@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Home Page Content
+ * The Employment-Page Template
  *
  * @package Objects
  * @subpackage Centrality

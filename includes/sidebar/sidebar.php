@@ -12,4 +12,4 @@
 	'after_widget'  => '</div>',
 	'before_title'  => '<h2 class="widgettitle employment-widget-title">',
 	'after_title'   => '</h2>' );
-	register_sidebar($sidebarargs);
+register_sidebar($sidebarargs);
