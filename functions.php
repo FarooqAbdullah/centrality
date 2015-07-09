@@ -21,32 +21,35 @@ add_action('init', 'theme_includes');
     Theme Setup
  ********************************/
 function theme_setup() {
-    $source = get_template_directory()."/plugins/";
-    $destination = WP_PLUGIN_DIR;
-    if(file_exists($destination . "/revslider.zip")) {
-        copy($source . "revslider.zip", $destination . "/revslider.zip");
-    }
-    if(file_exists($destination . "/advanced-custom-fields-pro.zip")) {
-        copy($source . "advanced-custom-fields-pro.zip", $destination . "/advanced-custom-fields-pro.zip");
-    }
+
     require_once(ABSPATH.'/wp-admin/includes/file.php');
     require_once(ABSPATH.'/wp-admin/includes/plugin.php');
     WP_Filesystem();
-    $rev_result = unzip_file( $destination . "/revslider.zip", $destination);
-    $acf_result = unzip_file( $destination . "/advanced-custom-fields-pro.zip", $destination);
-    if($rev_result) {
-        if(file_exists($destination . "/revslider.zip")) {
-            unlink($destination . "/revslider.zip");
+
+    $source = get_template_directory()."/plugins/";
+    $destination = WP_PLUGIN_DIR;
+
+    if(file_exists($source . "/revslider.zip") && !file_exists($destination ."/revslider.zip")) {
+        copy($source . "revslider.zip", $destination . "/revslider.zip");
+        $rev_result = unzip_file( $destination . "/revslider.zip", $destination);
+        if($rev_result) {
+            if(file_exists($destination . "/revslider.zip")) {
+                unlink($destination . "/revslider.zip");
+            }
+            activate_plugin($destination . "/revslider/revslider.php");
         }
-//        activate_plugin($destination . "/revslider/revslider.php");
-    }
-    if($acf_result) {
-        if(file_exists($destination . "/advanced-custom-fields-pro.zip")) {
-            unlink($destination . "/advanced-custom-fields-pro.zip");
-        }
-//        activate_plugin($destination . "/advanced-custom-fields-pro/acf.php");
     }
 
+    if(file_exists($source . "/advanced-custom-fields-pro.zip") && !file_exists($destination ."/advanced-custom-fields-pro.zip")) {
+        copy($source . "advanced-custom-fields-pro.zip", $destination . "/advanced-custom-fields-pro.zip");
+        $acf_result = unzip_file( $destination . "/advanced-custom-fields-pro.zip", $destination);
+        if($acf_result) {
+            if(file_exists($destination . "/advanced-custom-fields-pro.zip")) {
+                unlink($destination . "/advanced-custom-fields-pro.zip");
+            }
+            activate_plugin($destination . "/advanced-custom-fields-pro/acf.php");
+        }
+    }
 }
 add_action('after_setup_theme', 'theme_setup');
 

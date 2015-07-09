@@ -71,72 +71,8 @@
             </div>
         </div>
     </div>
-    <div class="centrality-service-wrapper row">
-        <div class="centrality-service">
-            <?php the_field('centrality_service_heading'); ?>
-        </div>
-        <div class="centrality-service-left padding-left-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">
-
-        <?php
-        $centrality_service_voice_solution_fetch = fetch_posts('voice-solution','menu_order', 'ASC', 1);
-            while ( $centrality_service_voice_solution_fetch->have_posts() ) {
-                $centrality_service_voice_solution_fetch->the_post();
-        ?>
-            <img src="<?php the_field('centrality_services_left_back_image'); ?>"  alt=""/>
-            <div class="voice-solution">
-                    <?php the_post_thumbnail(); ?>
-                    <h3><?php the_title(); ?></h3>
-                    <p><?php the_content(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php the_field('centrality_service_button_text'); ?></a>
-        <?php
-            }
-            // Restore original Post Data
-            wp_reset_postdata();
-        ?>
-            </div>
-        </div>
-        <div class="centrality-service-right padding-right-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">
-
-        <?php
-        $centrality_service_it_management_fetch = fetch_posts('it-management','menu_order', 'ASC', 1);
-            while ( $centrality_service_it_management_fetch->have_posts() ) {
-                $centrality_service_it_management_fetch->the_post();
-        ?>
-            <img src="<?php the_field('centrality_service_right_back_image'); ?>"  alt=""/>
-            <div class="it-management">
-                <?php the_post_thumbnail(); ?>
-                <h3><?php the_title(); ?></h3>
-                <p><?php the_content(); ?></p>
-                <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php the_field('centrality_service_right_button_text'); ?></a>
-        <?php
-            }
-            // Restore original Post Data
-            wp_reset_postdata();
-        ?>
-            </div>
-        </div>
-    </div>
-    <div class="row trusted-companies-wrapper">
-        <div class="container">
-            <h3><?php the_field('trusted_comapnies_heading'); ?></h3>
-            <?php
-            // check if the repeater field has rows of data
-            if( have_rows('trusted_companys_images') ):
-
-                // loop through the rows of data
-                while ( have_rows('trusted_companys_images') ) : the_row();
-                    ?>
-                    <div class="col-md-4 col-lg-2 col-sm-4 col-xs-6">
-                        <img src="<?php the_sub_field('trusted_repeator_company_image'); ?>" alt=""/>
-                    </div>
-            <?php
-
-                endwhile;
-            endif;
-
-            ?>
-        </div>
-    </div>
+    <?php echo do_shortcode('[_centrality_service]'); ?>
+    <?php echo do_shortcode('[_trusted_companies]'); ?>
     <div class="row working-with-centrality-wrapper">
         <div class="container">
             <h3><?php the_field('working_with_centrality_heading'); ?></h3>
@@ -218,89 +154,7 @@
             </div>
         </div>
     </div>
-    <div class="row industry-insights-promotion-wrapper">
-        <div class="container">
-            <h2><?php the_field('promotion_heading'); ?></h2>
-            <div class="insights-promotion row">
-                <?php
-                $promotion_fetch = fetch_posts('promotion','menu_order', 'ASC', 1);
-                while ( $promotion_fetch->have_posts() ) {
-                    $promotion_fetch->the_post();
-                ?>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php the_field('promotion_blog_wrapper_css_class'); ?>">
-                        <p class="head"><?php the_field('promotion_post_type'); ?></p>
-                        <h2><?php the_title(); ?></h2>
-                        <p class="desc">
-                            <?php echo str_replace('<p>','',get_the_content()); ?>
-                        </p>
-                        <div class="btn-wrapper">
-                            <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php the_field('promotion_button_text'); ?></a>
-                        </div>
-                        <div class="com-img">
-<!--                            <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/microsoft.png"  alt=""/>-->
-                            <?php the_post_thumbnail(); ?>
-                        </div>
-                    </div>
-                <?php
-                }
-                // Restore original Post Data
-                wp_reset_postdata();
-                ?>
-
-                <?php
-                $blog_fetch = fetch_posts('blog','menu_order', 'ASC', 2);
-                while ( $blog_fetch->have_posts() ) {
-                    $blog_fetch->the_post();
-                    ?>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php the_field('blog_wrapper_css_class'); ?>">
-                        <p class="head"><?php the_field('blog_post_type'); ?></p>
-                        <h2><?php the_title(); ?></h2>
-                        <p class="desc">
-                            <?php echo str_replace('<p>','',get_the_content()); ?>
-                        </p>
-                        <div class="btn-wrapper">
-                            <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php the_field('blog_button_text'); ?></a>
-                        </div>
-                        <div class="com-img">
-                            <!--                            <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/microsoft.png"  alt=""/>-->
-                            <?php the_post_thumbnail(); ?>
-                        </div>
-                    </div>
-                <?php
-                }
-                // Restore original Post Data
-                wp_reset_postdata();
-                ?>
-
-                <!--<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-video">
-                    <p class="head">Blog</p>
-                    <h2>Introducing Mivoice Video Unit from Mitel</h2>
-                    <p class="desc">
-                        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod tempor incidudunt ut labour et dolore magna aliqua.
-                    </p>
-                    <div class="btn-wrapper">
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                    <div class="com-img">
-                        <img src="<?php /*echo get_template_directory_uri(); */?>/images/blog-video-img-2.png"  alt=""/>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-benefit">
-                    <p class="head">Blog</p>
-                    <h2>How Your Business Can Benefit From Office 365</h2>
-                    <p class="desc">
-                        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod tempor incidudunt ut labour et dolore magna aliqua.
-                    </p>
-                    <div class="btn-wrapper">
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                    <div class="com-img">
-                        <img src="<?php /*echo get_template_directory_uri(); */?>/images/blog-technology-2.png"  alt=""/>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-    </div>
+    <?php echo do_shortcode('[_industry_insights_promotions]'); ?>
 </div>
 
 <?php get_footer(); ?>
