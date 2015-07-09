@@ -1,5 +1,5 @@
 # centrality
-Here are some following tips
+Some important notes.
 # Setup the Repo into your local machine :
     - Install GIT client (CLI) into your machine and Open the git bash
     - Click on Code button on top right section of this page
