@@ -1,0 +1,23 @@
+*/******************
+Header
+********************/
+.header-wrapper{width:100%; height:500px; background-position:center; background-repeat:no-repeat; text-align:center;}
+.employment-header{ background:url(../images/employment-header.jpg); }
+.header-wrapper h1, .header-wrapper h2{font-family:proxima_novalight; font-weight:normal; color:#fff;}
+.header-wrapper h1{ font-size:50px;    margin-bottom: 0px;  margin-top: 150px;  padding-bottom: 0px;}
+.header-wrapper h2{font-size:25px;   margin-top: 12px;  letter-spacing: 0.6px;   margin-bottom: 58px;}
+.header-wrapper .btn-square{text-decoration:none;  border:2px solid #fff; color:#fff; text-transform:uppercase; font-size:17px; font-family:proxima_nova_rgbold;   padding: 12px 33px; }
+.employment-page-sidebar h2.widgettitle{  margin-top: 29px;  margin-bottom: 9px;padding: 31px 57px;background:#018acf; color:#fff; font-size:22px; font-family:"proxima_nova_rgregular"; text-align:center;}
+.employment-page-sidebar .sidebarInside{ max-width:400px; float:right;}
+.inner-page-content li{  margin-bottom: 21px; list-style-image:url(../images/list-image.jpg); list-style-position:outside;   padding-left: 15px;  margin-left: 15px;}
+.employment-page-sidebar img{margin-bottom: 34px;}
+.inner-page-content ul{padding-left: 5px;   margin-top: 36px;}
+.employment-page-sidebar  {margin-top:0px;}
+.inner-page-content{  padding-top: 71px;   padding-bottom: 143px;}
+.inner-page-content{ font-family:proxima_nova_rgregular; font-size:21px; color:#58585a; line-height:31px;}
+.inner-page-content h1, .inner-page-content h2, .inner-page-content h3, .inner-page-content h4{color:#018acf; font-family:proxima_nova_rgregular;}
+.inner-page-content h2{font-size:36px;   margin-bottom: 30px;}
+.inner-page-content .joblist li{color:#018acf; list-style-image:none; padding-left:0px; margin-left:0px; list-style:none; }
+.inner-page-content .joblist li a{float:right; color:#018acf; border:2px solid #018acf;  padding: 3px 20px;  margin-top: -5px; text-decoration:none;}
+.employment-page-sidebar b{color:#023754;}
+.employment-page-sidebar a{text-decoration:none; color:#018acf;}
