@@ -12,6 +12,7 @@
 function theme_includes() {
     require("includes/navigation.php");
     require("includes/shortcodes/shortcodes.php");
+    require("includes/sidebar/sidebar.php");
     require("admin/CMB2-master/init.php");
     require("admin/theme_options.php");
 }
@@ -139,4 +140,6 @@ function fetch_posts($category_name, $orderby = '', $order = '', $posts_per_page
 }
 
 
+ 
+ 
 ?>
