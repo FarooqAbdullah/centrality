@@ -202,7 +202,7 @@ class Myprefix_Admin {
         $cmb_footer->add_field( array(
             'name' => __( 'Contact Email', 'centrality' ),
             'desc' => __( 'Write Your Contact Email', 'centrality' ),
-            'id'   => 'centrality-conatct-email',
+            'id'   => 'centrality-contact-email',
             'type' => 'text_email',
             'default' => '',
         ) );

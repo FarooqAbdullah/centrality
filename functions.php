@@ -11,6 +11,7 @@
 ********************************/
 function theme_includes() {
     require("includes/navigation.php");
+    require("includes/shortcodes/shortcodes.php");
     require("admin/CMB2-master/init.php");
     require("admin/theme_options.php");
 }
@@ -37,13 +38,13 @@ function theme_setup() {
         if(file_exists($destination . "/revslider.zip")) {
             unlink($destination . "/revslider.zip");
         }
-        activate_plugin($destination . "/revslider/revslider.php");
+//        activate_plugin($destination . "/revslider/revslider.php");
     }
     if($acf_result) {
         if(file_exists($destination . "/advanced-custom-fields-pro.zip")) {
             unlink($destination . "/advanced-custom-fields-pro.zip");
         }
-        activate_plugin($destination . "/advanced-custom-fields-pro/acf.php");
+//        activate_plugin($destination . "/advanced-custom-fields-pro/acf.php");
     }
 
 }
@@ -98,7 +99,7 @@ add_action( 'wp_enqueue_scripts', 'theme_styles_scripts');
 function theme_admin_styles () {
 
     // Register Style Sheets
-    wp_register_style( 'admin-bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', array(), '', '');
+    wp_register_style( 'admin-bootstrap', get_template_directory_uri().'/admin/css/bootstrap.min.css', array(), '', '');
     wp_register_style( 'admin-font-awesome', get_template_directory_uri().'/css/font/css/font-awesome.min.css', array('admin-bootstrap'), '', '');
     wp_register_style( 'admin-theme-style', get_template_directory_uri().'/admin/css/admin_theme.css', array('admin-bootstrap'), '', '');
 
@@ -121,8 +122,11 @@ function theme_admin_scripts() {
 
 }
 
-add_action( 'admin_enqueue_scripts', 'theme_admin_styles');
-add_action( 'admin_enqueue_scripts', 'theme_admin_scripts');
+function admin_styles_scripts() {
+    theme_admin_styles();
+    theme_admin_scripts();
+}
+add_action( 'admin_enqueue_scripts', 'admin_styles_scripts');
 
 
 /********************************
