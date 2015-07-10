@@ -44,7 +44,7 @@ get_header();the_post();
                                         <?php the_title(); ?>
                                     </div>
                                     <div class="description">
-                                        <?php echo str_replace('<p>','', get_the_content()); ?>
+                                        <?php the_field('blog_posts_short_description'); ?>
                                     </div>
                                 </div>
                             </a>

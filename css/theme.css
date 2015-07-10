@@ -1305,6 +1305,45 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
         Single Blog page Css Start
 *******************************************/
 
+.content-wrapper {
+    position: relative;
+}
+.content-wrapper .share-wrapper {
+    background-color:#e1e1e1;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+}
+.content-wrapper .share-wrapper .container > div {
+    font-size: 24px;
+    color: #018acf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon {
+    border:2px solid #018acf;
+    padding: 5px 18px;
+    display:inline-block;
+    border-radius:100%;
+    margin-right: 20px;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon a {
+    color: #018acf;
+    display: block;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon.en {
+    padding: 5px 13px;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon.yt {
+    padding: 5px 13px;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon.gplus {
+    padding: 5px 13px;
+}
+.content-wrapper .share-wrapper .container > div .soc-icon.twitter {
+    padding: 5px 13px;
+}
 .content-wrapper .header-wrapper .head-date {
     font-weight: normal;
     color: #fff;
@@ -1318,6 +1357,31 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+.content-wrapper .container.content {
+    margin-top: 50px;
+    padding-bottom: 150px;
+}
+.content-wrapper .container.content .single-first {
+    color: #018acf;
+    border-left: 3px solid #018acf;
+    font-size: 30px;
+    font-family: proxima_nova_rgregular;
+    padding-left: 20px;
+}
+.content-wrapper .container.content p {
+    font-size: 26px;
+    font-family: proxima_nova_rgregular;
+    margin-top:25px;
+    margin-bottom:25px;
+    color:#58585a;
+}
+.content-wrapper .container.content h2 {
+    font-size: 35px;
+    font-family: proxima_nova_rgregular;
+    margin-top:25px;
+    margin-bottom:25px;
+    color:#58585a;
 }
 
 /*******************************************
@@ -1389,6 +1453,10 @@ footer .social .soc-icon {
     background-color: #018acf;
     color: #023754;
     border-radius: 49%;
+}
+footer .social .soc-icon a {
+    color:#023754;
+    display: block;
 }
 footer .social .soc-icon.yt ,
 footer .social .soc-icon.gplus {

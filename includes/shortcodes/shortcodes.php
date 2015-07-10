@@ -180,3 +180,32 @@ function _employment_header($atts, $content = null) {
 
 add_shortcode('_employment_header', '_employment_header');
 
+//short code function for Social Icons.
+function _social_icon($atts, $content = null) {
+
+    extract(shortcode_atts(array(
+        'url'=> '#',
+        'name'=> '',
+        'class'=> ''
+    ), $atts));
+    if(!isset($url)) {
+        $url = '';
+    }
+    if(!isset($name)) {
+        $name = '';
+    }
+    if(!isset($class)) {
+        $class = '';
+    }
+
+    $result = '<div class="'.$class.' soc-icon">';
+    $result .= '<a href="'.$url.'">';
+    $result .= '<i class="fa fa-'.$name.'"></i>';
+    $result .= '</a>';
+    $result .= '</div>';
+
+
+    return $result;
+}
+add_shortcode('_social_icon', '_social_icon');
+

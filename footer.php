@@ -33,21 +33,13 @@
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                     <div class="social-wrapper">
                         <div class="social">
-                            <div class="fb soc-icon">
-                                <i class="fa fa-facebook"></i>
-                            </div>
+                            <?php echo do_shortcode('[_social_icon url="#" name="facebook" class="fb"]'); ?>
                             <div class="soc-seprator"></div>
-                            <div class="twitter soc-icon">
-                                <i class="fa fa-tumblr"></i>
-                            </div>
+                            <?php echo do_shortcode('[_social_icon url="#" name="tumblr" class="twitter"]'); ?>
                             <div class="soc-seprator"></div>
-                            <div class="yt soc-icon">
-                                <i class="fa fa-youtube-play"></i>
-                            </div>
+                            <?php echo do_shortcode('[_social_icon url="#" name="youtube-play" class="yt"]'); ?>
                             <div class="soc-seprator"></div>
-                            <div class="gplus soc-icon">
-                                <i class="fa fa-google-plus"></i>
-                            </div>
+                            <?php echo do_shortcode('[_social_icon url="#" name="google-plus" class="gplus"]'); ?>
                         </div>
                         <div class="copy-right">
                             <?php echo $field_value_footer['centrality-copyright-text']; ?>
