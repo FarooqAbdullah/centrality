@@ -6,7 +6,7 @@ Header
 .header-wrapper h1, .header-wrapper h2{font-family:proxima_novalight; font-weight:normal; color:#fff;}
 .header-wrapper h1{ font-size:50px;    margin-bottom: 0px;  margin-top: 150px;  padding-bottom: 0px;}
 .header-wrapper h2{font-size:25px;   margin-top: 12px;  letter-spacing: 0.6px;   margin-bottom: 58px;}
-.header-wrapper .btn-square{text-decoration:none;  border:2px solid #fff; color:#fff; text-transform:uppercase; font-size:17px; font-family:proxima_nova_rgbold;   padding: 12px 33px; }
+.header-wrapper .btn-square, .trust-us .btn-square{text-decoration:none;  border:2px solid #fff; color:#fff; text-transform:uppercase; font-size:17px; font-family:proxima_nova_rgbold;   padding: 12px 33px; }
 .employment-page-sidebar h2.widgettitle{  margin-top: 29px;  margin-bottom: 9px;padding: 31px 57px;background:#018acf; color:#fff; font-size:22px; font-family:"proxima_nova_rgregular"; text-align:center;}
 .employment-page-sidebar .sidebarInside{ max-width:400px; float:right;}
 .inner-page-content li{  margin-bottom: 21px; list-style-image:url(../images/list-image.jpg); list-style-position:outside;   padding-left: 15px;  margin-left: 15px;}
@@ -21,3 +21,27 @@ Header
 .inner-page-content .joblist li a{float:right; color:#018acf; border:2px solid #018acf;  padding: 3px 20px;  margin-top: -5px; text-decoration:none;}
 .employment-page-sidebar b{color:#023754;}
 .employment-page-sidebar a{text-decoration:none; color:#018acf;}
+.centerText{margin:0px auto; height:auto;float:none;}
+.we-strive h2, .our-team h2{text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_rgregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;}
+.number-box{   margin-bottom: 40px; border-left:2px solid #018acf; text-align:left;}
+.number-box h3{color:#018acf; font-size:62px; font-family:"proxima_nova_rgbold";   margin-top: 0px;   margin-bottom: 6px;  line-height: 55px;}
+.number-box h4{color:#018acf; text-transform:uppercase; font-size:18px; line-height:20px;  font-family:"proxima_nova_rgregular";margin-top: 0px;   padding-left: 10px;  margin-bottom: 0px; }
+.trust-us{min-height:406px;background:#023754 url(../images/grdntBlue.jpg) center no-repeat;}
+.trust-us h2{  margin-top: 65px; color: #fff; font-family:"proxima_novasemibold"; font-size:32px;   margin-bottom: 28px;}
+.trust-us p{  margin-bottom: 43px; color: #fff; font-family:"proxima_nova_rgregular"; font-size:17px; line-height:27px; }
+.our-team .team-mate{padding-left:0px; padding-right:0px;}
+.our-team .team-mate img{ width:100%; height:auto;}
+.our-team .team-mate  .labelBox{  max-height: 85px; overflow: hidden; transition:linear all 0.1s; padding:0px 15px;border-bottom:2px solid #cccccc; background:#fff; position:absolute; bottom:0px;   width: 100%;}
+.our-team .team-mate  .labelBox .title{color:#018acf; font-size:25px;   margin-top: 10px; font-family:"proxima_nova_rgbold";   margin-top: 14px;    margin-bottom: 0px; }
+.our-team .team-mate  .labelBox  .position{color:#023754; font-size:20px;font-family:"proxima_nova_rgregular"; margin-top: 0px;   margin-bottom: 10px; padding-bottom:10px; }
+.our-team .team-mate  .labelBox .plus{   margin-top: 20px;  margin-right: 40px; width:32px; height:32px; background:url(../images/plusicon.png); float:right;}
+.our-team .team-mate  .info{    width:100%; height:100%; background:#018acf; color:#fff; opacity:0;}
+.our-team .team-mate:hover .labelBox{ transition:linear all 0.2s;  background:#018acf; top:0px; max-height: 100%;  overflow: hidden; }
+.our-team .team-mate:hover  .labelBox .plus{display:none;}
+.our-team .team-mate:hover  .title, .our-team .team-mate:hover  .position, .our-team .team-mate:hover  .info{ transition:linear all 0.2s; color:#fff; opacity:1; display:block; }
+.our-team .team-mate  .title, .our-team .team-mate  .position, .our-team .team-mate  .info{ transition:linear all 0.2s; }
+.our-team .team-mate:hover  .position{border-bottom:1px solid #fff;}
+.claimBox{ background:#018acf; color: #fff;  border-bottom: 2px solid #cccccc; }
+.claimBoxText{font-size:33px; line-height:44px; font-size: 33px;  line-height: 44px;   padding: 89px 36px;}
+
+@media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}
