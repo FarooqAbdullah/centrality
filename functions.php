@@ -15,6 +15,7 @@ function theme_includes() {
     require("includes/sidebar/sidebar.php");
     require("admin/CMB2-master/init.php");
     require("admin/theme_options.php");
+	require("admin/customfields/customfields.php");
 }
 add_action('init', 'theme_includes');
 
