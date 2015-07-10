@@ -79,7 +79,7 @@ function _trusted_companies($atts, $content = null) {
 
 add_shortcode('_trusted_companies', '_trusted_companies');
 
-//short code function for Trusted Companies Content.
+//short code function for Industry Insights & Promotions Content.
 function _industry_insights_promotions($atts, $content = null) {
 
     extract(shortcode_atts(array(
@@ -113,7 +113,7 @@ function _industry_insights_promotions($atts, $content = null) {
     // Restore original Post Data
     wp_reset_postdata();
 
-    $blog_fetch = fetch_posts('blog','menu_order', 'ASC', 2);
+    $blog_fetch = fetch_posts('blog-promotion','menu_order', 'ASC', 2);
     while ( $blog_fetch->have_posts() ) {
         $blog_fetch->the_post();
     $result .= '<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 '.get_field('blog_wrapper_css_class').'">';
@@ -140,4 +140,43 @@ function _industry_insights_promotions($atts, $content = null) {
 }
 
 add_shortcode('_industry_insights_promotions', '_industry_insights_promotions');
+
+//short code function for Trusted Companies Content.
+function _employment_header($atts, $content = null) {
+
+    extract(shortcode_atts(array(
+        'heading'=> get_field('centrality_employment_heading'),
+        'slogan'=> get_field('centrality_employment_heading_slogan'),
+        'button_text'=> get_field('centrality_employment_header_button_text'),
+        'button_url'=> get_field('centrality_employment_heading_button_url'),
+        'class'=> get_field('centrality_employment_header_wrapper_class')
+    ), $atts));
+    if(!isset($heading)) {
+        $heading = '';
+    }
+    if(!isset($slogan)) {
+        $slogan = '';
+    }
+    if(!isset($button_text)) {
+        $button_text = '';
+    }
+    if(!isset($button_url)) {
+        $button_url = '';
+    }
+    if(!isset($class)) {
+        $class = '';
+    }
+
+    $result = '<div class="header-wrapper '.$class.'">';
+    $result .= '<div class="container">';
+    $result .= '<h1>'.$heading.'</h1>';
+    $result .= '<h2>'.$slogan.'</h2>';
+    $result .= '<a href="'.$button_url.'" class="btn-square">'.$button_text.'</a>';
+    $result .= '</div>';
+    $result .= '</div>';
+
+    return $result;
+}
+
+add_shortcode('_employment_header', '_employment_header');
 

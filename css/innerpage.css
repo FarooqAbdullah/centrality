@@ -1,7 +1,7 @@
 */******************
 Header
 ********************/
-.header-wrapper{width:100%; height:500px; background-position:center; background-repeat:no-repeat; text-align:center;}
+.header-wrapper{width:100%; height:500px; background-position:center;background-size: 100%; background-repeat:no-repeat; text-align:center;}
 .employment-header{ background:url(../images/employment-header.jpg); }
 .header-wrapper h1, .header-wrapper h2{font-family:proxima_novalight; font-weight:normal; color:#fff;}
 .header-wrapper h1{ font-size:50px;    margin-bottom: 0px;  margin-top: 150px;  padding-bottom: 0px;}
@@ -21,3 +21,6 @@ Header
 .inner-page-content .joblist li a{float:right; color:#018acf; border:2px solid #018acf;  padding: 3px 20px;  margin-top: -5px; text-decoration:none;}
 .employment-page-sidebar b{color:#023754;}
 .employment-page-sidebar a{text-decoration:none; color:#018acf;}
+.employment-header .container a:hover {
+    background-color: #000;
+}
