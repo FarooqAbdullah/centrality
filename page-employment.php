@@ -9,6 +9,7 @@
 /* Template Name: Employment-Page */
 get_header();the_post();
 ?>
+<div class="content-wrapper">
     <?php echo do_shortcode('[_employment_header]'); ?>
     <div class="content-wrapper inner-page-content">
         <div class="container">
@@ -22,4 +23,5 @@ get_header();the_post();
             </div>
         </div>
     </div>
+</div>
 <?php get_footer(); ?>

@@ -4,15 +4,15 @@
 function _centrality_service($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'action'=> ''
+        'pageID'=> get_option('page_on_front')
     ), $atts));
-    if(!isset($action)) {
-        $action = '';
+    if(!isset($pageId)) {
+        $pageId = '';
     }
 
     $result = '<div class="centrality-service-wrapper row">';
     $result .= '<div class="centrality-service">';
-    $result .= get_field('centrality_service_heading');
+    $result .= get_field('centrality_service_heading', $pageId);
     $result .= '</div>';
     $result .= '<div class="centrality-service-left padding-left-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">';
         $centrality_service_voice_solution_fetch = fetch_posts('voice-solution','menu_order', 'ASC', 1);
@@ -53,19 +53,19 @@ add_shortcode('_centrality_service', '_centrality_service');
 function _trusted_companies($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'action'=> ''
+        'pageID'=> get_option('page_on_front')
     ), $atts));
-    if(!isset($action)) {
-        $action = '';
+    if(!isset($pageID)) {
+        $pageID = '';
     }
 
     $result = '<div class="row trusted-companies-wrapper">';
     $result .= '<div class="container">';
-    $result .= '<h3>'.get_field('trusted_comapnies_heading').'</h3>';
-    if( have_rows('trusted_companys_images') ):
+    $result .= '<h3>'.get_field('trusted_comapnies_heading',$pageID).'</h3>';
+    if( have_rows('trusted_companys_images',$pageID) ):
 
         // loop through the rows of data
-        while ( have_rows('trusted_companys_images') ) : the_row();
+        while ( have_rows('trusted_companys_images',$pageID) ) : the_row();
            $result .= '<div class="col-md-4 col-lg-2 col-sm-4 col-xs-6">';
            $result .= '<img src="'.get_sub_field('trusted_repeator_company_image').'" alt=""/>';
            $result .= '</div>';
@@ -83,15 +83,15 @@ add_shortcode('_trusted_companies', '_trusted_companies');
 function _industry_insights_promotions($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'action'=> ''
+        'pageId'=> get_option('page_on_front')
     ), $atts));
-    if(!isset($action)) {
-        $action = '';
+    if(!isset($pageId)) {
+        $pageId = '';
     }
 
     $result = '<div class="row industry-insights-promotion-wrapper">';
     $result .= '<div class="container">';
-    $result .= '<h2>'.get_field('promotion_heading').'</h2>';
+    $result .= '<h2>'.get_field('promotion_heading',$pageId).'</h2>';
     $result .= '<div class="insights-promotion row">';
     $promotion_fetch = fetch_posts('promotion','menu_order', 'ASC', 1);
     while ( $promotion_fetch->have_posts() ) {
@@ -143,13 +143,17 @@ add_shortcode('_industry_insights_promotions', '_industry_insights_promotions');
 
 //short code function for Trusted Companies Content.
 function _employment_header($atts, $content = null) {
-
+    $page = get_page_by_path('employment');
+    $pageID = '';
+    if($page) {
+        $pageID = $page->ID;
+    }
     extract(shortcode_atts(array(
-        'heading'=> get_field('centrality_employment_heading'),
-        'slogan'=> get_field('centrality_employment_heading_slogan'),
-        'button_text'=> get_field('centrality_employment_header_button_text'),
-        'button_url'=> get_field('centrality_employment_heading_button_url'),
-        'class'=> get_field('centrality_employment_header_wrapper_class')
+        'heading'=> get_field('centrality_employment_heading',$pageID),
+        'slogan'=> get_field('centrality_employment_heading_slogan',$pageID),
+        'button_text'=> get_field('centrality_employment_header_button_text',$pageID),
+        'button_url'=> get_field('centrality_employment_heading_button_url',$pageID),
+        'class'=> get_field('centrality_employment_header_wrapper_class',$pageID)
     ), $atts));
     if(!isset($heading)) {
         $heading = '';

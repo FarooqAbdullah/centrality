@@ -29,7 +29,6 @@ get_header();the_post();
                 $blog_fetch = fetch_posts('blog','menu_order', 'ASC', -1);
                 while ( $blog_fetch->have_posts() ) {
                 $blog_fetch->the_post();
-//                    $b = the_post();
                     ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <a href="<?php the_permalink(); ?>">

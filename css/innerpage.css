@@ -1,7 +1,7 @@
 */******************
 Header
 ********************/
-.header-wrapper{width:100%; height:500px; background-position:center;background-size: 100%; background-repeat:no-repeat; text-align:center;}
+.header-wrapper{width:100%; height:500px; background-position:center;background-size: 100%; background-repeat:no-repeat; text-align:center;background-color:#777777;}
 .employment-header{ background:url(../images/employment-header.jpg); }
 .header-wrapper h1, .header-wrapper h2{font-family:proxima_novalight; font-weight:normal; color:#fff;}
 .header-wrapper h1{ font-size:50px;    margin-bottom: 0px;  margin-top: 150px;  padding-bottom: 0px;}
@@ -25,7 +25,7 @@ Header
       background-color: #fff;  color: #000;
 }
 .centerText{margin:0px auto; height:auto;float:none;}
-.we-strive h2, .our-team h2{max-width:630px; text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_rgregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;}
+.we-strive h2, .our-team h2{max-width:630px; text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_r.gregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;margin-left:auto;margin-right:auto;}
 .number-box{   margin-bottom: 40px; border-left:2px solid #018acf; text-align:left;}
 .number-box h3{color:#018acf; font-size:62px; font-family:"proxima_nova_rgbold";   margin-top: 0px;   margin-bottom: 6px;  line-height: 55px;}
 .number-box h4{color:#018acf; text-transform:uppercase; font-size:18px; line-height:20px;  font-family:"proxima_nova_rgregular";margin-top: 0px;   padding-left: 10px;  margin-bottom: 0px; }
