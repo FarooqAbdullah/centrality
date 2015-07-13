@@ -25,7 +25,8 @@ Header
       background-color: #fff;  color: #000;
 }
 .centerText{margin:0px auto; height:auto;float:none;}
-.we-strive h2, .our-team h2{max-width:630px; text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_r.gregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;margin-left:auto;margin-right:auto;}
+.we-strive h2, .our-team h2{text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_rgregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;margin-left:auto;margin-right:auto;}
+.we-strive h2{max-width:630px; }
 .number-box{   margin-bottom: 40px; border-left:2px solid #018acf; text-align:left;}
 .number-box h3{color:#018acf; font-size:62px; font-family:"proxima_nova_rgbold";   margin-top: 0px;   margin-bottom: 6px;  line-height: 55px;}
 .number-box h4{color:#018acf; text-transform:uppercase; font-size:18px; line-height:20px;  font-family:"proxima_nova_rgregular";margin-top: 0px;   padding-left: 10px;  margin-bottom: 0px; }
@@ -59,8 +60,10 @@ Header
 .proven-process h3{    padding-bottom: 18px;  margin-bottom: 18px; margin-top: 30px; background:url(../images/smart-object.png) center bottom no-repeat; font-size:25px; color:#fff; font-family:"proxima_novasemibold";}
 .proven-process p{font-size:17px; line-height:30px; font-family:"proxima_nova_rgregular"; }
 .discover-more{ text-transform:uppercase; text-decoration:none; background:#018acf url(../images/arrow-right.png) center right no-repeat; color:#023754; font-size:18px;font-family:"proxima_novasemibold";   margin-top: 38px;  display: inline-block;  padding: 12px 81px 12px 60px;}
+.discover-more:hover{color:#fff;background:url(../images/arrow-right-hover.png) center right no-repeat;  border:1px solid #fff; text-decoration:none; padding: 11px 80px 11px 59px; }
 .content-wrapper .trusted-companies-wrapper div img{opacity:0.2; transition:linear all 0.5s;}
 .content-wrapper .trusted-companies-wrapper div img:hover{opacity:1;}
-
-
+.proven-process .steps-line{width: 92px;  height: 5px;  background-color: #018acf;  position: absolute;  top: 0;  bottom: 0;  margin: auto;}
+.steps-line.line-right{  right: 0px;  top: -66%;} 
+.steps-line.line-left{  left: 0px;  top: -66%;} 
 @media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}
