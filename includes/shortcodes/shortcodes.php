@@ -143,6 +143,8 @@ add_shortcode('_industry_insights_promotions', '_industry_insights_promotions');
 
 //short code function for Trusted Companies Content.
 function _employment_header($atts, $content = null) {
+
+    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
     $page = get_page_by_path('employment');
     $pageID = '';
     if($page) {
@@ -152,8 +154,7 @@ function _employment_header($atts, $content = null) {
         'heading'=> get_field('centrality_employment_heading',$pageID),
         'slogan'=> get_field('centrality_employment_heading_slogan',$pageID),
         'button_text'=> get_field('centrality_employment_header_button_text',$pageID),
-        'button_url'=> get_field('centrality_employment_heading_button_url',$pageID),
-        'class'=> get_field('centrality_employment_header_wrapper_class',$pageID)
+        'button_url'=> get_field('centrality_employment_heading_button_url',$pageID)
     ), $atts));
     if(!isset($heading)) {
         $heading = '';
@@ -167,11 +168,8 @@ function _employment_header($atts, $content = null) {
     if(!isset($button_url)) {
         $button_url = '';
     }
-    if(!isset($class)) {
-        $class = '';
-    }
 
-    $result = '<div class="header-wrapper '.$class.'">';
+    $result = '<div class="header-wrapper" style="background-image:url('.(!empty($image_url[0]) ? $image_url[0] : get_template_directory_uri()."/images/employment-header.jpg" ).');background-size:100% 100%;">';
     $result .= '<div class="container">';
     $result .= '<h1>'.$heading.'</h1>';
     $result .= '<h2>'.$slogan.'</h2>';

@@ -8,7 +8,8 @@
 
 get_header(); ?>
 <div class="content-wrapper">
-    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
+    <?php
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
     ?>
     <div class="header-wrapper" style="background-image: url(<?php echo $image[0]; ?>);">
         <div class="container">
