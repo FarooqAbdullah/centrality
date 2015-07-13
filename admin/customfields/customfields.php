@@ -124,23 +124,43 @@ function WhyCentrality_metaBox() {
         'name'       => __( 'Proven Process Box 1 Title', 'cmb2' ),
         'desc'       => __( 'Proven Process Box 1 Title', 'cmb2' ),
         'id'         => $prefix . 'prBox1',
-        'type'       => 'textarea_small',
+        'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
-	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box 1 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 1 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox1_title',
+        'type'       => 'wysiwyg',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
 	$cmb->add_field( array(
         'name'       => __( 'Proven Process Box 2 Title', 'cmb2' ),
         'desc'       => __( 'Proven Process Box 2 Title', 'cmb2' ),
         'id'         => $prefix . 'prBox2',
-        'type'       => 'textarea_small',
+        'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
-	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box 2 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 2 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox2_title',
+        'type'       => 'wysiwyg',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
 	$cmb->add_field( array(
         'name'       => __( 'Proven Process Box 3 Title', 'cmb2' ),
         'desc'       => __( 'Proven Process Box 3 Title', 'cmb2' ),
         'id'         => $prefix . 'prBox3',
-        'type'       => 'textarea_small',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box 3 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 3 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox3_title',
+        'type'       => 'wysiwyg',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
 	
@@ -148,9 +168,37 @@ function WhyCentrality_metaBox() {
         'name'       => __( 'Proven Process Box 4 Title', 'cmb2' ),
         'desc'       => __( 'Proven Process Box 4 Title', 'cmb2' ),
         'id'         => $prefix . 'prBox4',
-        'type'       => 'textarea_small',
+        'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
+	
+	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box 4 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 4 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox4_title',
+        'type'       => 'wysiwyg',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box Button Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box Button Text', 'cmb2' ),
+        'id'         => $prefix . 'discoverbtn',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	
+	
+	$cmb->add_field( array(
+        'name'       => __( 'Proven Process Box Button URL', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box Button URL', 'cmb2' ),
+        'id'         => $prefix . 'discoverbtnurl',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
 	
 	
 	/*team*/

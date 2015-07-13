@@ -96,34 +96,45 @@ $b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>
 </div>
 </div>
 <?php $heading = get_post_meta( get_the_ID(), 'why_centrality_provenTextHeading', true ); 
+$box1Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox1', true ); 
+$box2Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox2', true ); 
+$box3Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox3', true ); 
+$box4Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox4', true ); 
 
+$box1Text = get_post_meta( get_the_ID(), 'why_centrality_prBox1_title', true ); 
+$box2Text = get_post_meta( get_the_ID(), 'why_centrality_prBox2_title', true );
+$box3Text = get_post_meta( get_the_ID(), 'why_centrality_prBox3_title', true );
+$box4Text = get_post_meta( get_the_ID(), 'why_centrality_prBox4_title', true );
+
+$btnText = get_post_meta( get_the_ID(), 'why_centrality_discoverbtn', true );
+$btnTextUrl = get_post_meta( get_the_ID(), 'why_centrality_discoverbtnurl', true );
 ?>
 <div class="row proven-process">
 	<div class="container">
 		<h2> <?php echo $heading; ?> </h2>
 	
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="number circle"> 1 </div>
-				<h3>LISTEN</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">			
+				<div class="number circle"> 1 <span class="steps-line line-right"></span> </div>				
+				<h3><?php echo $box1Heading; ?></h3>
+				<p><?php echo $box1Text; ?></p>
 			</div>
 			
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="number circle"> 2 </div>
-				<h3>LISTEN</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+				<div class="number circle"> <span class="steps-line line-left"></span> 2 <span class="steps-line line-right"></span> </div>
+				<h3><?php echo $box2Heading; ?></h3>
+				<p><?php echo $box2Text; ?></p>
 			</div>
 			
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="number circle"> 3 </div>
-				<h3>LISTEN</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+				<div class="number circle"><span class="steps-line line-left"></span> 3<span class="steps-line line-right"></span> </div>
+				<h3><?php echo $box3Heading; ?></h3>
+				<p><?php echo $box3Text; ?></p>
 			</div>
 			
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="number circle"> 4 </div>
-				<h3>LISTEN</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+				<div class="number circle"><span class="steps-line line-left"></span> 4 </div>
+				<h3><?php echo $box4Heading; ?></h3>
+				<p><?php echo $box4Text; ?></p>
 			</div>
 			
 			<div class="clearfix"></div>
