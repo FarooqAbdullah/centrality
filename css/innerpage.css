@@ -96,4 +96,7 @@ Header
 .content-wrapper.centralityServices .centrality-service-wrapper .centrality-service-right .it-management, .content-wrapper.centralityServices  .centrality-service-wrapper .centrality-service-left .voice-solution{   top: 50%;
   transform: translateY(-50%);}
 
+  .it-consulting-page-heading{background:url(../images/consultingPagetitleBG.jpg) center no-repeat; height:139px;}
+  .it-consulting-page-heading h2{color:#fff; font-size:56px; text-align:center; margin-top:0px; }
+  
 @media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}
