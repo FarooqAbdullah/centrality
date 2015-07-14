@@ -1,19 +1,21 @@
 <?php
 /**
- * The Employment-Page Template
+ * The IT Consulting Page Template
  *
  * @package Objects
  * @subpackage Centrality
  */
 
-/* Template Name: Solutions-main-page */
+/* Template Name: IT Consulting Page */
 get_header();the_post();
 ?>
-    <div class="content-wrapper solutions-page-heading">
+    <div class="content-wrapper it-consulting-page-heading">
+	<div class="container">
+	<div class="breadcrumbs">  Solutions / IT Management - IT Consulting</div>
 	<?php $pfx="solutions_"; ?>
 
-<h2><?php echo get_post_meta( get_the_ID(), $pfx.'Heading', true );  ?> <small><?php echo get_post_meta( get_the_ID(), $pfx.'slogan', true );  ?> </small></h2>
-
+<h2><?php echo the_title();  ?> </h2>
+</div>
 </div>
 <div class="content-wrapper centralityServices">
   <?php echo do_shortcode('[_centrality_service]'); ?>

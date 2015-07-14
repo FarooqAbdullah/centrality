@@ -495,6 +495,14 @@ $cmb->add_group_field($group_field_id, array(
     ) );
 	
 	$bx_sol->add_field( array(
+        'name'       => __( 'Cabling Solutions Block Icon Image', 'cmb2' ),
+        'desc'       => __( 'Cabling Solutions Block Icon Image', 'cmb2' ),		
+        'id'         => $pfx . 'cab_icon',
+        'type'       => 'file',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
         'name'       => __( 'Learn More Button Text', 'cmb2' ),
         'desc'       => __( 'Cabling Solutions Block Learn More button text', 'cmb2' ),
 		'default' => 'LEARN MORE ',
