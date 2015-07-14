@@ -66,4 +66,10 @@ Header
 .proven-process .steps-line{width: 92px;  height: 5px;  background-color: #018acf;  position: absolute;  top: 0;  bottom: 0;  margin: auto;}
 .steps-line.line-right{  right: 0px;  top: -66%;} 
 .steps-line.line-left{  left: 0px;  top: -66%;} 
+/** Solutions Page**/
+.solutions-page-heading{ text-align:center; }
+.solutions-page-heading h2{font-size:56px; margin:auto;  margin-top: 54px;  font-weight: normal;   margin-bottom: 36px;
+  max-width: 470px; font-family:"proxima_nova_rgregular"; color:#023754;line-height: 37px;  background: url(../images/head_bot_blue_bg.jpg) center bottom no-repeat;
+  padding-bottom: 32px; }
+.solutions-page-heading h2 small{font-size:18px; font-family:"proxima_nova_rgregular"; color:#757575;}
 @media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}

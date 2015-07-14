@@ -261,6 +261,136 @@ $cmb->add_group_field($group_field_id, array(
     // Regular text field
    
 
-    // Add other metaboxes as needed
+    /***************Solutions Page*****************/
+	$pfx="solutions_";
+	$bx_sol = new_cmb2_box( array(
+        'id'            => 'box_solutions',
+        'title'         => __( 'Page Elements', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-solutions.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Solutions Page Heading', 'cmb2' ),
+        'desc'       => __( 'Solutions Page Heading', 'cmb2' ),
+		'default' => 'Smart IT Solutions',
+        'id'         => $pfx . 'Heading',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Solutions Page Slogan', 'cmb2' ),
+        'desc'       => __( 'Text below Solutions Page Heading', 'cmb2' ),
+		'default' => 'WE DELIVER THE BEST SOLUTIONS EVER IN THE WORLD',
+        'id'         => $pfx . 'slogan',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Cabling Solutions Block Heading', 'cmb2' ),
+        'desc'       => __( 'Cabling Solutions Block Heading', 'cmb2' ),
+		'default' => 'Cabling Solutions',
+        'id'         => $pfx . 'cab_heading',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Cabling Solutions Block Text', 'cmb2' ),
+        'desc'       => __( 'Cabling Solutions Block Text', 'cmb2' ),
+		'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. ',
+        'id'         => $pfx . 'cab_text',
+        'type'       => 'textarea_small',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Learn More Button Text', 'cmb2' ),
+        'desc'       => __( 'Cabling Solutions Block Learn More button text', 'cmb2' ),
+		'default' => 'LEARN MORE ',
+        'id'         => $pfx . 'btn',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol->add_field( array(
+        'name'       => __( 'Learn More Button URL', 'cmb2' ),
+        'desc'       => __( 'Cabling Solutions Block Learn More button URL', 'cmb2' ),
+		'default' => '#',
+        'id'         => $pfx . 'btnUrl',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$bx_sol_feat = new_cmb2_box( array(
+        'id'            => 'box_featured_solutions',
+        'title'         => __( 'Featured Solutions', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-solutions.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+	
+	$feat_sol = $bx_sol_feat->add_field( array(
+    'id'          => 'Featured Solutions',
+    'type'        => 'group',
+    'description' => __( 'Add Multiple Featured Solutions', 'cmb' ),
+    'options'     => array(
+        'group_title'   => __( 'Featured Solutions {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+        'add_button'    => __( 'Add Another featured solution', 'cmb' ),
+        'remove_button' => __( 'Remove Featured Solution', 'cmb' ),
+        'sortable'      => true, // beta
+    ),
+) );
+
+// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	$bx_sol_feat->add_group_field( $feat_sol, array(
+		'name' => 'Featured Solution Title',
+		'default'=>'Managed Cloud Services',
+		'id'   => $pfx.'ftitle',
+		'type' => 'text',
+		
+	) );
+	
+	$bx_sol_feat->add_group_field( $feat_sol, array(
+		'name' => 'Featured Solution Icon',
+		'id'   => $pfx.'ficon',
+		'type' => 'file',
+		
+	) );
+	$bx_sol_feat->add_group_field( $feat_sol, array(
+		'name' => 'Featured Solution Text',
+		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+		'id'   => $pfx.'ftext',
+		'type' => 'textarea_small',
+		
+	) );
+	
+	$bx_sol_feat->add_group_field( $feat_sol, array(
+		'name' => 'Featured Solution Button Text',
+		'default'=>'LEARN MORE',
+		'id'   => $pfx.'fbtn',
+		'type' => 'text',
+		
+	) );
+	
+	$bx_sol_feat->add_group_field( $feat_sol, array(
+		'name' => 'Featured Solution Button URL',
+		'default'=>'#',
+		'id'   => $pfx.'furl',
+		'type' => 'text',
+		
+	) );
+	
 
 }
