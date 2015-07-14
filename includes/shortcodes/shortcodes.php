@@ -224,3 +224,119 @@ function _social_icon($atts, $content = null) {
 }
 add_shortcode('_social_icon', '_social_icon');
 
+//short code function for Trusted Companies Content.
+function _statistics($atts, $content = null) {
+
+    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
+    $page = get_page_by_path('employment');
+    $pageID = '';
+    if($page) {
+        $pageID = $page->ID;
+    }
+    extract(shortcode_atts(array(
+        'heading'=> '',
+        'statistics1'=> '',
+        'statistics1_year'=> '',
+        'statistics2'=> '',
+        'statistics2_year'=> '',
+        'statistics3'=> '',
+        'statistics3_year'=> '',
+        'is_year'=> true
+    ), $atts));
+    if(!isset($heading)) {
+        $heading = '';
+    }
+    if(!isset($statistics1)) {
+        $statistics1 = '';
+    }
+    if(!isset($statistics1_year)) {
+        $statistics1_year = '';
+    }
+    if(!isset($statistics2)) {
+        $statistics2 = '';
+    }
+    if(!isset($statistics2_year)) {
+        $statistics2_year = '';
+    }
+    if(!isset($statistics3)) {
+        $statistics3 = '';
+    }
+    if(!isset($statistics3_year)) {
+        $statistics3_year = '';
+    }
+    if(!isset($is_year)) {
+        $is_year = '';
+    }
+
+    $result = '<div class="row">';
+    $result .= '<div class="container text-center we-strive">';
+    $result .= '<div class="col-lg-7 col-sm-7 col-md-7 centerText">';
+    $result .= '<h2>'.$heading.'</h2>';
+    $result .= '<div class="row-minus">';
+    $result .= '<div class="col-lg-4 col-md-4 col-sm-4 number-box">';
+    if($is_year) {
+        $result .= '<h3>'.$statistics1_year.'</h3>';
+    }
+    $result .= '<h4> '.$statistics1.'</h4>';
+    $result .= '</div>';
+    $result .= '<div class="col-lg-4 col-md-4 col-sm-4 number-box">';
+    if($is_year) {
+        $result .= '<h3>'.$statistics2_year.'</h3>';
+    }
+    $result .= '<h4>'.$statistics2.'</h4>';
+    $result .= '</div>';
+    $result .= '<div class="col-lg-4 col-md-4 col-sm-4 number-box">';
+    if($is_year) {
+        $result .= '<h3>'.$statistics3_year.'</h3>';
+    }
+    $result .= '<h4> '.$statistics3.'</h4>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+
+    return $result;
+}
+
+add_shortcode('_statistics', '_statistics');
+
+//short code function for Features Content.
+function _feature_template($atts, $content = null) {
+
+    extract(shortcode_atts(array(
+        'heading'=> ''
+    ), $atts));
+    if(!isset($heading)) {
+        $heading = '';
+    }
+
+    $result = '<div class="row uniquely-qualified">';
+    $result .= '<div class="container">';
+    $result .= '<h2>'.$heading.'</h2>';
+    $result .= '<div class="col-lg-6 block1"><div class="ribbon"></div>';
+    $result .= '<ul>';
+    $featured_values = get_post_meta(get_the_ID(),'featured-template', true);
+    $size = ceil(sizeof($featured_values)/2);
+    $loo_num = 0;
+    if(!empty($featured_values)) {
+        foreach($featured_values as $featured_value) {
+            if($loo_num == $size) {
+                $result .= '</ul>';
+                $result .= '</div>';
+                $result .= '<div class="col-lg-6 block2"><div class="ribbon"></div>';
+                $result .= '<ul>';
+            }
+            $result .= '<li>'.$featured_value['_feature'].'</li>';
+            $loo_num++;
+        }
+    }
+    $result .= '</ul>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+
+    return $result;
+}
+
+add_shortcode('_feature_template', '_feature_template');

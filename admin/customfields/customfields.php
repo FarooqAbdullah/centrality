@@ -22,6 +22,29 @@ function WhyCentrality_metaBox() {
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
+    $featured_obj = new_cmb2_box( array(
+        'id'            => 'featued_element',
+        'title'         => __( 'Featured Element', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php') ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $statistics = new_cmb2_box( array(
+        'id'            => 'statistics_element',
+        'title'         => __( 'Statistics Element', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => array('page-featuredsolution.php') ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
 
     // Regular text field
     $cmb->add_field( array(
@@ -30,6 +53,46 @@ function WhyCentrality_metaBox() {
         'id'         => $prefix . 'relation_ship_heading',
         'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+
+    // Regular text field
+    $featured_obj->add_field( array(
+        'name'       => __( 'Feature Heading', 'cmb2' ),
+        'desc'       => __( 'Feature Heading', 'cmb2' ),
+        'id'         => '_feature_heading',
+        'type'       => 'text'
+    ) );
+
+    // Regular text field
+    $statistics->add_field( array(
+        'name'       => __( 'Statistics Heading', 'cmb2' ),
+        'desc'       => __( 'Statistics Heading', 'cmb2' ),
+        'id'         => '_statistics_heading',
+        'type'       => 'textarea'
+    ) );
+
+    // Regular text field
+    $statistics->add_field( array(
+        'name'       => __( 'Statistics1', 'cmb2' ),
+        'desc'       => __( 'Statistics1', 'cmb2' ),
+        'id'         => '_statistics1',
+        'type'       => 'text'
+    ) );
+
+    // Regular text field
+    $statistics->add_field( array(
+        'name'       => __( 'Statistics2', 'cmb2' ),
+        'desc'       => __( 'Statistics2', 'cmb2' ),
+        'id'         => '_statistics2',
+        'type'       => 'text'
+    ) );
+
+    // Regular text field
+    $statistics->add_field( array(
+        'name'       => __( 'Statistics3', 'cmb2' ),
+        'desc'       => __( 'Statistics3', 'cmb2' ),
+        'id'         => '_statistics3',
+        'type'       => 'text'
     ) );
 	
 	$cmb->add_field( array(
@@ -96,7 +159,7 @@ function WhyCentrality_metaBox() {
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
 	
-	$cmb->add_field( array(
+	/*$cmb->add_field( array(
         'name'       => __( 'Uniquely Qualified Block 1 Text', 'cmb2' ),
         'desc'       => __( 'Uniquely Qualified Block 1 Text', 'cmb2' ),
         'id'         => $prefix . 'qualifiedText1',
@@ -110,9 +173,30 @@ function WhyCentrality_metaBox() {
         'id'         => $prefix . 'qualifiedText2',
         'type'       => 'wysiwyg',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );*/
+    $featured = $featured_obj->add_field( array(
+        'id'          => 'featured-template',
+        'type'        => 'group',
+        'description' => __( 'Add Multiple Feature', 'cmb' ),
+        'options'     => array(
+            'group_title'   => __( 'Feature {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'    => __( 'Add Another Feature', 'cmb' ),
+            'remove_button' => __( 'Remove Feature', 'cmb' ),
+            'sortable'      => true, // beta
+        ),
     ) );
-	
-	$cmb->add_field( array(
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $featured_obj->add_group_field( $featured, array(
+        'name' => 'Feature Value',
+        'id'   => '_feature',
+        'type' => 'text',
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php' ))
+        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+    ) );
+
+
+    $cmb->add_field( array(
         'name'       => __( 'Proven Process Box Heading', 'cmb2' ),
         'desc'       => __( 'Proven Process Box Heading', 'cmb2' ),
         'id'         => $prefix . 'provenTextHeading',
@@ -280,6 +364,83 @@ $cmb->add_group_field($group_field_id, array(
         'id'   => 'centrality-featured-heading-img',
         'type' => 'file',
         'default' => '',
+    ) );
+
+    $bx_featured_sol->add_field( array(
+        'name' => __( 'Header Main Text', '_centrality' ),
+        'desc' => __( 'Write your header main heading', '_centrality' ),
+        'id'   => 'centrality-featured-heading-text',
+        'type' => 'text',
+        'default' => 'Manage Cloud Services For Your Business.',
+    ) );
+
+    $bx_featured_sol->add_field( array(
+        'name' => __( 'Header Button Text', '_centrality' ),
+        'desc' => __( 'Write your header Button heading', '_centrality' ),
+        'id'   => 'centrality-featured-heading-button-text',
+        'type' => 'text',
+        'default' => 'SIGN UP TODAY',
+    ) );
+
+    $bx_featured_sol->add_field( array(
+        'name' => __( 'Header Button URL', '_centrality' ),
+        'desc' => __( 'Write your header Button URL', '_centrality' ),
+        'id'   => 'centrality-featured-heading-button-url',
+        'type' => 'text',
+        'default' => '#',
+    ) );
+
+    $cloud_service_solution = new_cmb2_box( array(
+        'id'            => 'cloud-service-solution',
+        'title'         => __( 'Cloud Service Solution', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-featuredsolution.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Cloud Solution Heading', '_centrality' ),
+        'desc' => __( 'Write your Cloud Service Heading', '_centrality' ),
+        'id'   => 'centrality-cloud-service-heading',
+        'type' => 'text',
+        'default' => 'Better Cloud Service Solutions',
+    ) );
+
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Cloud Solution Content', '_centrality' ),
+        'desc' => __( 'Write your Cloud Service Content', '_centrality' ),
+        'id'   => 'centrality-cloud-service-content',
+        'type' => 'textarea',
+        'default' => 'In the Louisville area, you won\'t find another company as uniquely qualified to serve your business with a personal, professional touch.
+                      We are locally owned, locally managed, and have been serving Louisville\'s evolving IT needs since 1996. All staff are employed by Absolute;
+                      we don\'t send subcontractors into your business. We also have an \'A+\' rating with the Better Business Bureau.',
+    ) );
+
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Cloud Solution Button Text', '_centrality' ),
+        'desc' => __( 'Write your Cloud Service Button Text', '_centrality' ),
+        'id'   => 'centrality-cloud-service-button-text',
+        'type' => 'text',
+        'default' => 'Get Started Today',
+    ) );
+
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Cloud Solution Button URL', '_centrality' ),
+        'desc' => __( 'Write your Cloud Service Button URL', '_centrality' ),
+        'id'   => 'centrality-cloud-service-button-url',
+        'type' => 'text',
+        'default' => '#',
+    ) );
+
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Upload Cloud Solution Right Image', '_centrality' ),
+        'desc' => __( 'Upload your Cloud Service Right Image', '_centrality' ),
+        'id'   => 'centrality-cloud-service-right-image',
+        'type' => 'file'
     ) );
 
 

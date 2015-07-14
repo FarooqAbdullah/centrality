@@ -25,11 +25,11 @@ Header
       background-color: #fff;  color: #000;
 }
 .centerText{margin:0px auto; height:auto;float:none;}
-.we-strive h2, .our-team h2{text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat; font-family:"proxima_nova_rgregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;margin-left:auto;margin-right:auto;}
-.we-strive h2{max-width:630px; }
+.we-strive h2, .our-team h2{text-align:center;background:url(../images/head_bot_blue_bg.jpg) center bottom no-repeat;width:645px; font-family:"proxima_nova_rgregular"; font-size:28px; color:#023754; line-height:35px;   margin-top: 53px;   margin-bottom: 60px;  padding-bottom: 30px;margin-left:auto;margin-right:auto;}
+.we-strive h2{max-width:645px; }
 .number-box{   margin-bottom: 40px; border-left:2px solid #018acf; text-align:left;}
 .number-box h3{color:#018acf; font-size:62px; font-family:"proxima_nova_rgbold";   margin-top: 0px;   margin-bottom: 6px;  line-height: 55px;}
-.number-box h4{color:#018acf; text-transform:uppercase; font-size:18px; line-height:20px;  font-family:"proxima_nova_rgregular";margin-top: 0px;   padding-left: 10px;  margin-bottom: 0px; }
+.number-box h4{color:#018acf; text-transform:uppercase; font-size:18px; line-height:20px; width:85px; text-transform: uppercase; font-family:"proxima_nova_rgregular";margin-top: 0px;   padding-left: 10px;  margin-bottom: 0px; }
 .trust-us{min-height:406px;background:#023754 url(../images/grdntBlue.jpg) center no-repeat;}
 .trust-us h2{  margin-top: 65px; color: #fff; font-family:"proxima_novasemibold"; font-size:32px;   margin-bottom: 28px;}
 .trust-us p{  margin-bottom: 43px; color: #fff; font-family:"proxima_nova_rgregular"; font-size:17px; line-height:27px; }
