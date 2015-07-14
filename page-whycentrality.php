@@ -143,5 +143,6 @@ $btnTextUrl = get_post_meta( get_the_ID(), 'why_centrality_discoverbtnurl', true
     </div>
 
 <?php echo do_shortcode('[_trusted_companies]'); ?>
+</div>
 
 <?php get_footer(); ?>

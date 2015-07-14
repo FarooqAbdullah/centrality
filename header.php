@@ -23,7 +23,7 @@
 <div class="wrapper">
     <div class="brand-change">
         <div class="row close-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <span class="pull-right"><img src="images/close.png" alt=""/></span>
+            <span class="pull-right"><img src="<?php echo get_template_directory_uri(); ?>/images/close.png" alt=""/></span>
         </div>
         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="brand-change-content">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="logo-img">
                     <a href="<?php site_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png"  alt=""/>
+                        <img src="<?php echo $field_value_footer['centrality-footer-logo']; ?>"  alt=""/>
                     </a>
                 </div>
                 <p class="desc-head">
