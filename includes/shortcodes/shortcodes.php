@@ -154,7 +154,9 @@ function _employment_header($atts, $content = null) {
         'heading'=> get_field('centrality_employment_heading',$pageID),
         'slogan'=> get_field('centrality_employment_heading_slogan',$pageID),
         'button_text'=> get_field('centrality_employment_header_button_text',$pageID),
-        'button_url'=> get_field('centrality_employment_heading_button_url',$pageID)
+        'button_url'=> get_field('centrality_employment_heading_button_url',$pageID),
+        'head_img'=> '',
+        'is_slogan'=> true
     ), $atts));
     if(!isset($heading)) {
         $heading = '';
@@ -168,11 +170,22 @@ function _employment_header($atts, $content = null) {
     if(!isset($button_url)) {
         $button_url = '';
     }
+    if(!isset($head_img)) {
+        $head_img = '';
+    }
+    if(!isset($is_slogan)) {
+        $is_slogan = '';
+    }
 
     $result = '<div class="header-wrapper" style="background-image:url('.(!empty($image_url[0]) ? $image_url[0] : get_template_directory_uri()."/images/employment-header.jpg" ).');background-size:100% 100%;">';
     $result .= '<div class="container">';
+    if($head_img) {
+        $result .= '<img src="'.$head_img.'" alt="" />';
+    }
     $result .= '<h1>'.$heading.'</h1>';
-    $result .= '<h2>'.$slogan.'</h2>';
+    if($is_slogan) {
+        $result .= '<h2>'.$slogan.'</h2>';
+    }
     $result .= '<a href="'.$button_url.'" class="btn-square">'.$button_text.'</a>';
     $result .= '</div>';
     $result .= '</div>';

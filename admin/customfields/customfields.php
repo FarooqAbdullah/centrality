@@ -259,7 +259,29 @@ $cmb->add_group_field($group_field_id, array(
     ),
 ) );
     // Regular text field
-   
+
+    // Meta Fields for Featured Solution Page.
+
+    $bx_featured_sol = new_cmb2_box( array(
+        'id'            => 'header_featured_solution',
+        'title'         => __( 'Header', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-featuredsolution.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+         'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $bx_featured_sol->add_field( array(
+        'name' => __( 'Header Image', '_centrality' ),
+        'desc' => __( 'Upload Your Header Heading Image', '_centrality' ),
+        'id'   => 'centrality-featured-heading-img',
+        'type' => 'file',
+        'default' => '',
+    ) );
+
 
     // Add other metaboxes as needed
 
