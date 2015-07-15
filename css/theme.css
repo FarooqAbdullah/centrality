@@ -1456,7 +1456,39 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     background-color: #8ab1c5;
     height: 600px;
 }
+.business-technology .right-wrapper .right {
+    width: 450px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.business-technology .right-wrapper .right h2 {
+    font-size: 40px;
+    color: #fff;
+    font-family: proxima_nova_rgregular;
+    margin-bottom:30px;
+    margin-top:100px;
+}
+.business-technology .right-wrapper .right .content {
+    font-size: 21px;
+    color: #fff;
+    font-family: proxima_nova_rgregular;
+}
+.business-technology .right-wrapper .right .num {
+    font-size: 50px;
+    color: #fff;
+    font-family: proxima_nova_rgregular;
+}
+.business-technology .right-wrapper .right a.btn {
+    background-color: transparent;
+    color: #fff;
+    border-radius:0;
+    border-color:#fff;
+    margin-top:30px;
 
+}
+.business-technology .right-wrapper .right a.btn:hover {
+    background-color:#023754;
+}
 /*******************************************
         Featured Solution Css End
 *******************************************/

@@ -51,33 +51,19 @@ get_header();the_post();
     </div>
     <?php $f_head = get_post_meta(get_the_ID(),'_feature_heading',true);?>
     <?php echo do_shortcode('[_feature_template heading="'.$f_head.'"]'); ?>
-    <div class="row business-technology">
-        <div class="col-lg-7 col-m-7 col-sm-7 col-xs-12 padding-left-0 padding-right-0 left-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/business-technology.png" alt=""/>
-        </div>
-        <div class="col-lg-5 col-m-5 col-sm-5 col-xs-12 right-wrapper padding-left-0 padding-right-0">
-            <div class="right">
-                <h2><span>Our People</span> makes Us teh Business Technology leader in Kentuckiana</h2>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/white-cap.png"  alt=""/>
-                        <div class="num">350</div>
-                        <div class="content">
-                            hours of certified IT training, including dual certifications in Microsoft and Sisco.
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/white-cap.png"  alt=""/>
-                        <div class="num">20</div>
-                        <div class="content">
-                            business technology advisors & consultants
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-default">Meet The Team</a>
-            </div>
-        </div>
-    </div>
+    <?php
+        $left_img = get_post_meta(get_the_ID(),'centrality-business-technology-left-image',true);
+        $business_tech_heading = get_post_meta(get_the_ID(),'centrality-business-technology-heading',true);
+        $content1_num = get_post_meta(get_the_ID(),'centrality-business-technology-first-content-num',true);
+        $content1 = get_post_meta(get_the_ID(),'centrality-business-technology-first-content',true);
+        $content2_num = get_post_meta(get_the_ID(),'centrality-business-technology-second-content-num',true);
+        $content2 = get_post_meta(get_the_ID(),'centrality-business-technology-second-content',true);
+        $button_text = get_post_meta(get_the_ID(),'centrality-business-technology-button-text',true);
+        $button_url = get_post_meta(get_the_ID(),'centrality-business-technology-button-url',true);
+    ?>
+    <?php echo do_shortcode('[_business_technology heading="'.$business_tech_heading.'" content1="'.$content1.'" content2="'.$content2.'" content1_num="'.$content1_num.'" content2_num="'.$content2_num.'" button_text="'.$button_text.'" button_url="'.$button_url.'" left_img="'.$left_img.'"]'); ?>
+    <?php echo do_shortcode('[_working_with_centrality]'); ?>
+    <?php echo do_shortcode('[_trusted_companies]'); ?>
 </div>
 
 <?php get_footer(); ?>

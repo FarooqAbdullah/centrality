@@ -73,59 +73,7 @@
     </div>
     <?php echo do_shortcode('[_centrality_service]'); ?>
     <?php echo do_shortcode('[_trusted_companies]'); ?>
-    <div class="row working-with-centrality-wrapper">
-        <div class="container">
-            <h3><?php the_field('working_with_centrality_heading'); ?></h3>
-            <div class="steps-wrapper row">
-                <div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">
-                    <div class="steps-choices">
-                        <div class="choice-img-wrapper">
-                            <img src="<?php the_field('working_with_centrality_simple_image'); ?>" alt=""/>
-                            <span class="steps-line line-right"></span>
-                        </div>
-                        <h2><?php the_field('working_with_centrality_simple_title'); ?></h2>
-                        <div class="choices-smart-object">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/smart-object.png" alt=""/>
-                        </div>
-                        <p><?php the_field('working_with_centrality_simple_description'); ?></p>
-                    </div>
-                </div>
-                <div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">
-                    <div class="steps-choices">
-                        <div class="choice-img-wrapper">
-                            <span class="steps-line line-left"></span>
-                            <img src="<?php the_field('working_with_centrality_flexible_image'); ?>" alt=""/>
-                            <span class="steps-line line-right"></span>
-                        </div>
-                        <h2><?php the_field('working_with_centrality_flexible_title'); ?></h2>
-                        <div class="choices-smart-object">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/smart-object.png" alt=""/>
-                        </div>
-                        <p><?php the_field('working_with_centrality_flexible_description'); ?></p>
-                    </div>
-                </div>
-                <div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">
-                    <div class="steps-choices">
-                        <div class="choice-img-wrapper">
-                            <span class="steps-line line-left"></span>
-                            <img src="<?php the_field('working_with_centrality_smart_image'); ?>" alt=""/>
-                        </div>
-                        <h2><?php the_field('working_with_centrality_smart_title'); ?></h2>
-                        <div class="choices-smart-object">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/smart-object.png" alt=""/>
-                        </div>
-                        <p><?php the_field('working_with_centrality_smart_description'); ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="steps-discover-more-wrapper">
-                <a href="<?php the_field('working_with_centrality_button_url'); ?>" class="btn btn-default">
-                    <?php the_field('working_with_centrality_button_text'); ?>
-                    <img src="<?php the_field('working_with_centrality_button_image'); ?>"  alt=""/>
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php echo do_shortcode('[_working_with_centrality]'); ?>
     <div class="row mastery-trust-experience-wrapper">
         <div class="container">
             <h3><?php the_field('mastery_knowledge_experience_heading'); ?></h3>

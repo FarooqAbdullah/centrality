@@ -443,6 +443,74 @@ $cmb->add_group_field($group_field_id, array(
         'type' => 'file'
     ) );
 
+    $business_technology = new_cmb2_box( array(
+        'id'            => '_business_technology',
+        'title'         => __( 'Business Technology', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-featuredsolution.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $business_technology->add_field( array(
+        'name' => __( 'Upload Business Technology Left Image', '_centrality' ),
+        'desc' => __( 'Upload Business Technology Left Image', '_centrality' ),
+        'id'   => 'centrality-business-technology-left-image',
+        'type' => 'file'
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology Heading', '_centrality' ),
+        'desc' => __( 'Write Business Technology Heading', '_centrality' ),
+        'id'   => 'centrality-business-technology-heading',
+        'type' => 'textarea',
+        'default' => 'Our People  makes Us teh Business Technology leader in Kentuckiana',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology First Content Num', '_centrality' ),
+        'desc' => __( 'Write Business Technology First Content Num', '_centrality' ),
+        'id'   => 'centrality-business-technology-first-content-num',
+        'type' => 'text',
+        'default' => '350',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology First Content', '_centrality' ),
+        'desc' => __( 'Write Business Technology First Content', '_centrality' ),
+        'id'   => 'centrality-business-technology-first-content',
+        'type' => 'text',
+        'default' => 'hours of certified IT training, including dual certifications in Microsoft and Sisco.',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology Second Content Num', '_centrality' ),
+        'desc' => __( 'Write Business Technology Second Content Num', '_centrality' ),
+        'id'   => 'centrality-business-technology-second-content-num',
+        'type' => 'text',
+        'default' => '20',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology Second Content', '_centrality' ),
+        'desc' => __( 'Write Business Technology Second Content', '_centrality' ),
+        'id'   => 'centrality-business-technology-second-content',
+        'type' => 'text',
+        'default' => 'business technology advisors & consultants',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology Button Text', '_centrality' ),
+        'desc' => __( 'Write Business Technology Button Text', '_centrality' ),
+        'id'   => 'centrality-business-technology-button-text',
+        'type' => 'text',
+        'default' => 'Meet The Team',
+    ) );
+    $business_technology->add_field( array(
+        'name' => __( 'Business Technology Button URL', '_centrality' ),
+        'desc' => __( 'Write Business Technology Button URL', '_centrality' ),
+        'id'   => 'centrality-business-technology-button-url',
+        'type' => 'text',
+        'default' => '#',
+    ) );
+
 
     /***************Solutions Page*****************/
 	$pfx="solutions_";
