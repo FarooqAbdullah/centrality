@@ -139,4 +139,16 @@ Header
     background-color:#018acf;
     border-color: #018acf;
 }
+.it-testimonials{  text-align: center;}
+.it-testimonials h2{   margin-bottom: 27px;color:#018acf; font-size:36px; font-family:"proxima_nova_rgregular"; }
+.it-testimonials p{  max-width: 700px;  margin: auto; font-size:22px; color:#7d7e7e; line-height:36px;}
+.it-testimonials .btn-testi{  margin-bottom: 51px; background:#018acf url(../images/arrow-right-hover.png) center right no-repeat;   color: #fff;
+  margin-top: 29px;  font-size: 18px;  display: inline-block;  text-transform: uppercase; font-family: proxima_novasemibold;
+  padding: 10px 69px 10px 48px; border:2px solid #018acf;}
+  .it-testimonials .btn-testi:hover{color:#018acf; background:#fff url(../images/arrow-right.png) center right no-repeat; text-decoration:none;
+  border:2px solid #018acf;}
+ .it-testimonials p.testi-meta{  margin-top: 20px;  font-size: 18px !important;}
+ .blueribbon.supportPhone{background:#023754; color:#fff; padding: 33px 0px; text-align:center; }
+ .supportPhone p{font-size:32px;}
+ .supportPhone .btn-contactus {color:#fff; background:#018acf;  font-size: 18px !important; text-decoration:none;  text-transform: uppercase;  margin-left: 24px;  padding: 10px 31px;  }
 @media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}

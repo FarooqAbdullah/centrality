@@ -86,80 +86,29 @@ From experience, we know every business relies heavily on technology in order to
 	</div>
 	
 	<?php echo do_shortcode('[_business_technology heading="Our People  makes Us teh Business Technology leader in Kentuckiana" content1="hours of certified IT training, including dual certifications in Microsoft and Sisco." content2="business technology advisors & consultants" content1_num="350" content2_num="20" button_text="Meet The Team" button_url="#" ]'); ?>
-
-	<div class="content-wrapper centralityServices">
-	  <?php echo do_shortcode('[_centrality_service]'); ?>
-	  
+	<div style="height:656px;">
 	</div>
-	<div class="content-wrapper cabling-solutions">
-	<?php $hd_img=get_post_meta( get_the_ID(), $pfx.'cab_heading', true );
-	$hd_slogan=get_post_meta( get_the_ID(), $pfx.'cab_text', true );
-	$btntxt=get_post_meta( get_the_ID(), $pfx.'btn', true );
-	$btnurl=get_post_meta( get_the_ID(), $pfx.'btnUrl', true );
-	$cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
-
-	 echo do_shortcode('[_employment_header class="employment-header" head_img="'.$cab_icon.'" heading="'.$hd_img.'" slogan="'.$hd_slogan.'" button_text="'.$btntxt.'" button_url="'.btnurl.'"]'); ?>
-	 </div>
-
-	 <div class="content-wrapper featured-sol greybgwrap">
-		<div class="blueBgwrap">
-		 <h2>Featured Solutions</h2>
-		 <div class="container">
-		 <div class="row-minus">
-			 <div class="col-lg-3">
-				<div class="featuredServiceBox">
-				<img src="<?php echo get_template_directory_uri() ?>/images/cloudicon.jpg" /> 
-				<h2>Managed Cloud Services</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-				<a href="#" class="btn-square blue-border">LEARN MORE</a>
-				<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture1.jpg" /> </div>
-				</div>
-			 </div>
-			 <!--Col-->
-			 
-			 <div class="col-lg-3">
-				<div class="featuredServiceBox">
-				<img src="<?php echo get_template_directory_uri() ?>/images/bandaicon.jpg" /> 
-				<h2>On Premise IT Support</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-				<a href="#" class="btn-square blue-border">LEARN MORE</a>
-				<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture1.jpg" /> </div>
-				</div>
-			 </div>
-			 <!--Col-->
-			 
-			 <div class="col-lg-3">
-				<div class="featuredServiceBox">
-				<img src="<?php echo get_template_directory_uri() ?>/images/phoneicon.jpg" /> 
-				<h2>Voice Communications</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-				<a href="#" class="btn-square blue-border">LEARN MORE</a>
-				<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture1.jpg" /> </div>
-				</div>
-			 </div>
-			 <!--Col-->
-			 
-			 <div class="col-lg-3">
-				<div class="featuredServiceBox last">
-				<img src="<?php echo get_template_directory_uri() ?>/images/plusicon.jpg" /> 
-				<h2>Business Continuity/ Disaster Recovery</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-				<a href="#" class="btn-square blue-border">LEARN MORE</a>
-				<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture1.jpg" /> </div>
-				</div>
-			 </div>
-			 <!--Col-->
-		</div>
-			 
-			 <div class="clear-fix"></div>
-		</div>
-		</div>
-	 </div>
-
-
+	
+	<div class="content-wrapper whiteBg it-testimonials">
+		<div class="container">
+			<h2>What Our Customers Are Saying</h2>
+			<p class="testi-content"> "I just wanted to say thank you so much for always being there for me. You always step up to the plate when I am having network and phone issues. You take such good care of me. {Centrality} is my safety net, the backbone of my network!"</p>
+			<p class="testi-meta"> <b>-- Deborah Wolph,</b> CIO, Caudill Seed Company  </p>
+			<a href="#" class="btn-square btn-testi">SEE OUR CUSTOMER STORIES</a>
 		
+		</div>
+	</div>
+	
+	<div class="content-wrapper blueribbon supportPhone">
+		<div class="container">
+			<p>Get Centrality support today. <b>CALL 502.267.2552</b> or <a href="#" class="btn-contactus">Contact Us Online</a> </p>
+		</div>
+	</div>
+	
 
+	
 
+	 
 
 
 
