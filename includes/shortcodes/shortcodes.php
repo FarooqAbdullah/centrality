@@ -340,3 +340,198 @@ function _feature_template($atts, $content = null) {
 }
 
 add_shortcode('_feature_template', '_feature_template');
+
+//short code function for Business Technology Content.
+function _business_technology ($atts, $content = null) {
+
+    extract(shortcode_atts(array(
+        'heading'=> '',
+        'left_img'=> get_template_directory_uri().'/images/business-technology.png',
+        'button_text'=> '',
+        'button_url'=> '',
+        'content1_num'=> '',
+        'content2_num'=> '',
+        'content1'=> '',
+        'content2'=> ''
+    ), $atts));
+    if(!isset($heading)) {
+        $heading = '';
+    }
+    if(!isset($left_img)) {
+        $left_img = '';
+    }
+    if(!isset($content1_num)) {
+        $content1_num = '';
+    }
+    if(!isset($content1)) {
+        $content1 = '';
+    }
+    if(!isset($content2_num)) {
+        $content2_num = '';
+    }
+    if(!isset($content2)) {
+        $content2 = '';
+    }
+    if(!isset($button_text)) {
+        $button_text = '';
+    }
+    if(!isset($button_url)) {
+        $button_url = '';
+    }
+
+    $pieces = explode(" ", $heading);
+    $first_part = implode(" ", array_splice($pieces, 0, 2));
+
+    $result = '<div class="row business-technology">
+        <div class="col-lg-7 col-m-7 col-sm-7 col-xs-12 padding-left-0 padding-right-0 left-wrapper">
+            <img src="'.$left_img.'" alt=""/>
+        </div>
+        <div class="col-lg-5 col-m-5 col-sm-5 col-xs-12 right-wrapper padding-left-0 padding-right-0">
+            <div class="right">
+                <h2>'.str_replace($first_part,"<span>$first_part</span>", $heading).'</h2>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-0">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-left-0">
+                        <img src="'.get_template_directory_uri().'/images/white-cap.png"  alt=""/>
+                        <div class="num">'.$content1_num.'</div>
+                        <div class="content">
+                            '.$content1.'
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-left-0">
+                        <img src="'.get_template_directory_uri().'/images/white-cap.png"  alt=""/>
+                        <div class="num">'.$content2_num.'</div>
+                        <div class="content">
+                            '.$content2.'
+                        </div>
+                    </div>
+                </div>
+                <a href="'.$button_url.'" class="btn btn-default">'.$button_text.'</a>
+            </div>
+        </div>
+    </div>';
+
+
+    return $result;
+}
+
+add_shortcode('_business_technology', '_business_technology');
+
+//short code function for Working with Centrality Content.
+function _working_with_centrality($atts, $content = null) {
+    $home_page_ID = get_option('page_on_front');
+    extract(shortcode_atts(array(
+        'heading'=> get_field('working_with_centrality_heading', $home_page_ID),
+        'simple_img'=> get_field('working_with_centrality_simple_image', $home_page_ID),
+        'smart_img'=> get_field('working_with_centrality_smart_image', $home_page_ID),
+        'flexible_img'=> get_field('working_with_centrality_flexible_image', $home_page_ID),
+        'simple_title'=> get_field('working_with_centrality_simple_title', $home_page_ID),
+        'simple_description'=> get_field('working_with_centrality_simple_description', $home_page_ID),
+        'smart_title'=> get_field('working_with_centrality_smart_title', $home_page_ID),
+        'flexible_title'=> get_field('working_with_centrality_flexible_title', $home_page_ID),
+        'smart_description'=> get_field('working_with_centrality_smart_description', $home_page_ID),
+        'flexible_description'=> get_field('working_with_centrality_flexible_description', $home_page_ID),
+        'button_text'=> get_field('working_with_centrality_button_text', $home_page_ID),
+        'button_url'=> get_field('working_with_centrality_button_url', $home_page_ID),
+        'button_img'=> get_field('working_with_centrality_button_image', $home_page_ID),
+    ), $atts));
+    if(!isset($heading)) {
+        $heading = '';
+    }
+    if(!isset($simple_img)) {
+        $simple_img = '';
+    }
+    if(!isset($smart_img)) {
+        $smart_img = '';
+    }
+    if(!isset($flexible_img)) {
+        $flexible_img = '';
+    }
+    if(!isset($simple_title)) {
+        $simple_title = '';
+    }
+    if(!isset($simple_description)) {
+        $simple_description = '';
+    }
+    if(!isset($smart_title)) {
+        $smart_title = '';
+    }
+    if(!isset($flexible_title)) {
+        $flexible_title = '';
+    }
+    if(!isset($smart_description)) {
+        $smart_description = '';
+    }
+    if(!isset($flexible_description)) {
+        $flexible_description = '';
+    }
+    if(!isset($button_text)) {
+        $button_text = '';
+    }
+    if(!isset($button_url)) {
+        $button_url = '';
+    }
+    if(!isset($button_img)) {
+        $button_img = '';
+    }
+
+    $result = '<div class="row working-with-centrality-wrapper">';
+    $result .= '<div class="container">';
+    $result .= '<h3>'.$heading.'</h3>';
+    $result .= '<div class="steps-wrapper row">';
+    $result .= '<div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">';
+    $result .= '<div class="steps-choices">';
+    $result .= '<div class="choice-img-wrapper">';
+    $result .= '<img src="'.$simple_img.'" alt=""/>';
+    $result .= '<span class="steps-line line-right"></span>';
+    $result .= '</div>';
+    $result .= '<h2>'.$simple_title.'</h2>';
+    $result .= '<div class="choices-smart-object">';
+    $result .= '<img src="'.get_template_directory_uri().'/images/smart-object.png" alt=""/>';
+    $result .= '</div>';
+    $result .= '<p>'.$simple_description.'</p>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '<div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">';
+    $result .= '<div class="steps-choices">';
+    $result .= '<div class="choice-img-wrapper">';
+    $result .= '<span class="steps-line line-left"></span>';
+    $result .= '<img src="'.$flexible_img.'" alt=""/>';
+    $result .= '<span class="steps-line line-right"></span>';
+    $result .= '</div>';
+    $result .= '<h2>'.$flexible_title.'</h2>';
+    $result .= '<div class="choices-smart-object">';
+    $result .= '<img src="'.get_template_directory_uri().'/images/smart-object.png" alt=""/>';
+    $result .= '</div>';
+    $result .= '<p>'.$flexible_description.'</p>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '<div class="working-steps-choices col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-left-0 padding-right-0">';
+    $result .= '<div class="steps-choices">';
+    $result .= '<div class="choice-img-wrapper">';
+    $result .= '<span class="steps-line line-left"></span>';
+    $result .= '<img src="'.$smart_img.'" alt=""/>';
+    $result .= '</div>';
+    $result .= '<h2>'.$smart_title.'</h2>';
+    $result .= '<div class="choices-smart-object">';
+    $result .= '<img src="'.get_template_directory_uri().'/images/smart-object.png" alt=""/>';
+    $result .= '</div>';
+    $result .= '<p>'.$smart_description.'</p>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '<div class="steps-discover-more-wrapper">';
+    $result .= '<a href="'.$button_url.'" class="btn btn-default">';
+    $result .= $button_text;
+    $result .= '<img src="'.$button_img.'"  alt=""/>';
+    $result .= '</a>';
+    $result .= '</div>';
+    $result .= '</div>';
+    $result .= '</div>';
+
+
+    return $result;
+}
+
+add_shortcode('_working_with_centrality', '_working_with_centrality');
+
+?>

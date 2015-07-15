@@ -83,7 +83,7 @@ Header
 .featuredServiceBox h2{color:#029ae6; font-size:30px; font-family:"proxima_nova_rgregular";   max-width: 209px;
   margin: auto;  margin-bottom: 37px;   margin-top: 30px; }
   .featuredServiceBox.last h2{  max-width: 267px;}
-.featuredServiceBox p{color:#9b9b9b; font-family;'proxima_novasemibold'; font-size:18px; margin:auto; margin-bottom: 61px;   max-width: 230px; }
+.featuredServiceBox p{color:#9b9b9b; font-family:'proxima_novasemibold'; font-size:18px; margin:auto; margin-bottom: 61px;   max-width: 230px; }
 .featuredServiceBox img{  margin-top: 59px;}
 .featuredServiceBox .blue-border {color:#029ae6; border-color:#029ae6; max-width:210px; display:block;   max-width: 210px;
   margin: auto;   margin-bottom: 50px !important; }
@@ -100,3 +100,10 @@ Header
   .it-consulting-page-heading h2{color:#fff; font-size:56px; text-align:center; margin-top:0px; }
   
 @media(min-width:767px){.row-minus{margin-left:-15px; margin-right:-15px;}}
+
+.header-wrapper .btn-square:hover ,
+.trust-us .btn-square:hover ,
+.featuredServiceBox .btn-square:hover {
+    background-color: #023754;
+}
+
