@@ -16,8 +16,8 @@ get_header();the_post();
         $post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
         ?>
         <div class="centrality-source-center" style="background-image: url(<?php echo $post_thumbnail[0]; ?>);">
-            <h2><?php the_field('blog_main_heading'); ?></h2>
-            <h6><?php the_field('bloag_main_heading_slogan'); ?></h6>
+            <h2><?php echo get_post_meta(get_the_ID(),'blog-main-heading',true); ?></h2>
+            <h6><?php echo get_post_meta(get_the_ID(),'blog-main-heading-slogan',true); ?></h6>
             <img src="<?php echo get_template_directory_uri(); ?>/images/centrality-source-bottom.png" alt=""/>
         </div>
     </div>
@@ -43,7 +43,7 @@ get_header();the_post();
                                         <?php the_title(); ?>
                                     </div>
                                     <div class="description">
-                                        <?php the_field('blog_posts_short_description'); ?>
+                                        <?php echo get_field('category-blog-short-description'); ?>
                                     </div>
                                 </div>
                             </a>

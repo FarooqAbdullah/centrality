@@ -4,15 +4,15 @@
 function _centrality_service($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'pageID'=> get_option('page_on_front')
+        'heading'=> get_post_meta(get_the_ID(),'centrality-service-heading',true)
     ), $atts));
-    if(!isset($pageId)) {
-        $pageId = '';
+    if(!isset($heading)) {
+        $heading = '';
     }
 
     $result = '<div class="centrality-service-wrapper row">';
     $result .= '<div class="centrality-service">';
-    $result .= get_field('centrality_service_heading', $pageId);
+    $result .= $heading;
     $result .= '</div>';
     $result .= '<div class="centrality-service-left padding-left-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">';
         $centrality_service_voice_solution_fetch = fetch_posts('voice-solution','menu_order', 'ASC', 1);
@@ -52,23 +52,27 @@ add_shortcode('_centrality_service', '_centrality_service');
 //short code function for Trusted Companies Content.
 function _trusted_companies($atts, $content = null) {
 
+    $theme_options = get_option('myprefix_options');
+
     extract(shortcode_atts(array(
-        'pageID'=> get_option('page_on_front')
+        'trusted_heading' => $theme_options['trusted-companies-heading-text'],
     ), $atts));
-    if(!isset($pageID)) {
-        $pageID = '';
+    if(!isset($trusted_heading)) {
+        $trusted_heading = '';
     }
 
     $result = '<div class="row trusted-companies-wrapper">';
     $result .= '<div class="container">';
-    $result .= '<h3>'.get_field('trusted_comapnies_heading',$pageID).'</h3>';
-    if( have_rows('trusted_companys_images',$pageID) ):
-
+    $result .= '<h3>'.$trusted_heading.'</h3>';
+    if( !empty($theme_options['trusted-companies-img']) ):
+        $array_size = sizeof($theme_options['trusted-companies-img']);
+        $loop_num = 0;
         // loop through the rows of data
-        while ( have_rows('trusted_companys_images',$pageID) ) : the_row();
+        while ( $loop_num < $array_size ) :
            $result .= '<div class="col-md-4 col-lg-2 col-sm-4 col-xs-6">';
-           $result .= '<img src="'.get_sub_field('trusted_repeator_company_image').'" alt=""/>';
+           $result .= '<img src="'.$theme_options['trusted-companies-img'][$loop_num]['trusted-comapnies-single-image'].'" alt=""/>';
            $result .= '</div>';
+        $loop_num++;
         endwhile;
     endif;
     $result .= '</div>';
@@ -83,27 +87,27 @@ add_shortcode('_trusted_companies', '_trusted_companies');
 function _industry_insights_promotions($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'pageId'=> get_option('page_on_front')
+        'heading'=> get_post_meta(get_the_ID(),'industry_insight_promotion_heading',true)
     ), $atts));
-    if(!isset($pageId)) {
-        $pageId = '';
+    if(!isset($heading)) {
+        $heading = '';
     }
 
     $result = '<div class="row industry-insights-promotion-wrapper">';
     $result .= '<div class="container">';
-    $result .= '<h2>'.get_field('promotion_heading',$pageId).'</h2>';
+    $result .= '<h2>'.$heading.'</h2>';
     $result .= '<div class="insights-promotion row">';
     $promotion_fetch = fetch_posts('promotion','menu_order', 'ASC', 1);
     while ( $promotion_fetch->have_posts() ) {
         $promotion_fetch->the_post();
-    $result .= '<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 '.get_field('promotion_blog_wrapper_css_class').'">';
-    $result .= '<p class="head">'.get_field('promotion_post_type').'</p>';
+    $result .= '<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 '.get_field('category-promotion-wrapper-class').'">';
+    $result .= '<p class="head">'.get_field('category-promotion-post-type').'</p>';
     $result .= '<h2>'.get_the_title().'</h2>';
     $result .= '<p class="desc">';
     $result .= str_replace('<p>','',get_the_content());
     $result .= '</p>';
     $result .= '<div class="btn-wrapper">';
-    $result .= '<a href="'.get_the_permalink().'" class="btn btn-default">'.get_field('promotion_button_text').'</a>';
+    $result .= '<a href="'.get_the_permalink().'" class="btn btn-default">'.get_field('category-promotion-button-text').'</a>';
     $result .= '</div>';
     $result .= '<div class="com-img">';
     $result .= get_the_post_thumbnail();
@@ -418,21 +422,22 @@ add_shortcode('_business_technology', '_business_technology');
 
 //short code function for Working with Centrality Content.
 function _working_with_centrality($atts, $content = null) {
-    $home_page_ID = get_option('page_on_front');
+
+    $theme_options = get_option('myprefix_options');
     extract(shortcode_atts(array(
-        'heading'=> get_field('working_with_centrality_heading', $home_page_ID),
-        'simple_img'=> get_field('working_with_centrality_simple_image', $home_page_ID),
-        'smart_img'=> get_field('working_with_centrality_smart_image', $home_page_ID),
-        'flexible_img'=> get_field('working_with_centrality_flexible_image', $home_page_ID),
-        'simple_title'=> get_field('working_with_centrality_simple_title', $home_page_ID),
-        'simple_description'=> get_field('working_with_centrality_simple_description', $home_page_ID),
-        'smart_title'=> get_field('working_with_centrality_smart_title', $home_page_ID),
-        'flexible_title'=> get_field('working_with_centrality_flexible_title', $home_page_ID),
-        'smart_description'=> get_field('working_with_centrality_smart_description', $home_page_ID),
-        'flexible_description'=> get_field('working_with_centrality_flexible_description', $home_page_ID),
-        'button_text'=> get_field('working_with_centrality_button_text', $home_page_ID),
-        'button_url'=> get_field('working_with_centrality_button_url', $home_page_ID),
-        'button_img'=> get_field('working_with_centrality_button_image', $home_page_ID),
+        'heading'=> $theme_options['working-with-centrality-heading'],
+        'simple_img'=> $theme_options['working-with-centrality-simple-image'],
+        'smart_img'=> $theme_options['working-with-centrality-smart-image'],
+        'flexible_img'=> $theme_options['working-with-centrality-flexible-image'],
+        'simple_title'=> $theme_options['working-with-centrality-simple-title'],
+        'simple_description'=> $theme_options['working-with-centrality-simple-description'],
+        'smart_title'=> $theme_options['working-with-centrality-smart-title'],
+        'flexible_title'=> $theme_options['working-with-centrality-flexible-title'],
+        'smart_description'=> $theme_options['working-with-centrality-smart-description'],
+        'flexible_description'=> $theme_options['working-with-centrality-flexible-description'],
+        'button_text'=> $theme_options['working-with-centrality-button-text'],
+        'button_url'=> $theme_options['working-with-centrality-button-url'],
+        'button_img'=> $theme_options['working-with-centrality-button-image'],
     ), $atts));
     if(!isset($heading)) {
         $heading = '';
