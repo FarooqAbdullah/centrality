@@ -657,7 +657,7 @@ $cmb->add_group_field($group_field_id, array(
         'id'            => 'it_consulting',
         'title'         => __( 'Page Elements', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type
-		'show_on' => array( 'key' => 'page-template', 'value' => array('page-it_consulting.php') ),
+		'show_on' => array( 'key' => 'page-template', 'value' => array('page-itconsulting.php') ),
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
@@ -745,14 +745,6 @@ $cmb->add_group_field($group_field_id, array(
         'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
-	$itcons->add_field( array(
-        'name'       => __( 'Lead Generation Heading', 'cmb2' ),
-        'desc'       => __( 'Lead Generation Heading', 'cmb2' ),
-        'id'         => $prefix . 'leadgen_heading',
-		'default'=>'Want to save up to 30% annually on your company’s technology spend?',
-        'type'       => 'text',
-        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
-    ) );
 	
 	$itcons->add_field( array(
         'name'       => __( 'Form code', 'cmb2' ),
@@ -771,18 +763,171 @@ $cmb->add_group_field($group_field_id, array(
         'type'       => 'file',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
-	
-	$itcons->add_field( array(
-        'name'       => __( 'Lead Generation Image', 'cmb2' ),
-        'desc'       => __( 'Lead Generation Image', 'cmb2' ),
-        'id'         => $prefix . 'leadgen_image',
-		'default'=> 'Our People makes Us the Business Technology leader in Kentuckiana',
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Right Heading', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Heading', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-heading',
+		'default'    => 'Our People makes Us teh Business Technology leader in Kentuckiana',
         'type'       => 'text',
-        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Right First Content Num', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right First Content Num', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-first-content-num',
+		'default'    => '350',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Right Second Content Num', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Second Content Num', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-second-content-num',
+		'default'    => '20',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Right First Content', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right First Content', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-first-content',
+		'default'    => 'hours of certified IT training, including dual certifications in Microsoft and Sisco.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Right Second Content', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Second Content', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-second-content',
+		'default'    => 'business technology advisors & consultants',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Button Text', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Button Text', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-button-text',
+		'default'    => 'Meet The Team',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Button URL', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Button URL', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-button-url',
+		'default'    => '#',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Business Technology Image', 'cmb2' ),
+        'desc'       => __( 'Upload Business Technology Image', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-image',
+		'default'=> get_template_directory_uri().'/images/business-technology.png ',
+        'type'       => 'file',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Customers Saying Heading', 'cmb2' ),
+        'desc'       => __( 'Write Customers Saying Heading', 'cmb2' ),
+        'id'         => $prefix . 'customer-saying-heading',
+		'default'    => 'What Our Customers Are Saying',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Customers Saying Content', 'cmb2' ),
+        'desc'       => __( 'Write Customers Saying Content', 'cmb2' ),
+        'id'         => $prefix . 'customer-saying-content',
+		'default'    => ' "I just wanted to say thank you so much for always being there for me. You always step up to the plate when I am having network and phone issues. You take such good care of me. {Centrality} is my safety net, the backbone of my network!"',
+        'type'       => 'textarea',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Customer\'s Name', 'cmb2' ),
+        'desc'       => __( 'Write Customer\'s Name Here', 'cmb2' ),
+        'id'         => $prefix . 'customer-saying-customer-name',
+		'default'    => 'Deborah Wolph',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Customer\'s Designation', 'cmb2' ),
+        'desc'       => __( 'Write Customer\'s Designation Here', 'cmb2' ),
+        'id'         => $prefix . 'customer-saying-customer-designation',
+		'default'    => 'CIO',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Customer\'s Comapny Name', 'cmb2' ),
+        'desc'       => __( 'Write Customer\'s Comapny Name Here', 'cmb2' ),
+        'id'         => $prefix . 'customer-saying-company-name',
+		'default'    => 'Caudill Seed Company',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Need Help Heading', 'cmb2' ),
+        'desc'       => __( 'Unsure Need Help Section Heading', 'cmb2' ),
+        'id'         => $prefix . 'unsure-need-help-heading',
+		'default'    => 'Unsure of what you really need? Let us help.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Need Help Content', 'cmb2' ),
+        'desc'       => __( 'Unsure Need Help Section Content', 'cmb2' ),
+        'id'         => $prefix . 'unsure-need-help-content',
+		'default'    => 'We develop custom business technology solutions that are suited for your unique needs. ',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Need Help Get Started Heading', 'cmb2' ),
+        'desc'       => __( 'Unsure Need Help Section Get Started Heading', 'cmb2' ),
+        'id'         => $prefix . 'unsure-need-help-get-started-heading',
+		'default'    => 'LET’S GET STARTED.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Need Help Get Started in IT Button Text', 'cmb2' ),
+        'desc'       => __( 'Unsure Need Help Section Get Started in IT Button Text', 'cmb2' ),
+        'id'         => $prefix . 'unsure-need-help-get-started-in-it-button-text',
+		'default'    => 'I’m in IT.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $itcons->add_field( array(
+        'name'       => __( 'Need Help Get Started not in IT Button Text', 'cmb2' ),
+        'desc'       => __( 'Unsure Need Help Section Get Started not in IT Button Text', 'cmb2' ),
+        'id'         => $prefix . 'unsure-need-help-get-started-not-in-it-button-text',
+		'default'    => 'I’m not in IT.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
     ) );
 	
 
- $insight_promotion = new_cmb2_box( array(
+    $insight_promotion = new_cmb2_box( array(
         'id'            => 'promotion-heading',
         'title'         => __( 'Promotion', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type

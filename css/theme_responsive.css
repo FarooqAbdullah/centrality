@@ -344,6 +344,12 @@
     .content-wrapper .industry-insights-promotion-wrapper div.container div.insights-promotion > div[class*="blog-"] .btn-wrapper {
         margin-bottom: 81px;
     }
+
+    .content-wrapper .centrality-source .centrality-source-center {
+        width: auto;
+        padding-top: 20%;
+        /*height: 100%;*/
+    }
     /***************************
         Content Css End
     ***************************/
@@ -570,6 +576,13 @@
     }
     .content-wrapper .industry-insights-promotion-wrapper > div.container > h2 {
         width: 400px;
+    }
+
+    .content-wrapper .centrality-source .centrality-source-center {
+        width: auto;
+        padding-top: 20%;
+        height: 390px;
+        background-size: 100% 100%;
     }
 
     /***************************
@@ -898,6 +911,16 @@
     /***************************
         Brand Change css End
     ***************************/
+
+    .content-wrapper .header-wrapper .head-date + h1 {
+        width:400px ;
+    }
+    .content-wrapper .centrality-source .centrality-source-center {
+        width: auto;
+        padding-top: 20%;
+        height: 350px;
+        background-size: 100% 100%;
+    }
     /***************************
         Content Css End
     ***************************/
