@@ -24,7 +24,7 @@
 	<div class="container">
 		<div class="row-minus"> 
 		<div class="row-minus">
-			<div class="col-lg-3 col-md-3 col-xs-3 sidebar-menu-it-consulting">
+			<div class="col-lg-3 col-md-3 sidebar-menu-it-consulting">
 			<h2>IT Management</h2>
 			<ul class="sidemenu">
 			  <li> IT Consulting </li>
@@ -35,7 +35,7 @@
 			</ul>
 			
 			</div>
-			<div class="col-lg-9 col-md-9 col-xs-9 srv-page-intro-box">
+			<div class="col-lg-9 col-md-9 srv-page-intro-box">
 				<div class="top-block-well">
 				 <h2> Worry Free Support </h2>
 				 <h3>IT Consulting </h3>
@@ -43,8 +43,8 @@
 				</div>
 				<div class="blue-well">
 						<div class="col-lg-4 firstCol"> <div>CUSTOM-DESIGNED NETWORK </div> </div>
-						<div class="col-lg-2 secondCol"> <div> DEDICATED IT TEAM </div> </div>
-						<div class="col-lg-4 thirdCol"> <div> DATA LOSSPREVENTION </div> </div>
+						<div class="col-lg-4 secondCol"> <div> DEDICATED IT TEAM </div> </div>
+						<div class="col-lg-4 thirdCol"> <div> DATA LOSS PREVENTION </div> </div>
 				</div>	
 		<div class="lineVertical"></div>
 			<div class="blue-border-box">
@@ -72,7 +72,7 @@ From experience, we know every business relies heavily on technology in order to
                             <div class="form-group">
                                 <label for="newsLetter">Sign up for our FREE onsite technology analysis </label>
                                 <input type="email" name="newsLetter" class="form-control" id="newsLetter" placeholder="Enter Your email address to find out how to save">
-                                <button type="submit" class="btn btn-default"><img src="http://localhost:8080/centrality/wp-content/themes/centrality/images/right-arrow.png" alt=""></button>
+                                <button type="submit" class="btn btn-default"><img src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" alt=""></button>
                             </div>
                         </form>
 			</div>
@@ -84,9 +84,9 @@ From experience, we know every business relies heavily on technology in order to
 	  
 	  </div>	  
 	</div>
-	
+	<div class="content-wrapper">
 	<?php echo do_shortcode('[_business_technology heading="Our People  makes Us teh Business Technology leader in Kentuckiana" content1="hours of certified IT training, including dual certifications in Microsoft and Sisco." content2="business technology advisors & consultants" content1_num="350" content2_num="20" button_text="Meet The Team" button_url="#" ]'); ?>
-	<div style="height:656px;">
+	
 	</div>
 	
 	<div class="content-wrapper whiteBg it-testimonials">
@@ -101,14 +101,27 @@ From experience, we know every business relies heavily on technology in order to
 	
 	<div class="content-wrapper blueribbon supportPhone">
 		<div class="container">
-			<p>Get Centrality support today. <b>CALL 502.267.2552</b> or <a href="#" class="btn-contactus">Contact Us Online</a> </p>
+			<p>Get Centrality support today. <b>CALL <?php $field_value_footer = get_option('myprefix_options');  echo $field_value_footer['centrality-phone-number']; ?></b> or <a href="#" class="btn-contactus">Contact Us Online</a> </p>
 		</div>
 	</div>
+	<div class="content-wrapper greycircuitDesign">
+	  <div class="container">
+			 <div class="blueBg">
+				 <h2>Unsure of what you really need? Let us help.</h2>
+				 <p>We develop custom business technology solutions that are suited for your unique needs. </p>
+				 <h3>LET’S GET STARTED.</h3>
+				 <p class="second"> (SELECT ONE) </p>
+				 <a href="" class="btn-square btn-im"> I’m in IT.</a>
+				 <a href="" class="btn-square btn-im"> I’m not in IT.</a>
+			 </div>
+	  </div>
 	
-
+	</div>
 	
+<div class="content-wrapper">
+	<?php echo do_shortcode('[_industry_insights_promotions]'); ?>
 
-	 
+	 </div>
 
 
 

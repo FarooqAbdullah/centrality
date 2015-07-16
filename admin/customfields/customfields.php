@@ -651,5 +651,136 @@ $cmb->add_group_field($group_field_id, array(
 		
 	) );
 	
+	
+	/************IT COnsulting Page *****************/
+	$prefix="it_con_";
+	$itcons = new_cmb2_box( array(
+        'id'            => 'it_consulting',
+        'title'         => __( 'Page Elements', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => array('page-it_consulting.php') ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Page Bread Crumb Title', 'cmb2' ),
+        'desc'       => __( 'Page Bread Crumb Title', 'cmb2' ),
+        'id'         => $prefix . 'breadcrumbtitle',
+		'default'=>'IT Management - IT Consulting',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Page GreyBox Heading', 'cmb2' ),
+        'desc'       => __( 'Page GreyBox Heading', 'cmb2' ),
+        'id'         => $prefix . 'grey_box_heading',
+		'default'=>'Worry Free Support',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Page Grey Box Slogan', 'cmb2' ),
+        'desc'       => __( 'Page Grey Box Slogan (small Text)', 'cmb2' ),
+        'id'         => $prefix . 'grey_box_slogan',
+		'default'=>'IT CONSULTING',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Blue Bar Service 1', 'cmb2' ),
+        'desc'       => __( 'Blue Bar Service 1', 'cmb2' ),
+        'id'         => $prefix . 'service1',
+		'default'=>'CUSTOM-DESIGNED NETWORK',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Blue Bar Service 2', 'cmb2' ),
+        'desc'       => __( 'Blue Bar Service 2', 'cmb2' ),
+        'id'         => $prefix . 'service2',
+		'default'=>'DEDICATED IT TEAM',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Blue Bar Service 3', 'cmb2' ),
+        'desc'       => __( 'Blue Bar Service 3', 'cmb2' ),
+        'id'         => $prefix . 'service3',
+		'default'=>'DATA LOSS PREVENTION',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'White Box Heading', 'cmb2' ),
+        'desc'       => __( 'White Box Heading', 'cmb2' ),
+        'id'         => $prefix . 'whitebox_heading',
+		'default'=>'WE\’RE HERE TO HELP',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'White Box Text', 'cmb2' ),
+        'desc'       => __( 'White Box Text', 'cmb2' ),
+        'id'         => $prefix . 'whitebox_text',
+		'default'=>'<p>Centrality provides IT consulting services that partners you with a dedicated team. We start by understanding your network, your business goals, and your objectives. This allows us to develop a custom-designed network for your business.</p> <p>From experience, we know every business relies heavily on technology in order to run efficiently and effectively in today\'s economy. It\'s also proven that every business is unique when it comes to the way they use technology',
+        'type'       => 'wysiwyg',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Lead Generation Heading', 'cmb2' ),
+        'desc'       => __( 'Lead Generation Heading', 'cmb2' ),
+        'id'         => $prefix . 'leadgen_heading',
+		'default'=>'Want to save up to 30% annually on your company’s technology spend?',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$itcons->add_field( array(
+        'name'       => __( 'Lead Generation Heading', 'cmb2' ),
+        'desc'       => __( 'Lead Generation Heading', 'cmb2' ),
+        'id'         => $prefix . 'leadgen_heading',
+		'default'=>'Want to save up to 30% annually on your company’s technology spend?',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Form code', 'cmb2' ),
+        'desc'       => __( 'Sing up form HTML code or shortcode', 'cmb2' ),
+        'id'         => $prefix . 'leadgen_form',
+		'default'=>' ',
+        'type'       => 'textarea_small',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Lead Generation Image', 'cmb2' ),
+        'desc'       => __( 'Lead Generation Image', 'cmb2' ),
+        'id'         => $prefix . 'leadgen_image',
+		'default'=> get_template_directory_uri().'/images/30offer.png ',
+        'type'       => 'file',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$itcons->add_field( array(
+        'name'       => __( 'Lead Generation Image', 'cmb2' ),
+        'desc'       => __( 'Lead Generation Image', 'cmb2' ),
+        'id'         => $prefix . 'leadgen_image',
+		'default'=> 'Our People makes Us the Business Technology leader in Kentuckiana',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
 
 }

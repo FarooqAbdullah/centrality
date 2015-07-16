@@ -105,5 +105,16 @@ jQuery(document).ready(
                 setTimeout(megamenuRelative, 1);
             }
         );
+		
+		var imgheight=$('.team-mate').height();
+		$('.claimBox').height(imgheight);
+		
+		$(window).resize(function(){
+		var imgheight=$('.team-mate').height();
+		$('.claimBox').height(imgheight);
+	
+});
     }
 );
+
+
