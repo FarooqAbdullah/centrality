@@ -600,17 +600,23 @@ $cmb->add_group_field($group_field_id, array(
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
 
-    /*$bx_sol_feat->add_field( array(
+    $solu_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',-1);
+    $con = '';
+    $options= array();
+    while($solu_result->have_posts()){
+        $solu_result->the_post();
+        $title = get_the_title();
+        $options[$title] = $title;
+    }
+    wp_reset_postdata();
+
+    $bx_sol_feat->add_field( array(
         'name'    => 'Choose Posts',
         'desc'    => 'Choose Posts to Show at Featured Section',
         'id'      => 'choose-featured-posts',
         'type'    => 'multicheck',
-        'options' => array(
-            'check1' => 'Check One',
-            'check2' => 'Check Two',
-            'check3' => 'Check Three',
-        )
-    ) );*/
+        'options' => $options
+    ));
 	/************IT COnsulting Page *****************/
 	$prefix="it_con_";
 	$itcons = new_cmb2_box( array(

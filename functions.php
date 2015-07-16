@@ -142,6 +142,12 @@ function fetch_posts($category_name, $orderby = '', $order = '', $posts_per_page
     $query = new WP_Query($arguments);
     return $query;
 }
+function get_post_id_from_title ($title){
+    global $wpdb;
+    $posttitle = $title;
+    $postid = $wpdb->get_var( "SELECT ID FROM $wpdb->posts WHERE post_title = '" . $posttitle . "'" );
+    return $postid;
+}
 
 
  

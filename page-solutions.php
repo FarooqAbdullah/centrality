@@ -34,6 +34,10 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
 	 <h2>Featured Solutions</h2>
 	 <div class="container">
 	 <div class="row-minus">
+
+         <?php
+         $featured_solution_request = get_post_meta(get_the_ID(),'choose-featured-posts',true);
+?>
 		 <div class="col-lg-3 col-md-3 col-sm-6">
 			<div class="featuredServiceBox">
 			<img src="<?php echo get_template_directory_uri() ?>/images/cloudicon.jpg" /> 
@@ -76,7 +80,6 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
 			<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture4.jpg" /> </div>
 			</div>
 		 </div>
-		 <!--Col-->
 	</div>
 		 
 		 <div class="clear-fix"></div>
