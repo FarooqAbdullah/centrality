@@ -599,58 +599,18 @@ $cmb->add_group_field($group_field_id, array(
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
-	
-	$feat_sol = $bx_sol_feat->add_field( array(
-    'id'          => 'Featured Solutions',
-    'type'        => 'group',
-    'description' => __( 'Add Multiple Featured Solutions', 'cmb' ),
-    'options'     => array(
-        'group_title'   => __( 'Featured Solutions {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
-        'add_button'    => __( 'Add Another featured solution', 'cmb' ),
-        'remove_button' => __( 'Remove Featured Solution', 'cmb' ),
-        'sortable'      => true, // beta
-        ),
-    ) );
 
-    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
-	$bx_sol_feat->add_group_field( $feat_sol, array(
-		'name' => 'Featured Solution Title',
-		'default'=>'Managed Cloud Services',
-		'id'   => $pfx.'ftitle',
-		'type' => 'text',
-		
-	) );
-	
-	$bx_sol_feat->add_group_field( $feat_sol, array(
-		'name' => 'Featured Solution Icon',
-		'id'   => $pfx.'ficon',
-		'type' => 'file',
-		
-	) );
-	$bx_sol_feat->add_group_field( $feat_sol, array(
-		'name' => 'Featured Solution Text',
-		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-		'id'   => $pfx.'ftext',
-		'type' => 'textarea_small',
-		
-	) );
-	
-	$bx_sol_feat->add_group_field( $feat_sol, array(
-		'name' => 'Featured Solution Button Text',
-		'default'=>'LEARN MORE',
-		'id'   => $pfx.'fbtn',
-		'type' => 'text',
-		
-	) );
-	
-	$bx_sol_feat->add_group_field( $feat_sol, array(
-		'name' => 'Featured Solution Button URL',
-		'default'=>'#',
-		'id'   => $pfx.'furl',
-		'type' => 'text',
-		
-	) );
-	
+    /*$bx_sol_feat->add_field( array(
+        'name'    => 'Choose Posts',
+        'desc'    => 'Choose Posts to Show at Featured Section',
+        'id'      => 'choose-featured-posts',
+        'type'    => 'multicheck',
+        'options' => array(
+            'check1' => 'Check One',
+            'check2' => 'Check Two',
+            'check3' => 'Check Three',
+        )
+    ) );*/
 	/************IT COnsulting Page *****************/
 	$prefix="it_con_";
 	$itcons = new_cmb2_box( array(

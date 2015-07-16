@@ -15,8 +15,6 @@ get_header();the_post();
             <div class="container">
                 <div class="row-minus">
                     <div class="breadcrumbs">  Solutions / <?php echo get_post_meta(get_the_ID(),$pfx . 'breadcrumbtitle',true); ?></div>
-
-
                     <h2><?php the_title();  ?> </h2>
                 </div>
             </div>
@@ -43,9 +41,9 @@ get_header();the_post();
 
                             </div>
                             <div class="blue-well">
-                                <div class="col-lg-4 firstCol"> <div><?php echo get_post_meta(get_the_ID(),$pfx . 'service1',true); ?> </div> </div>
-                                <div class="col-lg-4 secondCol"> <div> <?php echo get_post_meta(get_the_ID(),$pfx . 'service2',true); ?>  </div> </div>
-                                <div class="col-lg-4 thirdCol"> <div> <?php echo get_post_meta(get_the_ID(),$pfx . 'service3',true); ?> </div> </div>
+                                <div class="col-lg-4 col-sm-4 col-md-4 firstCol"> <div><?php echo get_post_meta(get_the_ID(),$pfx . 'service1',true); ?> </div> </div>
+                                <div class="col-lg-4 col-sm-4 col-md-4 secondCol"> <div> <?php echo get_post_meta(get_the_ID(),$pfx . 'service2',true); ?>  </div> </div>
+                                <div class="col-lg-4 col-sm-4 col-md-4 thirdCol"> <div> <?php echo get_post_meta(get_the_ID(),$pfx . 'service3',true); ?> </div> </div>
                             </div>
                             <div class="lineVertical"></div>
                             <div class="blue-border-box">

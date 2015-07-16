@@ -125,10 +125,10 @@ Header
 }
   .srv-page-intro-box .blue-border-box h2{  margin-top: 38px;   margin-bottom: 17px; font-size:26px; color:#007dbc; font-family:"proxima_nova_rgbold";}
   .srv-page-intro-box .blue-border-box p{  max-width: 720px;  margin: auto;  margin-bottom: 26px; color:#58585a; font-size:20px; line-height:25px; font-family:"proxima_nova_rgregular"; }
-  .leadGen{   background-size: cover;  min-height: 456px;  background: #023754 url(../images/leadgen-blue.jpg) center no-repeat;}
+  .leadGen{     min-height: 456px;  background: #023754 url(../images/leadgen-blue.jpg) center no-repeat; background-size: cover;}
   .leadGen h2{color:#fff;   margin-top: 0px;  padding-top: 93px;  padding-left: 9px; font-size:35px; font-family:"proxima_nova_rgregular";   letter-spacing: -0.5px;
   line-height: 40px;   margin-bottom: 54px} 
-.leadGen form{  padding: 22px 0px 24px 48px;  width:100$; border:3px solid #018acf; margin-left: 7px;
+.leadGen form{  padding: 22px 0px 24px 48px;  width:100%; border:3px solid #018acf; margin-left: 7px;
   max-width: 597px;}  
   
   .leadGen form .form-group label {    color: #fff;   display: block; font-size:22px;   font-family: proxima_novasemibold;}
@@ -182,11 +182,15 @@ Header
 .our-team .team-mate .labelBox .plus{margin-right:5px; width:20px; height:20px; background-position:center;   margin-top: 17px;}
 .claimBoxText{  font-size: 17px;  line-height: 25px;}
 .cSection:nth-child(even) .steps-line.line-left, .cSection:nth-child(odd) .steps-line.line-right{ display:none;}
-.cSection{margin-bottom:20px;}
+.cSection{margin-bottom:20px;} 
+.featuredServiceBox{ margin-bottom:20px;}
 }
 
+@media(width:768px){
+.business-technology .right-wrapper{  height: 420px;}
+}
 
-@media and (max-width:767px)
+@media (max-width:767px)
  {
 .our-team .team-mate .labelBox .title{font-size:23px;}
 .our-team .team-mate .labelBox .plus{margin-right:5px; width:20px; height:20px; background-position:center;   margin-top: 17px;}
@@ -195,8 +199,39 @@ Header
 .cSection{margin-bottom:20px;}
 .trust-us h2{margin-top:40px;}
 .trust-us .btn-square{  margin-bottom: 40px;  display: block;}
+.proven-process .steps-line{ display:none;}
+.inner-page-content .joblist li { text-align:center;}
+.inner-page-content .joblist li a{float:none; display:block; margin:auto;   margin-top: 7px;}
+.breadcrumbs, .breadcrumbs a{  font-size: 15px;}
+.it-consulting-page-heading h2{font-size:39px;}
+.blue-well .firstCol, .blue-well .secondCol, .blue-well .thirdCol{ padding-left:15px;   padding-bottom: 20px;}
+.leadGen h2{  padding-top: 40px;  padding-left: 9px;  font-size: 26px;   margin-bottom: 21px;}
+.leadGen form{ padding:10px; margin-left:0px; }
+.leadGen form .form-group label{ font-size:19px;}
+.business-technology .left-wrapper{ height:auto !important;}
+.business-technology .right-wrapper .right h2{ max-width:80%!important; margin:auto!important;   font-size: 20px!important;   margin-top: 25px!important;}
+.business-technology .right-wrapper .right{width:100% !important;   text-align: center;}
+.business-technology .right-wrapper  .padding-left-0 .padding-left-0{ padding-left:15px !important;}
+.business-technology{ max-height:none !Important; }
+.it-testimonials h2{ font-size:29px;}
+.supportPhone p {  font-size: 22px;}
+.supportPhone .btn-contactus{  margin-top: 11px;  display: block;}
+.greycircuitDesign .blueBg h2{  font-size: 24px;  padding-top: 37px;}
+.greycircuitDesign .blueBg p{  font-size: 17px;line-height: 25px;  padding-bottom: 20px;}
+.greycircuitDesign .blueBg h3{  font-size: 30px;padding-top: 30px;}
+.greycircuitDesign .blueBg .btn-im{  margin-bottom: 31px;   font-size: 23px; min-width:206px;}
+.featuredServiceBox{ margin-bottom:20px;}
+.solutions-page-heading h2{line-height: 45px;}
+.solutions-page-heading h2 small{  display: block;}
+.featuredServiceBox h2{ font-size:27px;}
  }
  
  @media(max-width:540px){
  .team-mate {width:100% !important;}
+ .claimBox{width:100%;}
  }
+ 
+ @media screen and (min-width:1200px){
+.insights-promotion .blog-benefit h2{ font-size:32px !Important;}
+ 
+}
