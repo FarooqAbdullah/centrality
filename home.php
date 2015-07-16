@@ -17,8 +17,8 @@
 <div class="content-wrapper">
     <div class="row">
         <div class="in-it">
-            <h3><?php the_field('in_it_heading'); ?></h3>
-            <p><?php the_field('in_it_heading_slogan'); ?></p>
+            <h3><?php echo get_post_meta(get_the_ID(),'centrality-in-it-heading',true); ?></h3>
+            <p><?php echo get_post_meta(get_the_ID(),'centrality-in-it-heading-slogan',true); ?></p>
             <div class="selection">
                 <div class="select-wrapper clearfix">
                     <div class="s-left"></div>
@@ -26,8 +26,8 @@
                     <div class="s-right"></div>
                 </div>
                 <div class="button-wrapper">
-                    <a class="btn btn-lg i-m" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php the_field('in_it'); ?></a>
-                    <a class="btn btn-lg i-m" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php the_field('not_in_it'); ?></a>
+                    <a class="btn btn-lg i-m" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php echo  get_post_meta(get_the_ID(),'centrality-in-it-button-text',true); ?></a>
+                    <a class="btn btn-lg i-m" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php echo get_post_meta(get_the_ID(),'centrality-not-in-it-button-text',true); ?></a>
                 </div>
             </div>
         </div>
@@ -35,13 +35,13 @@
             <div class="in-it-body-top"></div>
             <div class="in-it-body-content">
                 <div class="in-it-body-left-content">
-                    <img src="<?php the_field('in_it_body_left_image'); ?>" alt=""/>
+                    <img src="<?php echo get_post_meta(get_the_ID(),'centrality-in-it-body-left-image',true); ?>" alt=""/>
                 </div>
                 <div class="in-it-body-center-content">
                     <div class="in-it-body-center-content-wrapper">
-                        <p class="head"><?php the_field('in_it_body_upper'); ?></p>
-                        <h3><?php the_field('get_started_text'); ?></h3>
-                        <p class="company-size"><?php the_field('get_started_slogan'); ?></p>
+                        <p class="head"><?php get_post_meta(get_the_ID(),'centrality-in-it-body-upper-text',true); ?></p>
+                        <h3><?php echo get_post_meta(get_the_ID(),'centrality-get-started-text',true); ?></h3>
+                        <p class="company-size"><?php echo get_post_meta(get_the_ID(),'centrality-slogan-get-started-text',true); ?></p>
                         <div class="radio-buttons-wrapper">
                             <div class="radio-wrapper">
                                 <input type="radio" id="radio-1-1" name="radio-1-set" class="regular-radio" checked /><label for="radio-1-1"></label>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="in-it-body-right-content">
-                    <img src="<?php the_field('in_it_body_right_image'); ?>" alt=""/>
+                    <img src="<?php echo get_post_meta(get_the_ID(),'centrality-in-it-body-right-image',true); ?>" alt=""/>
                 </div>
             </div>
         </div>
@@ -76,29 +76,25 @@
     <?php echo do_shortcode('[_working_with_centrality]'); ?>
     <div class="row mastery-trust-experience-wrapper">
         <div class="container">
-            <h3><?php the_field('mastery_knowledge_experience_heading'); ?></h3>
+            <h3><?php echo get_post_meta(get_the_ID(),'mastery-knowledge-experience-heading',true); ?></h3>
             <div class="years-wrapper row">
                 <?php
-                // check if the repeater field has rows of data
-                if( have_rows('mastery_knowledge_experience_years_mastery') ):
+                $year_experiences = get_post_meta(get_the_ID(),'mke-years-mastery',true);
+                foreach($year_experiences as $year_experience) { ?>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-ms-12">
+                        <img src="<?php echo get_post_meta(get_the_ID(),'mastery-knowledge-experience-year-image',true); ?>"  alt=""/>
+                        <h2><?php echo $year_experience['sub-year']; ?></h2>
+                        <p><?php echo $year_experience['sub-year-description']; ?></p>
+                    </div>
 
-                    // loop through the rows of data
-                    while ( have_rows('mastery_knowledge_experience_years_mastery') ) : the_row();
-                        ?>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-ms-12">
-                            <img src="<?php the_field('mastery_knowledge_experience_years_image'); ?>"  alt=""/>
-                            <h2><?php the_sub_field('sub_year'); ?></h2>
-                            <p><?php the_sub_field('sub_year_description'); ?></p>
-                        </div>
-                    <?php
-
-                    endwhile;
-                endif;
-
+                <?php
+                }
                 ?>
             </div>
             <div class="mastery-trust-experience-more-wrapper">
-                <a href="<?php the_field('mastery_knowledge_experience_button_url'); ?>" class="btn btn-default"><?php the_field('mastery_knowledge_experience_button_text'); ?></a>
+                <a href="<?php echo get_post_meta(get_the_ID(),'mastery-knowledge-experience-button-url',true); ?>" class="btn btn-default">
+                    <?php echo get_post_meta(get_the_ID(),'mastery-knowledge-experience-button-text',true); ?>
+                </a>
             </div>
         </div>
     </div>

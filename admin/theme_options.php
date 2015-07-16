@@ -431,7 +431,7 @@ class Myprefix_Admin {
         $cmb_working_with_centrality_smart->add_field( array(
             'name' => __( 'Upload Smart Image', 'centrality' ),
             'desc' => __( 'Upload Smart Image Here', 'centrality' ),
-            'id'   => 'working-with-centrality-flexible-smart',
+            'id'   => 'working-with-centrality-smart-image',
             'type' => 'file',
             'default' => get_template_directory_uri().'/images/cable.png',
         ) );
@@ -452,6 +452,35 @@ class Myprefix_Admin {
             'id'   => 'working-with-centrality-smart-description',
             'type' => 'text',
             'default' => 'Lorem Ipsum Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labour et dolore magna aliqua.',
+        ) );
+
+        // Set our CMB2 fields
+        $cmb_trusted_companies->add_field( array(
+            'name' => __( 'Heading Text', 'centrality' ),
+            'desc' => __( 'write Trusted Companies Heading Text Here', 'centrality' ),
+            'id'   => 'trusted-companies-heading-text',
+            'type' => 'text',
+            'default' => 'Centrality is Trusted by Companies Around the Country',
+        ) );
+
+        $trusted_com_img = $cmb_trusted_companies->add_field( array(
+            'id'          => 'trusted-companies-img',
+            'type'        => 'group',
+            'description' => __( 'Upload Multiple Comapnies Image Here', 'cmb' ),
+            'options'     => array(
+                'group_title'   => __( 'Trusted Company {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                'add_button'    => __( 'Upload Another Company Image', 'cmb' ),
+                'remove_button' => __( 'Remove Company Image', 'cmb' ),
+                'sortable'      => true, // beta
+            ),
+        ) );
+
+        // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+        $cmb_trusted_companies->add_group_field( $trusted_com_img, array(
+            'name' => 'Trusted Companies Images',
+            'id'   => 'trusted-comapnies-single-image',
+            'type' => 'file',
+
         ) );
 
     }

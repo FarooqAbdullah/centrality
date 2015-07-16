@@ -609,10 +609,10 @@ $cmb->add_group_field($group_field_id, array(
         'add_button'    => __( 'Add Another featured solution', 'cmb' ),
         'remove_button' => __( 'Remove Featured Solution', 'cmb' ),
         'sortable'      => true, // beta
-    ),
-) );
+        ),
+    ) );
 
-// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
 	$bx_sol_feat->add_group_field( $feat_sol, array(
 		'name' => 'Featured Solution Title',
 		'default'=>'Managed Cloud Services',
@@ -650,6 +650,248 @@ $cmb->add_group_field($group_field_id, array(
 		'type' => 'text',
 		
 	) );
-	
+
+    $insight_promotion = new_cmb2_box( array(
+        'id'            => 'promotion-heading',
+        'title'         => __( 'Promotion', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'home.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $insight_promotion->add_field( array(
+        'name'       => __( 'Heading', 'cmb2' ),
+        'desc'       => __( 'Industry , Insights & Promotion Heading', 'cmb2' ),
+        'id'         => 'industry_insight_promotion_heading',
+        'type'       => 'text',
+        'default'    =>  'Industry Insights & Promotions',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $centrality_service_main = new_cmb2_box( array(
+        'id'            => 'centrality-service-heading',
+        'title'         => __( 'Centrality Service', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'home.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $centrality_service_main->add_field( array(
+        'name'       => __( 'Heading', 'cmb2' ),
+        'desc'       => __( 'Centrality Service Heading', 'cmb2' ),
+        'id'         => 'centrality-service-heading',
+        'type'       => 'text',
+        'default'    =>  'Centrality Service',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+
+    $in_it = new_cmb2_box( array(
+        'id'            => 'centrality-in-it',
+        'title'         => __( 'in IT', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'home.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Heading', 'cmb2' ),
+        'desc'       => __( 'Write in IT Heading Here', 'cmb2' ),
+        'id'         => 'centrality-in-it-heading',
+        'type'       => 'text',
+        'default'    =>  'Finally, IT is easy with Centrality',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Heading Slogan', 'cmb2' ),
+        'desc'       => __( 'Write in IT Heading Slogan Here', 'cmb2' ),
+        'id'         => 'centrality-in-it-heading-slogan',
+        'type'       => 'text',
+        'default'    =>  'Whether you are a tech enthusiast or looking to fake it, we are here to help you.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Button Text', 'cmb2' ),
+        'desc'       => __( 'Write in IT Button Text Here', 'cmb2' ),
+        'id'         => 'centrality-in-it-button-text',
+        'type'       => 'text',
+        'default'    =>  'I\'m in IT.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'not in IT Button Text', 'cmb2' ),
+        'desc'       => __( 'Write not in IT Button Text Here', 'cmb2' ),
+        'id'         => 'centrality-not-in-it-button-text',
+        'type'       => 'text',
+        'default'    =>  'I\'m not in IT.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Body Upper Text', 'cmb2' ),
+        'desc'       => __( 'Write in IT body upper text here', 'cmb2' ),
+        'id'         => 'centrality-in-it-body-upper-text',
+        'type'       => 'text',
+        'default'    =>  'We understand your business is unique, so we craft custom IT Solutions to fit your needs.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'Get Started Text', 'cmb2' ),
+        'desc'       => __( 'Write get started text here', 'cmb2' ),
+        'id'         => 'centrality-get-started-text',
+        'type'       => 'text',
+        'default'    =>  'Let\'s get started',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'Select Comapny Text or Slogan of Get Started Text', 'cmb2' ),
+        'desc'       => __( 'Write slogan of get started text here', 'cmb2' ),
+        'id'         => 'centrality-slogan-get-started-text',
+        'type'       => 'text',
+        'default'    =>  'Select the size of your company',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Body Left Image', 'cmb2' ),
+        'desc'       => __( 'Upload in IT body left image here', 'cmb2' ),
+        'id'         => 'centrality-in-it-body-left-image',
+        'type'       => 'file',
+        'default'    =>  get_template_directory_uri().'/images/cable-left.png',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $in_it->add_field( array(
+        'name'       => __( 'in IT Body Right Image', 'cmb2' ),
+        'desc'       => __( 'Upload in IT body right image here', 'cmb2' ),
+        'id'         => 'centrality-in-it-body-right-image',
+        'type'       => 'file',
+        'default'    =>  get_template_directory_uri().'/images/cable-right.png',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $mastery_knowledge_experience = new_cmb2_box( array(
+        'id'            => 'mastery_knowledge_experience',
+        'title'         => __( 'Mastery, Knowledge, Experience', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'home.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $mastery_knowledge_experience->add_field( array(
+        'name'       => __( 'Mastery Knowledge Experience Heading', 'cmb2' ),
+        'desc'       => __( 'Write Mastery Knowledge Experience Heading Here', 'cmb2' ),
+        'id'         => 'mastery-knowledge-experience-heading',
+        'type'       => 'text',
+        'default'    =>  'Mastery Thourgh Knowledge, Trust From Experience',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $years_mastery = $mastery_knowledge_experience->add_field( array(
+        'id'          => 'mke-years-mastery',
+        'type'        => 'group',
+        'description' => __( 'Add Experience Here', 'cmb' ),
+        'options'     => array(
+            'group_title'   => __( 'Experience {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'    => __( 'Add another experience here', 'cmb' ),
+            'remove_button' => __( 'Remove Experience', 'cmb' ),
+            'sortable'      => true, // beta
+        ),
+    ) );
+
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $mastery_knowledge_experience->add_group_field( $years_mastery, array(
+        'name' => 'Year',
+        'id'   => 'sub-year',
+        'type' => 'text',
+
+    ) );
+
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $mastery_knowledge_experience->add_group_field( $years_mastery, array(
+        'name' => 'Descriprion',
+        'id'   => 'sub-year-description',
+        'type' => 'text',
+
+    ) );
+
+    $mastery_knowledge_experience->add_field( array(
+        'name'       => __( 'Mastery Knowledge Experience Year\'s image', 'cmb2' ),
+        'desc'       => __( 'Upload Mastery Knowledge Experience Year\'s image Here', 'cmb2' ),
+        'id'         => 'mastery-knowledge-experience-year-image',
+        'type'       => 'file',
+        'default'    =>  get_template_directory_uri().'/images/number-circle-2.png',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $mastery_knowledge_experience->add_field( array(
+        'name'       => __( 'Mastery Knowledge Experience Button Text', 'cmb2' ),
+        'desc'       => __( 'Write Mastery Knowledge Experience Button Text Here', 'cmb2' ),
+        'id'         => 'mastery-knowledge-experience-button-text',
+        'type'       => 'text',
+        'default'    =>  'Learn More',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $mastery_knowledge_experience->add_field( array(
+        'name'       => __( 'Mastery Knowledge Experience Button URL', 'cmb2' ),
+        'desc'       => __( 'Write Mastery Knowledge Experience Button URL Here', 'cmb2' ),
+        'id'         => 'mastery-knowledge-experience-button-url',
+        'type'       => 'text',
+        'default'    =>  '#',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $blog_main_page = new_cmb2_box( array(
+        'id'            => 'centrality-blog-main-page',
+        'title'         => __( 'Blog Main Page', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-blog.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $blog_main_page->add_field( array(
+        'name'       => __( 'Blog Main Heading', 'cmb2' ),
+        'desc'       => __( 'Write Blog Main Heading here', 'cmb2' ),
+        'id'         => 'blog-main-heading',
+        'type'       => 'text',
+        'default'    =>  'The Centrality Source',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $blog_main_page->add_field( array(
+        'name'       => __( 'Blog Main Heading Slogan', 'cmb2' ),
+        'desc'       => __( 'Write Blog Main Heading Slogan here', 'cmb2' ),
+        'id'         => 'blog-main-heading-slogan',
+        'type'       => 'text',
+        'default'    =>  'What Information Technology Means to you',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
 
 }
