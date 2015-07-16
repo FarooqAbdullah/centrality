@@ -584,6 +584,9 @@
         height: 390px;
         background-size: 100% 100%;
     }
+    .employment-page-sidebar .sidebarInside {
+        float: none;
+    }
 
     /***************************
         Brand Change css Start
@@ -921,6 +924,9 @@
         height: 350px;
         background-size: 100% 100%;
     }
+    .employment-page-sidebar .sidebarInside {
+        float: none;
+    }
     /***************************
         Content Css End
     ***************************/
@@ -1159,6 +1165,9 @@
     }
     .content-wrapper .in-it .selection .select-wrapper {
         width: 200px;
+    }
+    .employment-page-sidebar .sidebarInside {
+        float: none;
     }
     /***************************
         Content Css End

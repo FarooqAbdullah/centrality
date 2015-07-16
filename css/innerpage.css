@@ -10,7 +10,7 @@ Header
 .employment-page-sidebar h2.widgettitle{  margin-top: 29px;  margin-bottom: 9px;padding: 31px 57px;background:#018acf; color:#fff; font-size:22px; font-family:"proxima_nova_rgregular"; text-align:center;}
 .employment-page-sidebar .sidebarInside{ max-width:400px; float:right;}
 .inner-page-content li{  margin-bottom: 21px; list-style-image:url(../images/list-image.jpg); list-style-position:outside;   padding-left: 15px;  margin-left: 15px;}
-.employment-page-sidebar img{margin-bottom: 34px;}
+.employment-page-sidebar img{margin-bottom: 34px; max-width:100%;}
 .inner-page-content ul{padding-left: 5px;   margin-top: 36px;}
 .employment-page-sidebar  {margin-top:0px;}
 .inner-page-content{  padding-top: 71px;   padding-bottom: 143px;}
