@@ -118,8 +118,8 @@ From experience, we know every business relies heavily on technology in order to
 	
 	</div>
 	
-<div class="content-wrapper">
-	<?php echo do_shortcode('[_industry_insights_promotions]'); ?>
+<div class="content-wrapper"> 
+	<?php echo do_shortcode('[_industry_insights_promotions heading="Industry Insights & Promotions"]'); ?>
 
 	 </div>
 
