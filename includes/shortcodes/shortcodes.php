@@ -318,7 +318,7 @@ function _feature_template($atts, $content = null) {
     $result = '<div class="row uniquely-qualified">';
     $result .= '<div class="container">';
     $result .= '<h2>'.$heading.'</h2>';
-    $result .= '<div class="col-lg-6 block1"><div class="ribbon"></div>';
+    $result .= '<div class="col-lg-6 col-md-6 block1"><div class="ribbon"></div>';
     $result .= '<ul>';
     $featured_values = get_post_meta(get_the_ID(),'featured-template', true);
     $size = ceil(sizeof($featured_values)/2);
@@ -328,7 +328,7 @@ function _feature_template($atts, $content = null) {
             if($loo_num == $size) {
                 $result .= '</ul>';
                 $result .= '</div>';
-                $result .= '<div class="col-lg-6 block2"><div class="ribbon"></div>';
+                $result .= '<div class="col-lg-6 col-md-6 block2"><div class="ribbon"></div>';
                 $result .= '<ul>';
             }
             $result .= '<li>'.$featured_value['_feature'].'</li>';

@@ -188,6 +188,7 @@ Header
 
 @media(width:768px){
 .business-technology .right-wrapper{  height: 420px;}
+.business-technology .right-wrapper .right{ width:100%;}
 }
 
 @media (max-width:767px)
@@ -231,7 +232,12 @@ Header
  .claimBox{width:100%;}
  }
  
- @media screen and (min-width:1200px){
-.insights-promotion .blog-benefit h2{ font-size:32px !Important;}
+ @media screen and (min-width:992px){
+.insights-promotion .blog-benefit h2{ font-size:32px !Important;    margin-top: 33px !important;}
  
 }
+@media (min-width:992px) and (max-width:1200px){
+.proven-process .steps-line{ width:55px;}
+}
+
+ 

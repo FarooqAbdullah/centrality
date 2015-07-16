@@ -813,7 +813,7 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     margin-top: 50px;
 }
 .content-wrapper .working-with-centrality-wrapper .working-steps-choices .steps-choices .choice-img-wrapper {
-    border: 2px solid #029ae6;
+    border: 2px solid #029ae6;   height: 100px;   padding: 28px 29px;
     border-radius: 100%;
     padding: 25px;
     width: 100px;
@@ -1531,7 +1531,7 @@ footer form .form-group button {
     border-color: #018acf;
     border-radius: 0;
     margin-left: -3px;
-    margin-top: -4px;
+    margin-top: -4px;   height: 33px;
 }
 footer form .form-group button:hover {
     background-color:#018acf;
@@ -1576,7 +1576,7 @@ footer .social .soc-seprator {
     height: 2px;
     background-color: #018acf;
     float: left;
-    margin-top: 7%;
+    margin-top: 8%;
 }
 footer .copy-right {
     clear: both;

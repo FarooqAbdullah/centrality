@@ -36,7 +36,7 @@ $btnText = get_post_meta( get_the_ID(), 'why_centrality_btnText', true );
         </div>
     </div>
 
-
+<!--
     <div class="row our-team">
         <h2> Meet Our Team</h2>
 
@@ -52,7 +52,7 @@ $btnText = get_post_meta( get_the_ID(), 'why_centrality_btnText', true );
                     <div class="info"><?php echo $teamMember['introduction']; ?>.</div>
                 </div>
             </div>
-            <!--//First Team Box-->
+          
 
             <?php
         } ?>
@@ -64,21 +64,11 @@ $btnText = get_post_meta( get_the_ID(), 'why_centrality_btnText', true );
 
 
     </div>
-
+-->
 <?php $heading = get_post_meta( get_the_ID(), 'why_centrality_qualificationHeading', true );
 $b1=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText1', true );
 $b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>
-    <!--<div class="row uniquely-qualified">
-        <div class="container">
-            <h2><?php /*echo $heading; */?></h2>
-            <div class="col-lg-6 block1"><div class="ribbon"></div>
-                <?php /*echo $b1; */?>
-            </div>
-            <div class="col-lg-6 block2"><div class="ribbon"></div>
-                <?php /*echo $b2; */?>
-            </div>
-        </div>
-    </div>-->
+   
         <?php echo do_shortcode('[_feature_template heading="'.$heading.'"]'); ?>
 <?php $heading = get_post_meta( get_the_ID(), 'why_centrality_provenTextHeading', true );
 $box1Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox1', true );
