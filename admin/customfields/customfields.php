@@ -554,8 +554,99 @@ $cmb->add_group_field($group_field_id, array(
         'url' => false,
     ),
 ) );
+
+//Meta fields for Story page
+
+$story_obj = new_cmb2_box( array(
+        'id'            => 'page_elements3',
+        'title'         => __( 'Page Element', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-ourstory.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+	
+
+	$story_obj->add_field( array(
+        'name'       => __( 'Page Banner Main Heading Title', 'cmb2' ),
+        'desc'       => __( 'Page Banner Main Heading Title', 'cmb2' ),
+        'id'         => 'ourStroy_pageTitle1',
+        'type'       => 'text',
+		'default'=> 'Our Story',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Page Banner Main Slogan', 'cmb2' ),
+        'desc'       => __( 'Page Banner Main Slogan', 'cmb2' ),
+        'id'         => 'ourStroy_pageSlogan',
+        'type'       => 'text',
+		'default'=> 'We are super interesting.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Page Banner Button Text', 'cmb2' ),
+        'desc'       => __( 'Page Banner Button Text', 'cmb2' ),
+        'id'         => 'btnText',
+        'type'       => 'text',
+		'default'=> 'Request Service',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Page Banner Button Url', 'cmb2' ),
+        'desc'       => __( 'Page Banner Button Url', 'cmb2' ),
+        'id'         => 'btnUrl',
+        'type'       => 'text',
+		'default'=> '#',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Block 1 Heading', 'cmb2' ),
+        'desc'       => __( 'Block 1 Heading', 'cmb2' ),
+        'id'         => 'block1_heading',
+        'type'       => 'text',
+		'default'=> 'We Strive to Provide Long Term, Mutually Beneficial Relationships',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Block 1 Text', 'cmb2' ),
+        'desc'       => __( 'Block 1 Text', 'cmb2' ),
+        'id'         => 'block1_text',
+        'type'       => 'textarea',
+		'default'=> 'For customers who are looking for a technology partner, Centrality Business Technologies provides exceptional value by utilizing seamless integrated technology, extensive knowledge and unparalleled expertise to provide tailored business technology management for our clients.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Our Vision Text', 'cmb2' ),
+        'desc'       => __( 'Our Vision Text', 'cmb2' ),
+        'id'         => 'ourvision',
+        'type'       => 'textarea',
+		'default'=> 'Centrality Business Technologies will endeavor to be the most widely recognized and trusted name as the undisputed leader in the design, installation, and support of business technology systems using only the finest personnel, materials, and equipment.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$story_obj->add_field( array(
+        'name'       => __( 'Our Mission Text', 'cmb2' ),
+        'desc'       => __( 'Our Mission Text', 'cmb2' ),
+        'id'         => 'ourmission',
+        'type'       => 'textarea',
+		'default'=> 'We make customer satisfaction our number one priority by being a vital business partner in finding tailored solutions for our customers’ technology needs – always providing exceptional value at competitive prices.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+
     // Regular text field
 
+	
+	
     // Meta Fields for Featured Solution Page.
 
     $bx_featured_sol = new_cmb2_box( array(
