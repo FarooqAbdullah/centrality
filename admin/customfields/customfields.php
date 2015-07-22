@@ -283,6 +283,214 @@ function WhyCentrality_metaBox() {
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
 	
+	/*Our Team Page*/
+	$team_obj = new_cmb2_box( array(
+        'id'            => 'page_elements2',
+        'title'         => __( 'Page Element', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-ourteam.php' ),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Banner Main Heading Title', 'cmb2' ),
+        'desc'       => __( 'Page Banner Main Heading Title', 'cmb2' ),
+        'id'         => 'ourTeam_pageTitle1',
+        'type'       => 'text',
+		'default'=> 'Meet our Team',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Banner Main Slogan', 'cmb2' ),
+        'desc'       => __( 'Page Banner Main Slogan', 'cmb2' ),
+        'id'         => 'ourTeam_pageSlogan',
+        'type'       => 'text',
+		'default'=> 'We know what we’re doing.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Banner Button Text', 'cmb2' ),
+        'desc'       => __( 'Page Banner Button Text', 'cmb2' ),
+        'id'         => 'btnText',
+        'type'       => 'text',
+		'default'=> 'Request Service',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Banner Button Url', 'cmb2' ),
+        'desc'       => __( 'Page Banner Button Url', 'cmb2' ),
+        'id'         => 'btnUrl',
+        'type'       => 'text',
+		'default'=> '#',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Heading Title', 'cmb2' ),
+        'desc'       => __( 'Page Heading Title', 'cmb2' ),
+        'id'         => 'ourTeam_pageTitle',
+        'type'       => 'text',
+		'default'=> 'Meet Our Team',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Page Introduction', 'cmb2' ),
+        'desc'       => __( 'Page Introduction', 'cmb2' ),
+        'id'         => 'ourTeam_intro',
+        'type'       => 'textarea',
+		'default'=> 'For customers who are looking for a technology partner, Centrality Business Technologies provides exceptional value by utilizing seamless integrated technology, extensive knowledge and unparalleled expertise to provide tailored business technology management for our clients.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Green Box Text', 'cmb2' ),
+        'desc'       => __( 'Add Text for green box, to be shown in middle of team member boxes', 'cmb2' ),
+        'id'         => 'greenBox',
+        'type'       => 'textarea_small',
+		'default'=> 'Centrality maintains dual certifications in Microsoft and Cisco.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	/*Call to Action*/
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Call to Action Text for job Application', 'cmb2' ),
+        'desc'       => __( 'Call to Action Text for job Application', 'cmb2' ),
+        'id'         => 'ctaText',
+        'type'       => 'textarea_small',
+		'default'=> 'Interested in Joining our Team?',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Call to Action Button Text for job Application', 'cmb2' ),
+        'desc'       => __( 'Call to Action Button Text for job Application', 'cmb2' ),
+        'id'         => 'ctaBtn',
+        'type'       => 'text',
+		'default'=> 'Apply Today',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Call to Action Button URL for job Application', 'cmb2' ),
+        'desc'       => __( 'Call to Action Button URL for job Application', 'cmb2' ),
+        'id'         => 'ctaUrl',
+        'type'       => 'text',
+		'default'=> '#',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	
+	/*Boxes*/
+	
+	
+	 $team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box Heading', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box Heading', 'cmb2' ),
+        'id'         => $prefix . 'provenTextHeading',
+        'type'       => 'textarea_small',
+		'default'=>'A Proven Process for Successful Solutions',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 1 Title', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 1 Title', 'cmb2' ),
+        'id'         => $prefix . 'prBox1',
+        'type'       => 'text',
+		'default'=>'Listen',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 1 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 1 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox1_title',
+        'type'       => 'wysiwyg',
+		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 2 Title', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 2 Title', 'cmb2' ),
+        'id'         => $prefix . 'prBox2',
+        'type'       => 'text',
+		'default'=>'Analyze',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 2 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 2 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox2_title',
+        'type'       => 'wysiwyg',
+		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 3 Title', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 3 Title', 'cmb2' ),
+        'id'         => $prefix . 'prBox3',
+        'type'       => 'text',
+		'default'=>'Plan',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 3 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 3 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox3_title',
+        'type'       => 'wysiwyg',
+		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 4 Title', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 4 Title', 'cmb2' ),
+        'id'         => $prefix . 'prBox4',
+        'type'       => 'text',
+		'default'=>'Execute',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box 4 Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box 4 Text', 'cmb2' ),
+        'id'         => $prefix . 'prBox4_title',
+        'type'       => 'wysiwyg',
+		'default'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box Button Text', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box Button Text', 'cmb2' ),
+        'id'         => $prefix . 'discoverbtn',
+        'type'       => 'text',
+		'default'=>'Discover More',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
+	
+	
+	$team_obj->add_field( array(
+        'name'       => __( 'Proven Process Box Button URL', 'cmb2' ),
+        'desc'       => __( 'Proven Process Box Button URL', 'cmb2' ),
+        'id'         => $prefix . 'discoverbtnurl',
+        'type'       => 'text',
+		'default'=>'#',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	
 	
 	
 	/*team*/
@@ -290,7 +498,7 @@ function WhyCentrality_metaBox() {
         'id'            => 'team_metabox',
         'title'         => __( 'Team Members', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type
-		'show_on' => array( 'key' => 'page-template', 'value' => 'page-whycentrality.php' ),
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-ourteam.php' ),
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
@@ -315,6 +523,7 @@ $cmb->add_group_field( $group_field_id, array(
     'name' => 'Team Member Name',
     'id'   => 'name',
     'type' => 'text',
+	'default'=>'Noah Priddy'
     // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 ) );
 
@@ -322,6 +531,7 @@ $cmb->add_group_field( $group_field_id, array(
     'name' => 'Team Member Position',
     'id'   => 'position',
     'type' => 'text',
+	'default'=>'President'
     // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 ) );
 
@@ -330,6 +540,7 @@ $cmb->add_group_field( $group_field_id, array(
     'description' => 'Write a short introduction',
     'id'   => 'introduction',
     'type' => 'textarea_small',
+	'default'=>'vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magn.'
 ) );
 
 $cmb->add_group_field($group_field_id, array(
@@ -337,6 +548,7 @@ $cmb->add_group_field($group_field_id, array(
     'desc'    => 'Team Member headshot.',
     'id'      => 'headshot',
     'type'    => 'file',
+	'default'=> 'http://localhost:8080/centrality/wp-content/uploads/2015/01/headshot.jpg',
     // Optionally hide the text input for the url:
     'options' => array(
         'url' => false,
