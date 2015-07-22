@@ -31,6 +31,7 @@ get_header();the_post();
         $cloud_service_button_text = get_post_meta(get_the_ID(),'centrality-cloud-service-button-text',true);
         $cloud_service_button_url = get_post_meta(get_the_ID(),'centrality-cloud-service-button-url',true);
         $cloud_service_right_image = get_post_meta(get_the_ID(),'centrality-cloud-service-right-image',true);
+        $cloud_service_video_embed = esc_url(get_post_meta(get_the_ID(),'centrality-cloud-service-video-embed',true));
         if(empty($cloud_service_right_image)) {
            $cloud_service_right_image = get_template_directory_uri()."/images/featured-solution-cloud.png";
         }
@@ -46,7 +47,14 @@ get_header();the_post();
             </div>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 right_wrapper padding-left-0 padding-right-0 video">
-            <img src="<?php echo $cloud_service_right_image; ?>"  alt=""/>
+            <?php
+                if(strtolower(get_the_title()) == "cabling" && !empty($cloud_service_video_embed)) {
+                    echo wp_oembed_get($cloud_service_video_embed);
+                }
+            else {
+                echo "<img src='".$cloud_service_right_image."'  alt=''/>";
+            }
+            ?>
         </div>
     </div>
     <?php $f_head = get_post_meta(get_the_ID(),'_feature_heading',true);?>

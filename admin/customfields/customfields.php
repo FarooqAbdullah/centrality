@@ -655,6 +655,13 @@ $cmb->add_group_field($group_field_id, array(
         'type' => 'file'
     ) );
 
+    $cloud_service_solution->add_field( array(
+        'name' => __( 'Put Your Video Embed', '_centrality' ),
+        'desc' => __( 'Put Your Video Embed', '_centrality' ),
+        'id'   => 'centrality-cloud-service-video-embed',
+        'type' => 'oembed'
+    ) );
+
     $business_technology = new_cmb2_box( array(
         'id'            => '_business_technology',
         'title'         => __( 'Business Technology', 'cmb2' ),
