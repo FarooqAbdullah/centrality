@@ -813,9 +813,10 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     margin-top: 50px;
 }
 .content-wrapper .working-with-centrality-wrapper .working-steps-choices .steps-choices .choice-img-wrapper {
-    border: 2px solid #029ae6;   height: 100px;   padding: 28px 29px;
+    border: 2px solid #029ae6;
+    height: 100px;
+    padding: 28px 29px;
     border-radius: 100%;
-    padding: 25px;
     width: 100px;
     margin-left: auto;
     margin-right: auto;

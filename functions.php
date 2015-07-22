@@ -137,8 +137,8 @@ add_action( 'admin_enqueue_scripts', 'admin_styles_scripts');
 /********************************
     Function to fetch Posts
  ********************************/
-function fetch_posts($category_name, $orderby = '', $order = '', $posts_per_page = -1){
-    $arguments = array('category_name' => $category_name, 'orderby' => $orderby, 'order' => $order , 'posts_per_page' => $posts_per_page);
+function fetch_posts($category_name=null, $orderby = '', $order = '', $posts_per_page = -1, $post_id = null){
+    $arguments = array('category_name' => $category_name, 'orderby' => $orderby, 'order' => $order , 'posts_per_page' => $posts_per_page, 'p' => $post_id );
     $query = new WP_Query($arguments);
     return $query;
 }

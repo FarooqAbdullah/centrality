@@ -37,47 +37,146 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
 
          <?php
          $featured_solution_request = get_post_meta(get_the_ID(),'choose-featured-posts',true);
+         $post1_id = get_post_id_from_title($featured_solution_request[0]);
+         $post2_id = get_post_id_from_title($featured_solution_request[1]);
+         $post3_id = get_post_id_from_title($featured_solution_request[2]);
+         $post4_id = get_post_id_from_title($featured_solution_request[3]);
 ?>
 		 <div class="col-lg-3 col-md-3 col-sm-6">
 			<div class="featuredServiceBox">
-			<img src="<?php echo get_template_directory_uri() ?>/images/cloudicon.jpg" /> 
-			<h2>Managed Cloud Services</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-			<a href="#" class="btn-square blue-border">LEARN MORE</a>
-			<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture1.jpg" /> </div>
+                <?php
+                $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post1_id);
+                while ( $fetch_result->have_posts() ) {
+                $fetch_result->the_post();
+                   $f_title_imge =  get_field($post1_id,'featured_solution_post_title_image',true);
+                    if(empty($f_title_imge)) {
+                        $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
+                    }
+                    $f_button_text = get_field($post1_id,'featured_solution_button_text_button_text',true);
+                    if(empty($f_button_text)) {
+                        $f_button_text = "Learn More";
+                    }
+                    $f_bottom_image = get_field($post1_id,'featured_solution_footer_image',true);
+                    if(empty($f_bottom_image)) {
+                        $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
+                    }
+                ?>
+                    <img src="<?php echo $f_title_imge; ?>" />
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo str_replace('<p>','',get_the_content()); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-square blue-border"><?php echo $f_button_text; ?></a>
+                    <div class="clear-fix texture1 texture"><img src="<?php echo $f_bottom_image;  ?>" /> </div>
+                <?php
+                }
+
+                // Restore original Post Data
+                wp_reset_postdata();
+                ?>
+
 			</div>
 		 </div>
 		 <!--Col-->
 		 
 		 <div class="col-lg-3 col-md-3 col-sm-6">
 			<div class="featuredServiceBox">
-			<img src="<?php echo get_template_directory_uri() ?>/images/bandaicon.jpg" /> 
-			<h2>On Premise IT Support</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-			<a href="#" class="btn-square blue-border">LEARN MORE</a>
-			<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture2.jpg" /> </div>
+
+                <?php
+                $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post2_id);
+                while ( $fetch_result->have_posts() ) {
+                    $fetch_result->the_post();
+                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    if(empty($f_title_imge)) {
+                        $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
+                    }
+                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    if(empty($f_button_text)) {
+                        $f_button_text = "Learn More";
+                    }
+                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    if(empty($f_bottom_image)) {
+                        $f_bottom_image = get_template_directory_uri()."/images/texture2.jpg";
+                    }
+                    ?>
+                    <img src="<?php echo $f_title_imge; ?>" />
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo str_replace('<p>','',get_the_content()); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-square blue-border"><?php echo $f_button_text; ?></a>
+                    <div class="clear-fix texture1 texture"><img src="<?php echo $f_bottom_image;  ?>" /> </div>
+                <?php
+                }
+                // Restore original Post Data
+                wp_reset_postdata();
+                ?>
 			</div>
 		 </div>
 		 <!--Col-->
 		 
 		 <div class="col-lg-3 col-md-3 col-sm-6">
 			<div class="featuredServiceBox">
-			<img src="<?php echo get_template_directory_uri() ?>/images/phoneicon.jpg" /> 
-			<h2>Voice Communications</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-			<a href="#" class="btn-square blue-border">LEARN MORE</a>
-			<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture3.jpg" /> </div>
+
+                <?php
+                $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post3_id);
+                while ( $fetch_result->have_posts() ) {
+                    $fetch_result->the_post();
+                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    if(empty($f_title_imge)) {
+                        $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
+                    }
+                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    if(empty($f_button_text)) {
+                        $f_button_text = "Learn More";
+                    }
+                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    if(empty($f_bottom_image)) {
+                        $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
+                    }
+                    ?>
+                    <img src="<?php echo $f_title_imge; ?>" />
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo str_replace('<p>','',get_the_content()); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-square blue-border"><?php echo $f_button_text; ?></a>
+                    <div class="clear-fix texture1 texture"><img src="<?php echo $f_bottom_image;  ?>" /> </div>
+                <?php
+                }
+
+                // Restore original Post Data
+                wp_reset_postdata();
+                ?>
 			</div>
 		 </div>
 		 <!--Col-->
 		 
 		 <div class="col-lg-3 col-md-3 col-sm-6">
 			<div class="featuredServiceBox last">
-			<img src="<?php echo get_template_directory_uri() ?>/images/plusicon.jpg" /> 
-			<h2>Business Continuity/ Disaster Recovery</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-			<a href="#" class="btn-square blue-border">LEARN MORE</a>
-			<div class="clear-fix texture1 texture"><img src="<?php echo get_template_directory_uri() ?>/images/texture4.jpg" /> </div>
+
+                <?php
+                $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post4_id);
+                while ( $fetch_result->have_posts() ) {
+                    $fetch_result->the_post();
+                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    if(empty($f_title_imge)) {
+                        $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
+                    }
+                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    if(empty($f_button_text)) {
+                        $f_button_text = "Learn More";
+                    }
+                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    if(empty($f_bottom_image)) {
+                        $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
+                    }
+                    ?>
+                    <img src="<?php echo $f_title_imge; ?>" />
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo str_replace('<p>','',get_the_content()); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-square blue-border"><?php echo $f_button_text; ?></a>
+                    <div class="clear-fix texture1 texture"><img src="<?php echo $f_bottom_image;  ?>" /> </div>
+                <?php
+                }
+
+                // Restore original Post Data
+                wp_reset_postdata();
+                ?>
 			</div>
 		 </div>
 	</div>
