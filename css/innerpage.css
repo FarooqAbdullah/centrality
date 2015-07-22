@@ -45,7 +45,7 @@ Header
 .our-team .team-mate:hover  .title, .our-team .team-mate:hover  .position, .our-team .team-mate:hover  .info{ transition:linear all 0.2s; color:#fff; opacity:1; display:block; }
 .our-team .team-mate  .title, .our-team .team-mate  .position, .our-team .team-mate  .info{ transition:linear all 0.2s; }
 .our-team .team-mate:hover  .position{border-bottom:1px solid #fff;}
-.claimBox{ background:#018acf; color: #fff;  border-bottom: 2px solid #cccccc;    display: table;  height: 100%; }
+.claimBox{ background:#799a3d; color: #fff;  border-bottom: 2px solid #cccccc;    display: table;  height: 100%; }
 .claimBoxText{font-size:33px; line-height:44px; font-size: 33px;  line-height: 44px;   /*padding: 89px 36px;*/ display:table-cell; vertical-align:middle;}
 .uniquely-qualified{   padding-bottom: 62px; text-align:center;  color:#58585a; font-size:21px; font-family:"proxima_nova_rgregular"; }
 .uniquely-qualified h2{  color:#018acf; font-size:36px;font-family:"proxima_nova_rgregular";  margin-top: 43px;  margin-bottom: 60px; }
@@ -169,6 +169,14 @@ Header
   .greycircuitDesign .blueBg  p.second{font-size: 18px;   background-image: none !important;
   padding-bottom: 32px;
 }
+.applyNow{background:#006298; color:#fff; text-align:center;   min-height: 200px;  padding-bottom: 61px;}
+.applyNow h2{font-size:42px; font-family:"proxima_nova_rgregular";   padding-top: 22px;  margin-bottom: 47px;}
+.applyNow a.btn-square{ color:#fff; font-size:17px;  font-family: 'proxima_nova_rgbold'; text-transform:uppercase; border:2px solid #fff;  padding: 12px 40px; }
+.our-team h2{ font-size:36px !important;   padding-bottom: 25px !important;   margin-bottom: 40px; !important}
+p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;
+  margin: auto;  text-align: center; padding-bottom:40px;   line-height: 27px}
+
+
 @media(min-width:768px){.row-minus{margin-left:-15px; margin-right:-15px;}}
 
 .header-wrapper .btn-square:hover ,
