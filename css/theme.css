@@ -275,7 +275,19 @@ header .request-service-form form > div textarea {
 .dropdown.solution.open {
     position: static;
 }
+.dropdown.why-centrality.open {
+    position: static;
+}
 .logo-right-wrapper ul.nav li.dropdown.solution .dropdown-menu.solutions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 85px;
+    width: 100%;
+    display: none;
+    background-color:rgba(242,247,250,0.9);
+}
+.logo-right-wrapper ul.nav li.dropdown.why-centrality .dropdown-menu.why-centrality {
     position: absolute;
     left: 0;
     right: 0;
@@ -406,6 +418,29 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     display: inline-block;
     max-width: 50%;
     vertical-align: text-top;
+}
+.dropdown.why-centrality .solution-dropdown-wrapper {
+    height: 30px;
+}
+.dropdown.why-centrality .arrow-up {
+    border-bottom:10px solid #006298;
+    right: 34%;
+}
+.dropdown.why-centrality .container ul {
+    text-align: right;
+}
+.dropdown.why-centrality .container ul li a {
+    color: #006298;
+}
+.dropdown.why-centrality .container ul li ul li a {
+    color: #006298;
+}
+.dropdown.why-centrality .container ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dropdown.why-centrality .container ul li a:hover {
+    text-decoration: none;
 }
 /*******************************************
         Header Css End

@@ -195,6 +195,47 @@ $ulClass = "";
             </li>
         <?php
         }
+        elseif($val->title == "Why Centrality"){
+            ?>
+            <li class="dropdown why-centrality">
+                <a href="<?php echo $val->url; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+                    <?php echo $val->title; ?>
+                </a>
+                <div class="dropdown-menu why-centrality">
+                    <div class="arrow-up"></div>
+                    <div class="solution-dropdown-wrapper row">
+                        <div class="search-head">
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row menu-links">
+                            <ul>
+                            <?php
+                            $w_c_inner_menu = wp_get_nav_menu_items("why-centrality-inner-menu");
+//                            var_dump($w_c_inner_menu);
+                            $inner_menu_loop_num = 1;
+                            foreach ( (array) $w_c_inner_menu as $inner_key => $inner_val ) {
+                                $title = $inner_val->title;
+                                $url = $inner_val->url;
+                                $menu_wrapper_class = strtolower(str_replace(' ','-',$title));
+                                $menu_wrapper_class_f = $menu_wrapper_class."-wrapper";
+                                ?>
+
+                                        <li>
+                                            <a href="<?php echo $url; ?>"><?php echo $title; ?></a>
+                                        </li>
+
+                            <?php
+                            }
+                            ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <?php
+        }
         else {
             ?>
             <li>

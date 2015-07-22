@@ -40,6 +40,9 @@
     .solutions .arrow-up {
         right: 26%;
     }
+    .dropdown.why-centrality .arrow-up {
+        right: 14%;
+    }
 
     /***************************
         Header Css End
@@ -132,6 +135,9 @@
     }
     .solutions .arrow-up {
         right: 31%;
+    }
+    .dropdown.why-centrality .arrow-up {
+        right: 15%;
     }
 
     /***************************
@@ -255,6 +261,10 @@
         right: 36%;
     }
 
+    .dropdown.why-centrality .arrow-up {
+        right: 20%;
+    }
+
     /***************************
         Header Css End
     ***************************/
@@ -376,6 +386,11 @@
         top: 116px;
         left: 37px;
     }
+    .why-centrality .arrow-up {
+        right: inherit;
+        top: 160px;
+        left: 37px;
+    }
     /***************************
         General Css End
     ***************************/
@@ -438,6 +453,21 @@
     header nav #bs-example-navbar-collapse-1 ul.nav li.solution a.dropdown-toggle:hover {
         color: #007dbc !important;
     }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality a.dropdown-toggle {
+        background-color: transparent !important;
+        padding: 10px;
+        text-align: left;
+        color: #023754 !important;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality a.dropdown-toggle:hover {
+        color: #007dbc !important;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality ul li {
+        list-style: none;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li ul {
+        padding-left:0;
+    }
 
     header nav #bs-example-navbar-collapse-1 ul > li > a:focus,
     header nav #bs-example-navbar-collapse-1 ul > li > a:hover {
@@ -449,6 +479,15 @@
         margin-right: 0;
         margin-top: 0;
         float: none;
+    }
+    header #bs-example-navbar-collapse-1 ul li.dropdown .dropdown-menu.why-centrality {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        float: none;
+    }
+    .dropdown.why-centrality .container ul {
+        text-align: left;
     }
     .dropdown-menu.solutions .featured-solution div.container > div {
         border-right: none;
@@ -644,6 +683,11 @@
         top: 116px;
         left: 37px;
     }
+    .why-centrality .arrow-up {
+        right: inherit;
+        top: 160px;
+        left: 37px;
+    }
     /***************************
         General Css End
     ***************************/
@@ -711,11 +755,26 @@
     header nav #bs-example-navbar-collapse-1 ul.nav li.solution a.dropdown-toggle:hover {
         color: #007dbc !important;
     }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality a.dropdown-toggle {
+        background-color: transparent !important;
+        padding: 10px;
+        text-align: left;
+        color: #023754 !important;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality a.dropdown-toggle:hover {
+        color: #007dbc !important;
+    }
 
     header nav #bs-example-navbar-collapse-1 ul > li > a:focus,
     header nav #bs-example-navbar-collapse-1 ul > li > a:hover {
         background-color: transparent;
         color:#007dbc ;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality ul {
+        padding-left: 0;
+    }
+    header nav #bs-example-navbar-collapse-1 ul.nav li.why-centrality ul li {
+        list-style: none;
     }
     header #bs-example-navbar-collapse-1 ul li.dropdown .dropdown-menu.solutions {
         margin-left: 0;
@@ -723,6 +782,16 @@
         margin-top: 0;
         float: none;
         max-width: 100%;
+    }
+    header #bs-example-navbar-collapse-1 ul li.dropdown .dropdown-menu.why-centrality {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        float: none;
+        max-width: 100%;
+    }
+    .dropdown.why-centrality .container ul {
+        text-align: left;
     }
     .dropdown-menu.solutions .featured-solution div.container > div {
         border-right: none;

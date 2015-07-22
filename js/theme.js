@@ -91,10 +91,17 @@ jQuery(document).ready(
             if($('li.dropdown.solution').hasClass('open')) {
                 $('.logo-right-wrapper').addClass('staticClass');
                 $('.logo-right-wrapper ul.nav li.dropdown.solution .dropdown-menu.solutions').css({'display':'block'});
+                $('.logo-right-wrapper ul.nav li.dropdown.why-centrality .dropdown-menu.why-centrality').css({'display':'none'});
+            }
+            else if($('li.dropdown.why-centrality').hasClass('open') ){
+                $('.logo-right-wrapper').addClass('staticClass');
+                $('.logo-right-wrapper ul.nav li.dropdown.why-centrality .dropdown-menu.why-centrality').css({'display':'block'});
+                $('.logo-right-wrapper ul.nav li.dropdown.solution .dropdown-menu.solutions').css({'display':'none'});
             }
             else {
                 $('.logo-right-wrapper').removeClass('staticClass');
                 $('.logo-right-wrapper ul.nav li.dropdown.solution .dropdown-menu.solutions').css({'display':'none'});
+                $('.logo-right-wrapper ul.nav li.dropdown.why-centrality .dropdown-menu.why-centrality').css({'display':'none'});
 
             }
         }

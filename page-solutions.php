@@ -48,15 +48,15 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
                 $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post1_id);
                 while ( $fetch_result->have_posts() ) {
                 $fetch_result->the_post();
-                   $f_title_imge =  get_field($post1_id,'featured_solution_post_title_image',true);
+                   $f_title_imge =  get_field('featured_solution_post_title_image',$post1_id,true);
                     if(empty($f_title_imge)) {
                         $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
                     }
-                    $f_button_text = get_field($post1_id,'featured_solution_button_text_button_text',true);
+                    $f_button_text = get_field('featured_solution_button_text_button_text',$post1_id,true);
                     if(empty($f_button_text)) {
                         $f_button_text = "Learn More";
                     }
-                    $f_bottom_image = get_field($post1_id,'featured_solution_footer_image',true);
+                    $f_bottom_image = get_field('featured_solution_footer_image',$post1_id,true);
                     if(empty($f_bottom_image)) {
                         $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
                     }
@@ -84,15 +84,15 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
                 $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post2_id);
                 while ( $fetch_result->have_posts() ) {
                     $fetch_result->the_post();
-                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    $f_title_imge =  get_field('featured_solution_post_title_image',$post2_id,true);
                     if(empty($f_title_imge)) {
                         $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
                     }
-                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    $f_button_text = get_field('featured_solution_button_text_button_text',$post2_id,true);
                     if(empty($f_button_text)) {
                         $f_button_text = "Learn More";
                     }
-                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    $f_bottom_image = get_field('featured_solution_footer_image',$post2_id,true);
                     if(empty($f_bottom_image)) {
                         $f_bottom_image = get_template_directory_uri()."/images/texture2.jpg";
                     }
@@ -118,15 +118,15 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
                 $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post3_id);
                 while ( $fetch_result->have_posts() ) {
                     $fetch_result->the_post();
-                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    $f_title_imge =  get_field('featured_solution_post_title_image',$post3_id,true);
                     if(empty($f_title_imge)) {
                         $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
                     }
-                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    $f_button_text = get_field('featured_solution_button_text_button_text',$post3_id,true);
                     if(empty($f_button_text)) {
                         $f_button_text = "Learn More";
                     }
-                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    $f_bottom_image = get_field('featured_solution_footer_image',$post3_id,true);
                     if(empty($f_bottom_image)) {
                         $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
                     }
@@ -153,15 +153,15 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
                 $fetch_result = fetch_posts('featured-solutions', 'menu_order', 'ASC',1, $post4_id);
                 while ( $fetch_result->have_posts() ) {
                     $fetch_result->the_post();
-                    $f_title_imge =  get_field(get_the_ID(),'featured_solution_post_title_image',true);
+                    $f_title_imge =  get_field('featured_solution_post_title_image',$post4_id,true);
                     if(empty($f_title_imge)) {
                         $f_title_imge = get_template_directory_uri()."/images/on-prmise-it-support.png";
                     }
-                    $f_button_text = get_field(get_the_ID(),'featured_solution_button_text_button_text',true);
+                    $f_button_text = get_field('featured_solution_button_text_button_text',$post4_id,true);
                     if(empty($f_button_text)) {
                         $f_button_text = "Learn More";
                     }
-                    $f_bottom_image = get_field(get_the_ID(),'featured_solution_footer_image',true);
+                    $f_bottom_image = get_field('featured_solution_footer_image',$post4_id,true);
                     if(empty($f_bottom_image)) {
                         $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
                     }
