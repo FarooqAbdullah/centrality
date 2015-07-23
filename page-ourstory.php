@@ -42,21 +42,28 @@ $mission=get_post_meta( get_the_ID(), 'ourmission', true );
 </div>
    
         
+		<?php $heading = get_post_meta( get_the_ID(), '_feature_heading', true );
+		$test= get_post_meta( get_the_ID(), 'commitmentText', true );
+//$b1=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText1', true );
+//$b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>
+   
+        <?php echo do_shortcode('[_feature_template heading="'.$heading.'"]'); ?>
 		
-<?php $heading = get_post_meta( get_the_ID(), 'why_centrality_provenTextHeading', true );
-$box1Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox1', true );
-$box2Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox2', true );
-$box3Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox3', true );
-$box4Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox4', true );
+		
+		
+ <?php $pfx="our-story";
+            $bus_heading  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-right-heading', true);
+            $bus_content1  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-right-first-content', true);
+            $bus_content2  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-right-second-content', true);
+            $bus_content1_num  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-right-first-content-num', true);
+            $bus_content2_num  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-right-second-content-num', true);
+            $bus_img  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-image', true);
+            $bus_button_text  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-button-text', true);
+            $bus_button_url  = get_post_meta(get_the_ID(),$pfx.'business-tecnolgy-button-url', true);
+        ?>
+        <?php echo do_shortcode('[_business_technology left_img="'.$bus_img.'" heading="'.$bus_heading.'" content1="'.$bus_content1.'" content2="'.$bus_content2.'" content1_num="'.$bus_content1_num.'" content2_num="'.$bus_content2_num.'" button_text="'.$bus_button_text.'" button_url="'.$bus_button_url.'" ]'); ?>
 
-$box1Text = get_post_meta( get_the_ID(), 'why_centrality_prBox1_title', true );
-$box2Text = get_post_meta( get_the_ID(), 'why_centrality_prBox2_title', true );
-$box3Text = get_post_meta( get_the_ID(), 'why_centrality_prBox3_title', true );
-$box4Text = get_post_meta( get_the_ID(), 'why_centrality_prBox4_title', true );
 
-$btnText = get_post_meta( get_the_ID(), 'why_centrality_discoverbtn', true );
-$btnTextUrl = get_post_meta( get_the_ID(), 'why_centrality_discoverbtnurl', true );
-?>
 
 <?php echo do_shortcode('[_trusted_companies]'); ?>
 </div>
