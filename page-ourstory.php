@@ -38,16 +38,20 @@ $text = get_post_meta( get_the_ID(), 'block1_text', true );
   <?php 
 $vision=get_post_meta( get_the_ID(), 'ourvision', true );
 $mission=get_post_meta( get_the_ID(), 'ourmission', true );
-  echo do_shortcode('[_centrality_service]'); ?>
+$right_img = get_field('centrality_service_right_image');
+$left_img_heading = get_field('centrality_service_left_image_heading');
+$right_img_heading = get_field('centrality_service_right_image_heading');
+$left_img = get_field('centrality_service_left_img');
+  echo do_shortcode('[_centrality_service is_post="'.false.'" left_heading="'.$left_img_heading.'" left_para="'.$vision.'" left_img="'.$left_img.'" right_img="'.$right_img.'" right_heading="'.$right_img_heading.'" right_para="'.$mission.'"]'); ?>
 </div>
    
         
-		<?php $heading = get_post_meta( get_the_ID(), '_feature_heading', true );
+		<?php
+        $heading = get_post_meta( get_the_ID(), '_feature_heading', true );
 		$test= get_post_meta( get_the_ID(), 'commitmentText', true );
-//$b1=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText1', true );
-//$b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>
+        ?>
    
-        <?php echo do_shortcode('[_feature_template heading="'.$heading.'"]'); ?>
+        <?php echo do_shortcode('[_feature_template heading="'.$heading.'" is_para="'.$test.'"]'); ?>
 		
 		
 		

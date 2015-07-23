@@ -4,10 +4,38 @@
 function _centrality_service($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'heading'=> get_post_meta(get_the_ID(),'centrality-service-heading',true)
+        'heading'=> get_post_meta(get_the_ID(),'centrality-service-heading',true),
+        'is_post'=> true,
+        'left_heading'=> 'Our Vision',
+        'left_para'=> '',
+        'left_img'=> '',
+        'right_heading'=> 'Our Mission',
+        'right_para'=> '',
+        'right_img'=> ''
     ), $atts));
     if(!isset($heading)) {
         $heading = '';
+    }
+    if(!isset($is_post)) {
+        $is_post = '';
+    }
+    if(!isset($left_heading)) {
+        $left_heading = '';
+    }
+    if(!isset($left_para)) {
+        $left_para = '';
+    }
+    if(!isset($left_img)) {
+        $left_img = '';
+    }
+    if(!isset($right_heading)) {
+        $right_heading = '';
+    }
+    if(!isset($right_para)) {
+        $right_para = '';
+    }
+    if(!isset($right_img)) {
+        $right_img = '';
     }
 
     $result = '<div class="centrality-service-wrapper row">';
@@ -15,6 +43,7 @@ function _centrality_service($atts, $content = null) {
     $result .= $heading;
     $result .= '</div>';
     $result .= '<div class="centrality-service-left padding-left-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">';
+    if($is_post) {
         $centrality_service_voice_solution_fetch = fetch_posts('voice-solution','menu_order', 'ASC', 1);
         while ( $centrality_service_voice_solution_fetch->have_posts() ) {
         $centrality_service_voice_solution_fetch->the_post();
@@ -26,9 +55,17 @@ function _centrality_service($atts, $content = null) {
             $result .= '<a href="'.get_the_permalink().'" class="btn btn-default">'.get_field('centrality_service_button_text').'</a>';
         }
         wp_reset_postdata();
+    }
+    else {
+        $result .= '<img src="'.$left_img.'"  alt=""/>';
+        $result .='<div class="voice-solution">';
+        $result .='<h3 class="not-post">'.$left_heading.'</h3>';
+        $result .='<p>'.$left_para.'</p>';
+    }
     $result .= '</div>';
     $result .= '</div>';
     $result .= '<div class="centrality-service-right padding-right-0 col-md-6 col-lg-6 col-xs-12 col-sm-6">';
+    if($is_post) {
         $centrality_service_it_management_fetch = fetch_posts('it-management','menu_order', 'ASC', 1);
         while ( $centrality_service_it_management_fetch->have_posts() ) {
             $centrality_service_it_management_fetch->the_post();
@@ -40,6 +77,13 @@ function _centrality_service($atts, $content = null) {
             $result .= '<a href="'.get_the_permalink().'" class="btn btn-default">'.get_field('centrality_service_right_button_text').'</a>';
         }
     wp_reset_postdata();
+    }
+    else {
+        $result .= '<img src="'.$right_img.'"  alt=""/>';
+        $result .='<div class="it-management">';
+        $result .='<h3 class="not-post">'.$right_heading.'</h3>';
+        $result .='<p>'.$right_para.'</p>';
+    }
     $result .= '</div>';
     $result .= '</div>';
     $result .= '</div>';
@@ -309,15 +353,22 @@ add_shortcode('_statistics', '_statistics');
 function _feature_template($atts, $content = null) {
 
     extract(shortcode_atts(array(
-        'heading'=> ''
+        'heading'=> '',
+        'is_para'=> false
     ), $atts));
     if(!isset($heading)) {
         $heading = '';
+    }
+    if(!isset($is_para)) {
+        $is_para = '';
     }
 
     $result = '<div class="row uniquely-qualified">';
     $result .= '<div class="container">';
     $result .= '<h2>'.$heading.'</h2>';
+    if($is_para){
+        $result .= '<p>'.$is_para.'</p>';
+    }
     $result .= '<div class="col-lg-6 col-md-6 block1"><div class="ribbon"></div>';
     $result .= '<ul>';
     $featured_values = get_post_meta(get_the_ID(),'featured-template', true);
