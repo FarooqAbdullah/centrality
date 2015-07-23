@@ -131,7 +131,7 @@ $cab_icon=get_post_meta( get_the_ID(), $pfx.'cab_icon', true );
                         $f_bottom_image = get_template_directory_uri()."/images/texture1.jpg";
                     }
                     ?>
-                    <img src="<?php echo $f_title_imge; ?>" />
+                    <div class="featuredBoxImg"><img src="<?php echo $f_title_imge; ?>" /></div>
                     <h2><?php the_title(); ?></h2>
                     <p><?php echo str_replace('<p>','',get_the_content()); ?></p>
                     <a href="<?php the_permalink(); ?>" class="btn-square blue-border"><?php echo $f_button_text; ?></a>
