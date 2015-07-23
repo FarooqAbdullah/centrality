@@ -70,6 +70,7 @@ $b1=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText1', true );
 $b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>
    
         <?php echo do_shortcode('[_feature_template heading="'.$heading.'"]'); ?>
+		
 <?php $heading = get_post_meta( get_the_ID(), 'why_centrality_provenTextHeading', true );
 $box1Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox1', true );
 $box2Heading = get_post_meta( get_the_ID(), 'why_centrality_prBox2', true );

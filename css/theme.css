@@ -1361,7 +1361,7 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
 }
 .content-wrapper .share-wrapper .container > div .soc-icon {
     border:2px solid #018acf;
-    padding: 5px 18px;
+    padding: 8px 18px;
     display:inline-block;
     border-radius:100%;
     margin-right: 20px;
@@ -1371,16 +1371,16 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     display: block;
 }
 .content-wrapper .share-wrapper .container > div .soc-icon.en {
-    padding: 5px 13px;
+    padding: 8px 13px;
 }
 .content-wrapper .share-wrapper .container > div .soc-icon.yt {
-    padding: 5px 13px;
+    padding: 9px 13px 7px 13px;
 }
 .content-wrapper .share-wrapper .container > div .soc-icon.gplus {
-    padding: 5px 13px;
+    padding: 9px 14px 7px 14px;
 }
 .content-wrapper .share-wrapper .container > div .soc-icon.twitter {
-    padding: 5px 13px;
+    padding: 8px 14px;
 }
 .content-wrapper .header-wrapper .head-date {
     font-weight: normal;

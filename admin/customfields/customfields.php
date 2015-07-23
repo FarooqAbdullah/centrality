@@ -26,13 +26,15 @@ function WhyCentrality_metaBox() {
         'id'            => 'featued_element',
         'title'         => __( 'Featured Element', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type
-		'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php') ),
+		'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php', 'page-ourstory.php') ),
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         // 'closed'     => true, // Keep the metabox closed by default
     ) );
+	
+	
 
     $statistics = new_cmb2_box( array(
         'id'            => 'statistics_element',
@@ -57,10 +59,21 @@ function WhyCentrality_metaBox() {
 
     // Regular text field
     $featured_obj->add_field( array(
-        'name'       => __( 'Feature Heading', 'cmb2' ),
-        'desc'       => __( 'Feature Heading', 'cmb2' ),
+        'name'       => __( 'Featured Heading', 'cmb2' ),
+        'desc'       => __( 'Featured Heading', 'cmb2' ),
         'id'         => '_feature_heading',
         'type'       => 'text'
+    ) );
+	
+	$featured_obj->add_field( array(
+        'name'       => __( 'Commitment Box Introduction Text', 'cmb2' ),
+        'desc'       => __( 'Commitment Box Introduction Text', 'cmb2' ),
+		'show_on' => array( 'key' => 'page-template', 'value' => 'page-ourstory.php' ),
+        'id'         => 'commitmentText',
+        'type'       => 'textarea',
+		'default'=> 'Absolute Networking Systems is always seeking qualified candidates to add to our team. Some key components you will need to be aware of before considering Absolute Networking for a career.',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value 
+		
     ) );
 
     // Regular text field
@@ -159,6 +172,10 @@ function WhyCentrality_metaBox() {
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
 	
+	
+	
+	
+	
 	/*$cmb->add_field( array(
         'name'       => __( 'Uniquely Qualified Block 1 Text', 'cmb2' ),
         'desc'       => __( 'Uniquely Qualified Block 1 Text', 'cmb2' ),
@@ -191,7 +208,7 @@ function WhyCentrality_metaBox() {
         'id'   => '_feature',
         'type' => 'text',
         'object_types'  => array( 'page', ), // Post type
-        'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php' ))
+        'show_on' => array( 'key' => 'page-template', 'value' => array('page-whycentrality.php','page-featuredsolution.php', 'page-ourstory.php' ))
         // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
     ) );
 
@@ -642,6 +659,87 @@ $story_obj = new_cmb2_box( array(
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
     ) );
 	
+	$story_obj->add_field( array(
+        'name'       => __( 'Commitment Box Heading', 'cmb2' ),
+        'desc'       => __( 'Commitment Box Heading', 'cmb2' ),
+        'id'         => 'commitmentHeading',
+        'type'       => 'text',
+		'default'=> 'Our Commitment to Community',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value        
+    ) );
+	$prefix="our-story";
+	//Story_OBj Business Consulting Light blue left side content
+	$story_obj->add_field( array(
+        'name'       => __( 'Business Technology Right Heading', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Heading', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-heading',
+		'default'    => 'Our People makes Us the Business Technology leader in Kentuckiana',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Right First Content Num', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right First Content Num', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-first-content-num',
+		'default'    => '350',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Right Second Content Num', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Second Content Num', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-second-content-num',
+		'default'    => '20',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Right First Content', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right First Content', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-first-content',
+		'default'    => 'hours of certified IT training, including dual certifications in Microsoft and Sisco.',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Right Second Content', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Right Second Content', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-right-second-content',
+		'default'    => 'business technology advisors & consultants',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Button Text', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Button Text', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-button-text',
+		'default'    => 'Meet The Team',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Button URL', 'cmb2' ),
+        'desc'       => __( 'Write Business Technology Button URL', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-button-url',
+		'default'    => get_site_url().'/our-team.php',
+        'type'       => 'text',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
+
+    $story_obj->add_field( array(
+        'name'       => __( 'Business Technology Image', 'cmb2' ),
+        'desc'       => __( 'Upload Business Technology Image', 'cmb2' ),
+        'id'         => $prefix . 'business-tecnolgy-image',
+		'default'=> get_template_directory_uri().'/images/business-technology.png ',
+        'type'       => 'file',
+        'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+    ) );
 
     // Regular text field
 
@@ -1044,7 +1142,7 @@ $story_obj = new_cmb2_box( array(
         'name'       => __( 'Business Technology Right Heading', 'cmb2' ),
         'desc'       => __( 'Write Business Technology Right Heading', 'cmb2' ),
         'id'         => $prefix . 'business-tecnolgy-right-heading',
-		'default'    => 'Our People makes Us teh Business Technology leader in Kentuckiana',
+		'default'    => 'Our People makes Us the Business Technology leader in Kentuckiana',
         'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
     ) );
