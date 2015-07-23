@@ -1541,6 +1541,9 @@ header .navbar-default #bs-example-navbar-collapse-1 .phone-systems-wrapper div.
     padding-top: 100px;
     padding-bottom: 100px;
 }
+h3.not-post {
+    margin-bottom: 50px;
+}
 
 /*******************************************
         Content Css End
