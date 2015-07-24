@@ -289,7 +289,7 @@ function email_contact () {
                                             $content .= 'System Type : '. $system_type . "\r\n";
 
                                             $field_value_footer = get_option('myprefix_options');
-                                            $to = $field_value_footer['centrality-contact-email'];
+                                            $to = $field_value_footer['centrality-service-request-number'];
 
                                             if(wp_mail($to,'Contact Enquiry',$content)){
                                                 ?>

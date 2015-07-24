@@ -286,6 +286,13 @@ class Myprefix_Admin {
             'type' => 'text',
             'default' => '',
         ) );
+        $cmb_general->add_field( array(
+            'name' => __( 'Service Request Email', 'centrality' ),
+            'desc' => __( 'Write Your Service Request Here', 'centrality' ),
+            'id'   => 'centrality-service-request-number',
+            'type' => 'text',
+            'default' => 'service@centrality.com',
+        ) );
 
         // Set our CMB2 fields
         $cmb_header->add_field( array(
