@@ -1,9 +1,11 @@
 jQuery(document).ready(
     function ($) {
-		
-		//$(".page-template-home .brand-change").slideDown(10000);
-		$(".page-template-home .brand-change").fadeIn();
-		
+
+        //$(".page-template-home .brand-change").slideDown(10000);
+        $(".page-template-home .brand-change").fadeIn(1000);
+
+
+
         console.log($(window).width());
         $(window).resize(
             function () {
@@ -116,17 +118,17 @@ jQuery(document).ready(
                 //setTimeout(megamenuRelative, 1);
             }
         );
-		
-		var imgheight=$('.team-mate').height();
-		$('.claimBox').height(imgheight);
-		
-		$(window).resize(function(){
-		var imgheight=$('.team-mate').height();
-		$('.claimBox').height(imgheight);
+
+        var imgheight=$('.team-mate').height();
+        $('.claimBox').height(imgheight);
+
+        $(window).resize(function(){
+            var imgheight=$('.team-mate').height();
+            $('.claimBox').height(imgheight);
 
 
-	
-});
+
+        });
         $(function(){
             var $class, $className;
             $('.dropdown').hover(function() {
@@ -180,15 +182,14 @@ jQuery(document).ready(
 
         }
 
-    // Click Events Code
-	 $(".tophat-wrapper").click(function(){
-		 $(".brand-change").fadeIn();
-	 });
-	 $("#close-brand-change").click(function(){
-		 $(".brand-change").fadeOut();
-	 });
+        // Click Events Code
+        $(".tophat-wrapper").click(function(){
+            $(".brand-change").fadeIn();
+        });
+        $("#close-brand-change").click(function(){
+            $(".brand-change").fadeOut();
+        });
     }
-	
 );
 
 

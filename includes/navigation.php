@@ -149,26 +149,26 @@ $ulClass = "";
                         <form action="#" method="post" class="form-inine">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <input type="text" class="form-control" name="first-name" placeholder="First Name">
+                                    <input type="text" required="required" class="form-control" name="first-name" placeholder="First Name">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <input type="text" class="form-control" name="last-name" placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <input type="text" class="form-control" name="company" placeholder="Last Company">
+                                    <input type="text" required="required" class="form-control" name="last-name" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <input type="tel" class="form-control" name="phone" placeholder="Phone Number">
+                                    <input type="email" required="required" class="form-control" name="email" placeholder="Your Email">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
-                                    <select name="system-type" class="form-control">
+                                    <input type="text" required="required" class="form-control" name="company" placeholder="Last Company">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
+                                    <input type="tel" required="required" class="form-control" name="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-right-0 padding-left-0" >
+                                    <select name="system-type" required="required" class="form-control">
                                         <option value="1"> One</option>
                                         <option value="2"> Two</option>
                                     </select>
@@ -176,7 +176,7 @@ $ulClass = "";
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-right-0 padding-left-0">
-                                    <textarea name="comments" cols="30" placeholder="comments" rows="10" class="form-control"></textarea>
+                                    <textarea name="comments"  cols="30" placeholder="comments" rows="10" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="row note">
@@ -186,6 +186,7 @@ $ulClass = "";
                             </div>
                             <div class="row submit">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-0 padding-right-0">
+                                    <input type="hidden" name="action" value="service-request"/>
                                     <button type="submit" class="btn btn-default">Submit Service Request</button>
                                 </div>
                             </div>

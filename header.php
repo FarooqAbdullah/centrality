@@ -34,8 +34,8 @@
                     <div class="line right"></div>
                 </div>
                 <div class="logo-img">
-                    <a href="<?php site_url(); ?>">
-                        <img src="<?php echo $field_value_footer['centrality-footer-logo']; ?>"  alt=""/>
+                    <a href="<?php echo site_url(); ?>">
+                        <img src="<?php echo $field_value['centrality-footer-logo']; ?>"  alt=""/>
                     </a>
                 </div>
                 <p class="desc-head">

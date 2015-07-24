@@ -253,6 +253,119 @@ function email_contact () {
                 exit();
             }
         }
+        if($_POST['action'] == "service-request") {
+            if(!empty($_POST['first-name'])) {
+                $first_name =  $_POST['first-name'];
+                if(!empty($_POST['last-name'])) {
+                    $last_name = $_POST['last-name'];
+                    if(is_email($_POST['email'])) {
+                        $email = $_POST['email'];
+                        if(!empty($_POST['phone'])) {
+                                $phone_num = $_POST['phone'];
+                                if(!empty($_POST['comments'])) {
+                                    $message = $_POST['comments'];
+                                    if(!empty($_POST['company'])) {
+                                        $company = $_POST['company'];
+                                        if(!empty($_POST['system-type'])) {
+                                            $system_type = $_POST['system-type'];
+
+                                            $content = 'First Name : '. $first_name . "\r\n";
+                                            $content .= 'Last Name : '. $last_name . "\r\n";
+                                            $content .= 'Email : '. $email . "\r\n";
+                                            $content .= 'Phone Number : '. $phone_num . "\r\n";
+                                            $content .= 'Comments : '. $message . "\r\n";
+                                            $content .= 'Company Name : '. $company . "\r\n";
+                                            $content .= 'System Type : '. $system_type . "\r\n";
+
+                                            $field_value_footer = get_option('myprefix_options');
+                                            $to = $field_value_footer['centrality-contact-email'];
+
+                                            if(wp_mail($to,'Contact Enquiry',$content)){
+                                                ?>
+                                                <script>
+                                                    alert('your Request has been sent');
+                                                </script>
+                                                <?php
+                                                echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                                                exit();
+                                            }
+                                            else {
+                                                ?>
+                                                <script>
+                                                    alert("There is some error. Please try again!");
+                                                </script>
+                                                <?php
+                                                echo '<META HTTP_EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                                                exit();
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        $company = "Enter Your Comapny Name";
+                                        ?>
+                                        <script>
+                                            alert(<?php echo $company; ?>);
+                                        </script>
+                                        <?php
+                                        echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                                        exit();
+                                    }
+                                }
+                                else {
+                                    $message = "Enter Your Message";
+                                    ?>
+                                    <script>
+                                        alert(<?php echo $message; ?>);
+                                    </script>
+                                    <?php
+                                    echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                                    exit();
+                                }
+                        }
+                        else {
+                            $phone_num = "Enter Phone Number";
+                            ?>
+                            <script>
+                                alert(<?php echo $phone_num; ?>);
+                            </script>
+                            <?php
+                            echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                            exit();
+                        }
+                    }
+                    else {
+                        $email = "Enter Valid Email";
+                        ?>
+                        <script>
+                            alert(<?php echo $email; ?>);
+                        </script>
+                        <?php
+                        echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                        exit();
+                    }
+                }
+                else {
+                    $last_name = "Enter Last Name";
+                    ?>
+                    <script>
+                        alert(<?php echo $last_name; ?>);
+                    </script>
+                    <?php
+                    echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                    exit();
+                }
+            }
+            else {
+                $first_name = "Enter First Name";
+                ?>
+                <script>
+                    alert(<?php echo $first_name; ?>);
+                </script>
+                <?php
+                echo '<META HTTP-EQUIV="refresh" content="0;URL='.get_permalink(get_the_ID()).'">';
+                exit();
+            }
+        }
     }
 }
 add_action('init','email_contact');
