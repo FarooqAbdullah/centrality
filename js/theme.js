@@ -109,7 +109,7 @@ jQuery(document).ready(
         divSlide();
         $('body').click(
             function() {
-                setTimeout(megamenuRelative, 1);
+                //setTimeout(megamenuRelative, 1);
             }
         );
 		
@@ -119,8 +119,63 @@ jQuery(document).ready(
 		$(window).resize(function(){
 		var imgheight=$('.team-mate').height();
 		$('.claimBox').height(imgheight);
+
+
 	
 });
+
+        $(function(){
+            var $class, $className;
+            $('.dropdown').hover(function() {
+                    $class = $(this).context.className;
+                    $className = $.trim($class.replace('open', ''));
+                    $className = $className.replace(/ /g, '.');
+                    if($className == "dropdown"){
+                        return  false;
+                    }else {
+                        $(this).addClass('open');
+                        $('.logo-right-wrapper').addClass('staticClass');
+                        $($className + ' .dropdown-menu').css({'display':'block','top':'65px'});
+                    }
+                },
+                function() {
+                    $class = $(this).context.className;
+                    $className = $class.replace(/ /g, '.');
+                    if($className == "dropdown.open"){
+                        return  false;
+                    }else {
+                        $(this).removeClass('open');
+                        $('.logo-right-wrapper').removeClass('staticClass');
+                        $($className + ' .dropdown-menu').css({'display':'none','top':'85px'});
+                    }
+                });
+        });
+
+        $('.page-template-page-whycentrality .wrapper .content-wrapper .header-wrapper .container > a').click(
+            function(e) {
+                e.preventDefault();
+                setTimeout(
+                    function(){
+                        $('#serviceRequest').addClass('open');
+                    },100
+                );
+            }
+        );
+
+        // navigation click actions
+        $('.page-template-page-employment .wrapper .content-wrapper .header-wrapper .container > a').on('click', function(event){
+            event.preventDefault();
+            var sectionID = "jobs";
+            scrollToID('#' + sectionID, 1000);
+        });
+        // scroll function
+        function scrollToID(id, speed){
+
+            var offSet = 50;
+            var targetOffset = $(id).offset().top - offSet;
+            $('html,body').animate({scrollTop:targetOffset}, speed);
+
+        }
     }
 );
 

@@ -24,15 +24,30 @@ get_header();the_post();
                 <div class="row-minus">
                     <div class="row-minus">
                         <div class="col-lg-3 col-md-3 sidebar-menu-it-consulting">
-                            <h2>IT Management</h2>
+                            <?php
+                            $current_page_title = get_the_title(get_the_ID());
+                            $parent_sibling_menu = it_consulting_menu();
+                            $parent_title = (!empty($parent_sibling_menu['parent_title']) ? $parent_sibling_menu['parent_title'] : "create Menu From Option") ;
+                            $siblings = $parent_sibling_menu['siblings'][$parent_title];
+                            ?>
+                            <h2><?php echo $parent_title; ?></h2>
                             <ul class="sidemenu">
-                                <li> IT Consulting </li>
-                                <li> Managed Services  </li>
-                                <li> Helpdesk </li>
-                                <li> Office 365 </li>
-                                <li> Share Point </li>
+                            <?php
+                            if(!empty($siblings)) {
+                                foreach($siblings as $key=> $value){
+                                    if($current_page_title == $value['title']){
+                                        echo "<li class='active'><a href='".$value['url']."'>".$value['title']."</a></li>";
+                                    }
+                                    else {
+                                        echo "<li><a href='".$value['url']."'>".$value['title']."</a></li>";
+                                    }
+                                }
+                            }
+                            else {
+                                echo "<p>Create Menu From Menu Option</p>";
+                            }
+                            ?>
                             </ul>
-
                         </div>
                         <div class="col-lg-9 col-md-9 srv-page-intro-box">
                             <div class="top-block-well">
