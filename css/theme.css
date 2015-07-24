@@ -173,12 +173,13 @@ header .navbar #bs-example-navbar-collapse-1 ul.nav li .btn:hover ,
 header nav #bs-example-navbar-collapse-1 ul.nav li a.dropdown-toggle:hover {
     background-color:#668233 !important;
 }
-header .tophat-wrapper {
+header .tophat-wrapper { cursor:pointer;
     background-color: #023754;
     min-height:40px;
     padding-top: 7px;
     padding-bottom: 7px;
 }
+#close-brand-change{cursor:pointer;}
 header .tophat-wrapper p {
     font-size: 17px;
     width: 520px;

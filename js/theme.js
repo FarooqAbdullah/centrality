@@ -1,5 +1,9 @@
 jQuery(document).ready(
     function ($) {
+		
+		//$(".page-template-home .brand-change").slideDown(10000);
+		$(".page-template-home .brand-change").fadeIn();
+		
         console.log($(window).width());
         $(window).resize(
             function () {
@@ -123,7 +127,6 @@ jQuery(document).ready(
 
 	
 });
-
         $(function(){
             var $class, $className;
             $('.dropdown').hover(function() {
@@ -176,7 +179,16 @@ jQuery(document).ready(
             $('html,body').animate({scrollTop:targetOffset}, speed);
 
         }
+
+    // Click Events Code
+	 $(".tophat-wrapper").click(function(){
+		 $(".brand-change").fadeIn();
+	 });
+	 $("#close-brand-change").click(function(){
+		 $(".brand-change").fadeOut();
+	 });
     }
+	
 );
 
 

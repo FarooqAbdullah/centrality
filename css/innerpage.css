@@ -48,7 +48,10 @@ Header
 .claimBox{ background:#799a3d; color: #fff;  border-bottom: 2px solid #cccccc;    display: table;  height: 100%; }
 .claimBoxText{font-size:33px; line-height:44px; font-size: 33px;  line-height: 44px;   /*padding: 89px 36px;*/ display:table-cell; vertical-align:middle;}
 .uniquely-qualified{   padding-bottom: 62px; text-align:center;  color:#58585a; font-size:21px; font-family:"proxima_nova_rgregular"; }
-.uniquely-qualified h2{  color:#018acf; font-size:36px;font-family:"proxima_nova_rgregular";  margin-top: 43px;  margin-bottom: 60px; }
+
+ .uniquely-qualified p{max-width: 645px; margin:auto;} 
+ 
+ .uniquely-qualified h2{  color:#018acf; font-size:36px;font-family:"proxima_nova_rgregular";  margin-top: 43px;  margin-bottom: 60px; }
 .uniquely-qualified .ribbon{width:100%; height:10px; display:block; background:url(../images/smart-object.png) center no-repeat;   margin-bottom: 19px;}
 .uniquely-qualified  li{  margin-bottom: 6px; list-style:none;}
 .uniquely-qualified  ul{padding-left: 0px;}  
@@ -94,7 +97,7 @@ Header
 }
 .cabling-solutions{ margin-top:10px;}
 .content-wrapper.centralityServices .centrality-service-wrapper .centrality-service-right .it-management, .content-wrapper.centralityServices  .centrality-service-wrapper .centrality-service-left .voice-solution{   top: 50%;
-  transform: translateY(-50%);}
+  transform: translateY(-50%);  -webkit-transform: translateY(-50%); }
 
   .it-consulting-page-heading{background:url(../images/consultingPagetitleBG.jpg) center no-repeat; height:139px;}
   .it-consulting-page-heading h2{color:#fff; font-size:56px; text-align:center; margin-top:0px; font-family:proxima_novalight;   margin-top: 11px;}
@@ -136,13 +139,21 @@ Header
   height: 38px;display: inline-block;    width: 82%;    border-radius: 0;}
 .leadGen form .form-group button {   border-radius: 0;
   height: 38px;    display: inline-block;    width: 11%;    background-color:#018acf;    border-color: #018acf;    border-radius: 0;    margin-left: -3px;    margin-top: -4px;}
-  .leadImage { text-align:center;  display: table;   height: 100%;  min-height: 456px;}
-  .leadImage>div{display: table-cell;
-  vertical-align: middle;}
+  .leadImage { text-align:center;  display: table; [;display: table-row !Important;];   height: 100%;  min-height: 456px;}
+  .leadImage>div{display: table-cell;   vertical-align: middle;
+  [;display: block !important;];
+[;margin-top: 50% !important;]; [;transform: translateY(-40%);]; [;-webkit-transform: translateY(-40%);];
+  }
+  
 .leadGen form .form-group button:hover {
     background-color:#018acf;
     border-color: #018acf;
 }
+
+.leadImage>div{  
+}
+
+
 .it-testimonials{  text-align: center;}
 .it-testimonials h2{   margin-bottom: 27px;color:#018acf; font-size:36px; font-family:"proxima_nova_rgregular"; }
 .it-testimonials p{  max-width: 700px;  margin: auto; font-size:22px; color:#7d7e7e; line-height:36px;}
@@ -181,8 +192,55 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 .our-story-box{  padding-bottom: 59px;}
 
 
-@media(min-width:768px){.row-minus{margin-left:-15px; margin-right:-15px;}}
+.header-solutions-finder{ background:url(../images/solutions-finder-header.jpg) center top repeat-x; height:418px; width:100%; text-align:center;}
+.header-solutions-finder h2{ margin-top:0px; padding-top:58px; padding-bottom:20px; color:#fff; margin-bottom:; font-family:proxima_nova_rgregular; font-size:57px; line-height:67px;   }
+.header-solutions-finder p{ color:#fff; font-size:25px; line-height:33px; font-family:"proxima_nova_rgregular";  }
+.tabs-wrapper{ width:450px; margin:auto;}
+.nav-tabs{ border-bottom:0px !Important;}
+.nav-tabs li a{ border-radius:50%; background:#015787; border:2px solid #4181a5; display:block;     padding: 1px 9px !important;     margin-left: 15px;
+    margin-right: 15px;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover { background:#4181a5 !Important; border:2px solid #4181a5 !Important;}
+.nav-tabs li:before{ width:15px; height:2px; content:""; display:block; background:#4181a5;     top: 11px;    position: absolute;    left: 0px;}
+.nav-tabs li:after{ width:15px; height:2px; content:""; display:block; background:#4181a5;     top: 11px;    position: absolute;    right: 0px;}
 
+
+.nav-tabs li:first-child:before, .nav-tabs li:last-child:after{ content:""; width:0px !Important; height:0px !important;}
+.solutions-finder-content{ text-align:center; padding-top:40px;}
+.solutions-finder-content .left_down_arrow{  background:url(../images/left-arrow-down.png) center bottom no-repeat; width:81px; height:36px;float:left;     margin-right: 10px; }
+.solutions-finder-content .form_top_label{float:left; color:#018acf; text-transform:uppercase; font-size:18px;}
+.solutions-finder-content .right_down_arrow{background:url(../images/right-arrow-down.png) center bottom no-repeat; width:83px; height:36px;     margin-left: 10px; float:left;}
+.solutions-label-wrapper{ width:300px; margin:auto; }
+.i-m-in-field .wpcf7-list-item-label{/*display:none;*/}
+
+.i-m-in-field  input[type="radio"]+span.wpcf7-list-item-label{width: 280px; margin-left:10px; margin-right:10px; border: 2px solid #018acf !important;height: 100px !important;     display: block;}
+.i-m-in-field  input[type="radio"]{-webkit-appearance: none; appearance: none; -moz-appearance: none;}
+.radio-fields-wrapper{ margin:auto; max-width:700px;}
+span.wpcf7-list-item-label{ color:#018acf; font-size:34px; font-family:'proxima_novasemibold';     padding-top: 23px;}
+.step_2_wrapper .box_choice{     padding: 20px 10px 0px 10px; border:2px solid #018acf; color:#018acf; width:100%; height:240px; }
+.step_2_wrapper .box_choice h2{ font-size:34px; font-family:'proxima_novasemibold'; font-weight:bold; text-transform:uppercase;}
+.step_2_wrapper .box_choice p{ font-size:22px; line-height:28px;}
+.step_2_wrapper .box_choice.selected{     color: #fff;    background: #018acf;}
+
+.step_2_wrapper .box_choice .expandicon, .step_2_wrapper .box_choice .modernizeicon, .step_2_wrapper .box_choice .integrateicon{ 
+    margin: auto; width:60px; height:60px; display:block; }
+.step_2_wrapper .box_choice .expandicon{ background:url(../images/expand.png);}
+.step_2_wrapper .box_choice .modernizeicon{ background:url(../images/modernize.png);}
+.step_2_wrapper .box_choice .integrateicon{ background:url(../images/integrate.png);}
+
+.step_2_wrapper .box_choice.selected .expandicon{ background:url(../images/expand_white.png);}
+.step_2_wrapper .box_choice.selected .modernizeicon{ background:url(../images/modernize_white.png);}
+.step_2_wrapper .box_choice.selected .integrateicon{ background:url(../images/integrate_white.png);}
+
+.step_3_wrapper{ max-width:500px;}
+.step_3_wrapper h2{ font-size:25px; color:#434444; line-height:33px;}
+.step_3_wrapper .col-md-6, .step_3_wrapper .col-sm-6{ padding-left:0px; padding-right:0px; }
+.step_3_wrapper input[type="text"]{}
+.step_3_wrapper p{}
+
+
+
+
+@media(min-width:768px){.row-minus{margin-left:-15px; margin-right:-15px;}}
 .header-wrapper .btn-square:hover ,
 .trust-us .btn-square:hover ,
 .featuredServiceBox .btn-square:hover {
