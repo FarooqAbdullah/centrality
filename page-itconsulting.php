@@ -99,7 +99,7 @@ get_header();the_post();
         </div>
         <div class="blueribbon supportPhone">
             <div class="container">
-                <p>Get Centrality support today. <b>CALL <?php $field_value_footer = get_option('myprefix_options');  echo $field_value_footer['centrality-phone-number']; ?></b> or <a href="#" class="btn-contactus">Contact Us Online</a> </p>
+                <p>Get Centrality support today. <b>CALL <?php $field_value_footer = get_option('myprefix_options');  echo $field_value_footer['centrality-phone-number']; ?></b> or <a href="<?php echo site_url() ?>/contact" class="btn-contactus">Contact Us Online</a> </p>
             </div>
         </div>
         <div class="greycircuitDesign">
