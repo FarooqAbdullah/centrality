@@ -205,7 +205,8 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 
 
 .nav-tabs li:first-child:before, .nav-tabs li:last-child:after{ content:""; width:0px !Important; height:0px !important;}
-.solutions-finder-content{ text-align:center; padding-top:40px;}
+.solutions-finder-content{ text-align:center; }
+#step1, #step2, .step_3_main_wrapper{padding-top:40px;}
 .solutions-finder-content .left_down_arrow{  background:url(../images/left-arrow-down.png) center bottom no-repeat; width:81px; height:36px;float:left;     margin-right: 10px; }
 .solutions-finder-content .form_top_label{float:left; color:#018acf; text-transform:uppercase; font-size:18px;}
 .solutions-finder-content .right_down_arrow{background:url(../images/right-arrow-down.png) center bottom no-repeat; width:83px; height:36px;     margin-left: 10px; float:left;}
@@ -213,6 +214,7 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 .i-m-in-field .wpcf7-list-item-label{/*display:none;*/}
 
 .i-m-in-field  input[type="radio"]+span.wpcf7-list-item-label{width: 280px; margin-left:10px; margin-right:10px; border: 2px solid #018acf !important;height: 100px !important;     display: block;}
+.i-m-in-field  input[type="radio"]:checked+span.wpcf7-list-item-label{background:#018acf; color:#fff;}
 .i-m-in-field  input[type="radio"]{-webkit-appearance: none; appearance: none; -moz-appearance: none;}
 .radio-fields-wrapper{ margin:auto; max-width:700px;}
 span.wpcf7-list-item-label{ color:#018acf; font-size:34px; font-family:'proxima_novasemibold';     padding-top: 23px;}
@@ -230,13 +232,15 @@ span.wpcf7-list-item-label{ color:#018acf; font-size:34px; font-family:'proxima_
 .step_2_wrapper .box_choice.selected .expandicon{ background:url(../images/expand_white.png);}
 .step_2_wrapper .box_choice.selected .modernizeicon{ background:url(../images/modernize_white.png);}
 .step_2_wrapper .box_choice.selected .integrateicon{ background:url(../images/integrate_white.png);}
+span.wpcf7-form-control-wrap.servicesNeeded {    display: none;}
 
-.step_3_wrapper{ max-width:500px;}
+.step_3_main_wrapper{width:100%; background:#e1e1e1;}
+.step_3_wrapper{ max-width:500px; margin:auto;}
 .step_3_wrapper h2{ font-size:25px; color:#434444; line-height:33px;}
-.step_3_wrapper .col-md-6, .step_3_wrapper .col-sm-6{ padding-left:0px; padding-right:0px; }
-.step_3_wrapper input[type="text"]{}
-.step_3_wrapper p{}
-
+.step_3_wrapper .col-md-6, .step_3_wrapper .col-sm-6, .step_3_wrapper .col-md-12, .step_3_wrapper .col-sm-12{ padding-left:3px; padding-right:3px; }
+.step_3_wrapper input[type="text"], .step_3_wrapper input[type="email"], .step_3_wrapper textarea{ color:#414141; font-size:18px; font-family:; padding:10px; margin-bottom:6px; width:100%;  border:0px !important; }
+.step_3_wrapper p{ font-size:18px; line-height:20px; color:#58585a; }
+.step_3_wrapper input[type="submit"]{ background:#029ae6; color:#fff; font-size:20px; padding:20px 89px; text-transform:uppercase; border:0px; }
 
 
 
