@@ -1,7 +1,8 @@
 jQuery(document).ready(
     function ($) {
 		
-		$(".brand-change").fadeIn();
+		//$(".page-template-home .brand-change").slideDown(10000);
+		$(".page-template-home .brand-change").fadeIn();
 		
         console.log($(window).width());
         $(window).resize(
