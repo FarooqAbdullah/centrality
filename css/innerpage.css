@@ -97,7 +97,7 @@ Header
 }
 .cabling-solutions{ margin-top:10px;}
 .content-wrapper.centralityServices .centrality-service-wrapper .centrality-service-right .it-management, .content-wrapper.centralityServices  .centrality-service-wrapper .centrality-service-left .voice-solution{   top: 50%;
-  transform: translateY(-50%);}
+  transform: translateY(-50%);  -webkit-transform: translateY(-50%); }
 
   .it-consulting-page-heading{background:url(../images/consultingPagetitleBG.jpg) center no-repeat; height:139px;}
   .it-consulting-page-heading h2{color:#fff; font-size:56px; text-align:center; margin-top:0px; font-family:proxima_novalight;   margin-top: 11px;}
@@ -139,13 +139,21 @@ Header
   height: 38px;display: inline-block;    width: 82%;    border-radius: 0;}
 .leadGen form .form-group button {   border-radius: 0;
   height: 38px;    display: inline-block;    width: 11%;    background-color:#018acf;    border-color: #018acf;    border-radius: 0;    margin-left: -3px;    margin-top: -4px;}
-  .leadImage { text-align:center;  display: table;   height: 100%;  min-height: 456px;}
-  .leadImage>div{display: table-cell;
-  vertical-align: middle;}
+  .leadImage { text-align:center;  display: table; [;display: table-row !Important;];   height: 100%;  min-height: 456px;}
+  .leadImage>div{display: table-cell;   vertical-align: middle;
+  [;display: block !important;];
+[;margin-top: 50% !important;]; [;transform: translateY(-40%);]; [;-webkit-transform: translateY(-40%);];
+  }
+  
 .leadGen form .form-group button:hover {
     background-color:#018acf;
     border-color: #018acf;
 }
+
+.leadImage>div{  
+}
+
+
 .it-testimonials{  text-align: center;}
 .it-testimonials h2{   margin-bottom: 27px;color:#018acf; font-size:36px; font-family:"proxima_nova_rgregular"; }
 .it-testimonials p{  max-width: 700px;  margin: auto; font-size:22px; color:#7d7e7e; line-height:36px;}

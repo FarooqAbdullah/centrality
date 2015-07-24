@@ -1,5 +1,8 @@
 jQuery(document).ready(
     function ($) {
+		
+		$(".brand-change").fadeIn();
+		
         console.log($(window).width());
         $(window).resize(
             function () {
@@ -121,7 +124,17 @@ jQuery(document).ready(
 		$('.claimBox').height(imgheight);
 	
 });
+
+// Click Events Code
+	 $(".tophat-wrapper").click(function(){
+		 $(".brand-change").fadeIn();
+	 });
+	 $("#close-brand-change").click(function(){
+		 $(".brand-change").fadeOut();
+	 });
+	 
     }
+	
 );
 
 
