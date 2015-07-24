@@ -52,6 +52,17 @@ function theme_setup() {
             activate_plugin($destination . "/advanced-custom-fields-pro/acf.php");
         }
     }
+
+    if(file_exists($source . "/contact-form-7.zip") && !file_exists($destination ."/contact-form-7.zip")) {
+        copy($source . "contact-form-7.zip", $destination . "/contact-form-7.zip");
+        $contatc_form__result = unzip_file( $destination . "/contact-form-7.zip", $destination);
+        if($contatc_form__result) {
+            if(file_exists($destination . "/contact-form-7.zip")) {
+                unlink($destination . "/contact-form-7.zip");
+            }
+            activate_plugin($destination . "/contact-form-7/wp-contact-form-7.php");
+        }
+    }
 }
 add_action('after_setup_theme', 'theme_setup');
 
