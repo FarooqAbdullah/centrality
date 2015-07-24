@@ -199,10 +199,11 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 .nav-tabs{ border-bottom:0px !Important;}
 .nav-tabs li a{ border-radius:50%; background:#015787; border:2px solid #4181a5; display:block;     padding: 1px 9px !important;     margin-left: 15px;
     margin-right: 15px;}
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover { background:#4181a5 !Important; border:2px solid #4181a5 !Important;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover { background:#4181a5; border:2px solid #4181a5 !Important;}
 .nav-tabs li:before{ width:15px; height:2px; content:""; display:block; background:#4181a5;     top: 11px;    position: absolute;    left: 0px;}
 .nav-tabs li:after{ width:15px; height:2px; content:""; display:block; background:#4181a5;     top: 11px;    position: absolute;    right: 0px;}
 
+.nav-tabs>li.disable>a, .nav-tabs>li.disable>a:focus, .nav-tabs>li.disable>a:hover{ background: #015787 !Important;    border: 2px solid #4181a5 !Important;}
 
 .nav-tabs li:first-child:before, .nav-tabs li:last-child:after{ content:""; width:0px !Important; height:0px !important;}
 .solutions-finder-content{ text-align:center; }
@@ -218,7 +219,7 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 .i-m-in-field  input[type="radio"]{-webkit-appearance: none; appearance: none; -moz-appearance: none;}
 .radio-fields-wrapper{ margin:auto; max-width:700px;}
 span.wpcf7-list-item-label{ color:#018acf; font-size:34px; font-family:'proxima_novasemibold';     padding-top: 23px;}
-.step_2_wrapper .box_choice{     padding: 20px 10px 0px 10px; border:2px solid #018acf; color:#018acf; width:100%; height:240px; }
+.step_2_wrapper .box_choice{      margin-bottom: 20px;   padding: 20px 10px 0px 10px; border:2px solid #018acf; color:#018acf; width:100%; height:240px; }
 .step_2_wrapper .box_choice h2{ font-size:34px; font-family:'proxima_novasemibold'; font-weight:bold; text-transform:uppercase;}
 .step_2_wrapper .box_choice p{ font-size:22px; line-height:28px;}
 .step_2_wrapper .box_choice.selected{     color: #fff;    background: #018acf;}
@@ -234,14 +235,14 @@ span.wpcf7-list-item-label{ color:#018acf; font-size:34px; font-family:'proxima_
 .step_2_wrapper .box_choice.selected .integrateicon{ background:url(../images/integrate_white.png);}
 span.wpcf7-form-control-wrap.servicesNeeded {    display: none;}
 
-.step_3_main_wrapper{width:100%; background:#e1e1e1;}
+.step_3_main_wrapper{width:100%; background:#e1e1e1;padding-bottom: 21px;}
 .step_3_wrapper{ max-width:500px; margin:auto;}
 .step_3_wrapper h2{ font-size:25px; color:#434444; line-height:33px;}
 .step_3_wrapper .col-md-6, .step_3_wrapper .col-sm-6, .step_3_wrapper .col-md-12, .step_3_wrapper .col-sm-12{ padding-left:3px; padding-right:3px; }
 .step_3_wrapper input[type="text"], .step_3_wrapper input[type="email"], .step_3_wrapper textarea{ color:#414141; font-size:18px; font-family:; padding:10px; margin-bottom:6px; width:100%;  border:0px !important; }
-.step_3_wrapper p{ font-size:18px; line-height:20px; color:#58585a; }
+.step_3_wrapper span.privacystate{ font-size:18px; line-height:20px; color:#58585a; }
 .step_3_wrapper input[type="submit"]{ background:#029ae6; color:#fff; font-size:20px; padding:20px 89px; text-transform:uppercase; border:0px; }
-
+.tab-content p:last-child{ margin-bottom:0px !important;}
 
 
 @media(min-width:768px){.row-minus{margin-left:-15px; margin-right:-15px;}}

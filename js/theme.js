@@ -189,10 +189,20 @@ jQuery(document).ready(
 	 });
 	 
 	 // Solutions Finder Form Code
+	 
+	 //Common
+	 var heading =$('.header-solutions-finder h2');
+	 var text=$('.header-solutions-finder p');
+	 
 	 //Step 1
 	 $('#i_m_field .wpcf7-list-item-label').click(function(){
 		
-		setTimeout(function(){$('.tabs-wrapper a[href="#step2"]').tab('show')}, 1000 ); 
+		setTimeout(function()
+		{$('.tabs-wrapper a[href="#step2"]').tab('show');
+		$(heading).html('Which of these goals can we <br/>help you to achieve?');
+		$(text).html('Please choose the option below that best<br/>describes the needs of your business.');
+		}, 1000 ); 
+		
 	 });
 	 
 	 //Step 2
@@ -214,7 +224,11 @@ jQuery(document).ready(
 				 $("input[name='servicesNeeded'][value='I want to integrate']").attr("checked", true);
 				 console.log('integrate');
 			 }
-			 setTimeout(function(){$('.tabs-wrapper a[href="#step3"]').tab('show')}, 1000 ); 
+			 setTimeout(function(){
+				 $('.tabs-wrapper a[href="#step3"]').tab('show');
+			 $(heading).html('Thank you! You’re all set.');
+		$(text).html('Let us now work on crafting the perfect <br/> IT solution for your business.');
+			 }, 1000 ); 
 			 
 		 });
 		 

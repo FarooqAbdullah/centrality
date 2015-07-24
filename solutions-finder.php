@@ -18,12 +18,12 @@ of questions regarding your IT business solution needs. </p>
 	<div class="tabs-wrapper">
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active"><a href="#step1" aria-controls="home" role="tab" data-toggle="tab">&nbsp;</a></li>
-		<li role="presentation"><a href="#step0" aria-controls="profile" role="tab" data-toggle="tab">&nbsp;</a></li>
+		<li role="presentation" class="disable"><a href="#step0" aria-controls="profile" role="tab" data-toggle="tab">&nbsp;</a></li>
 		<li role="presentation"><a href="#step2" aria-controls="messages" role="tab" data-toggle="tab">&nbsp;</a></li>
-		<li role="presentation"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
+		<li role="presentation" class="disable"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
 		<li role="presentation"><a href="#step3" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
-		<li role="presentation"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
-		<li role="presentation"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
+		<li role="presentation" class="disable"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
+		<li role="presentation" class="disable"><a href="#step0" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
 		<li role="presentation"><a href="#step3" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;</a></li>
 	</ul>
   </div>
@@ -31,7 +31,7 @@ of questions regarding your IT business solution needs. </p>
 		
 		<div class="containerX">
 			<div class="solutions-finder-content">
-			 <?php echo do_shortcode('[contact-form-7 id="281" title="Contact form 1"]'); ?>
+			 <?php $scode= do_shortcode('[contact-form-7 id="281" title="Contact form 1"]'); echo $scode; ?>
 			</div>		
 		</div>
 		
