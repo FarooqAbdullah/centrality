@@ -187,6 +187,39 @@ jQuery(document).ready(
 	 $("#close-brand-change").click(function(){
 		 $(".brand-change").fadeOut();
 	 });
+	 
+	 // Solutions Finder Form Code
+	 //Step 1
+	 $('#i_m_field .wpcf7-list-item-label').click(function(){
+		
+		setTimeout(function(){$('.tabs-wrapper a[href="#step2"]').tab('show')}, 1000 ); 
+	 });
+	 
+	 //Step 2
+	 $('.box_choice').each( function() {
+		 $(this).click(function(){
+			 $('.box_choice').removeClass('selected');
+			 $(this).addClass('selected');
+			 if($(this).hasClass('expand') ){
+				 //$("input[name=servicesNeeded][value=" + I want to Expand + "]").prop('checked', true);
+				 $("input[name='servicesNeeded'][value='I want to Expand']").attr("checked", true);
+				 console.log('Expand');
+			 }
+			 else if($(this).hasClass('modernize') ){				
+				 $("input[name='servicesNeeded'][value='I want to modernize']").attr("checked", true);
+				 console.log('modernize');
+			 }
+			 
+			 else if ($(this).hasClass('integrate') ){				
+				 $("input[name='servicesNeeded'][value='I want to integrate']").attr("checked", true);
+				 console.log('integrate');
+			 }
+			 setTimeout(function(){$('.tabs-wrapper a[href="#step3"]').tab('show')}, 1000 ); 
+			 
+		 });
+		 
+	 });
+	 // End Solutions Finder
     }
 	
 );

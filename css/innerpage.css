@@ -195,7 +195,7 @@ p.ourTeam_intro{font-size:17px; color:#4d7083;   max-width: 675px;  margin: auto
 .header-solutions-finder{ background:url(../images/solutions-finder-header.jpg) center top repeat-x; height:418px; width:100%; text-align:center;}
 .header-solutions-finder h2{ margin-top:0px; padding-top:58px; padding-bottom:20px; color:#fff; margin-bottom:; font-family:proxima_nova_rgregular; font-size:57px; line-height:67px;   }
 .header-solutions-finder p{ color:#fff; font-size:25px; line-height:33px; font-family:"proxima_nova_rgregular";  }
-.tabs-wrapper{ width:450px; margin:auto;}
+.tabs-wrapper{ width:450px; margin:auto;     margin-top: 50px;}
 .nav-tabs{ border-bottom:0px !Important;}
 .nav-tabs li a{ border-radius:50%; background:#015787; border:2px solid #4181a5; display:block;     padding: 1px 9px !important;     margin-left: 15px;
     margin-right: 15px;}

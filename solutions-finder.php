@@ -35,72 +35,7 @@ of questions regarding your IT business solution needs. </p>
 			</div>		
 		</div>
 		
-		<!----Raw COde-->
-		<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="step1">
-					<div class="solutions-label-wrapper">
-						<div class="left_down_arrow"></div>
-						<div class="form_top_label">SELECT ONE</div>
-						<div class="right_down_arrow"></div>						
-					</div>
-					<div class="radio-fields-wrapper">
-					[radio i-m-in-field id:i_m_field class:i_m_field use_label_element "I'm in IT" "I'm not in IT"]
-					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="step2">
-				<div class="container">
-				  <div class="step_2_wrapper">
-				        <div class="col-md-4 col-sm-4"> 
-						   <div class=" box_choice expand">
-[radio servicesNeeded id:servicesNeeded class:servicesNeeded label_first use_label_element "I want to Expand" "I want to modernize" "I want to integrate"]
-						     <div class="expandicon"> </div>
-							 <h2> EXPAND </h2>
-							 <p>Adjusting to growing and changing business needs.</p>
-						   </div>
-						</div>
-						
-						 <div class="col-md-4 col-sm-4"> 
-						   <div class=" box_choice modernize selected">
-						   <div class="modernizeicon"> </div>
-							 <h2> MODERNIZE </h2>
-							 <p>Building the right system to move your business forward.</p>
-						   </div>
-						</div>
-						
-						 <div class="col-md-4 col-sm-4"> 
-						   <div class=" box_choice integrate">
-						   <div class="integrateicon"> </div>						   
-							 <h2> INTEGRATE </h2>
-							 <p>Combining voice and technology into a single efficient system.</p>
-						   </div>
-						</div>
-						
-				  </div>				
-				</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="step3">
-				  <div class="step_3_main_wrapper">
-				      <div class="step_3_wrapper">
-					   <h2> Please fill out the form below and we will be in touch soon..</h2> 
-					  <div class="col-md-6 col-sm-6">[text* fname id:fname class:fname placeholder "First Name"]</div>
-					  <div class="col-md-6 col-sm-6">[text* lname id:lname class:lname placeholder "Last Name"]</div>
-					  <div class="clearfix"></div>
-					  <div class="col-md-6 col-sm-6">[email* email id:email class:email placeholder "Your Email"]</div>
-					  <div class="col-md-6 col-sm-6">[text* company id:company class:company placeholder "Company"]</div>
-					  <div class="clearfix"></div>
-					  <div class="col-md-12 col-sm-12">[textarea comments id:comments class:comments placeholder "Comments"]</div>
-
-					  <div class="col-md-12 col-sm-12"> <p>All information submitted to Centrality is kept completely private.</p> [submit id:submit-solution-finder class:submit-solution-finder "Submit Now"]</div>
-					  
-					 
-					  
-<div class="clearfix"></div>
-					  </div>
-			      </div>
-			    </div>    
-		</div>
-		
-		<!-- Raw Code-->
+	
 		
     </div>
 <?php get_footer(); ?>
