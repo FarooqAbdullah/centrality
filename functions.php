@@ -256,6 +256,37 @@ function email_contact () {
     }
 }
 add_action('init','email_contact');
+
+function it_consulting_menu () {
+    $current_page_title = get_the_title(get_the_ID());
+    $inner_menu = wp_get_nav_menu_items("inner-menu");
+    $menu = array();
+    $found = false;
+    $parent = array();
+    $i = 1;
+    foreach ((array)$inner_menu as $inner_key => $inner_val) {
+        $title = $inner_val->title;
+        $parent['title'][$i] = $title;
+        if ($inner_val->menu_item_parent == 0) {
+            $subMenuItem = get_nav_menu_item_children($inner_menu[$inner_key]->ID, $inner_menu);
+            foreach ($subMenuItem as $skey => $sval) {
+                if ($subMenuItem[$skey]->title == $current_page_title) {
+                    $menu['parent_title'] = $title;
+                    $found = true;
+                }
+                $sub_title = $subMenuItem[$skey]->title;
+                $sub_url = $subMenuItem[$skey]->url;
+                $menu['siblings'][$title][$sub_title]['title'] .= $sub_title;
+                $menu['siblings'][$title][$sub_title]['url'] .= $sub_url;
+            }
+            if(!$found) {
+                $menu['parent_title'] = $parent['title'][1];
+            }
+        }
+        $i++;
+    }
+    return $menu;
+}
  
  
 ?>

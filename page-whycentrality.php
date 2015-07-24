@@ -39,32 +39,25 @@ $btnText = get_post_meta( get_the_ID(), 'why_centrality_btnText', true );
 <!--
     <div class="row our-team">
         <h2> Meet Our Team</h2>
-
         <?php
         // Grab the metadata from the database
         $teamMembers = get_post_meta( get_the_ID(), 'teamMembers', true );
         //print_r($teamMembers);
         foreach($teamMembers as $teamMember) { ?>
-
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 team-mate">
                 <img src="<?php echo $teamMember['headshot']; ?>"/>
                 <div class="labelBox">  <div class="plus"></div>  <h3 class="title"><?php echo $teamMember['name']; ?></h3> <h4 class="position"><?php echo $teamMember['position']; ?></h4>
                     <div class="info"><?php echo $teamMember['introduction']; ?>.</div>
                 </div>
             </div>
-          
-
             <?php
         } ?>
-
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 claimBox">
-
             <div class="claimBoxText">Centrality maintains dual certifications in Microsoft and Cisco. </div>
         </div>
-
-
     </div>
 -->
+
 <?php $heading = get_post_meta( get_the_ID(), 'why_centrality_qualificationHeading', true );
 $b1=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText1', true );
 $b2=get_post_meta( get_the_ID(), 'why_centrality_qualifiedText2', true );  ?>

@@ -10,7 +10,7 @@
 get_header();the_post();
 ?>
 <div class="content-wrapper">
-    <?php echo do_shortcode('[_employment_header]'); ?>
+    <?php echo do_shortcode('[_employment_header button_url="#jobs"]'); ?>
     <div class="content-wrapper inner-page-content">
         <div class="container">
             <div class="row">

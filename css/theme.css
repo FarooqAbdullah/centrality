@@ -139,6 +139,7 @@ header .logo-right-wrapper ul.nav li a {
     font-family: inherit;
     color: #023754;
     text-transform: uppercase;
+    background-color:transparent;
 }
 header .logo-right-wrapper ul.nav li a:hover ,
 header .logo-right-wrapper ul.nav li a:focus {
@@ -279,13 +280,17 @@ header .request-service-form form > div textarea {
 .dropdown.why-centrality.open {
     position: static;
 }
+.logo-right-wrapper ul.nav li.dropdown.solution.open > a ,
+.logo-right-wrapper ul.nav li.dropdown.why-centrality.open > a {
+    padding-bottom: 30px;
+}
 .logo-right-wrapper ul.nav li.dropdown.solution .dropdown-menu.solutions {
     position: absolute;
     left: 0;
     right: 0;
     top: 85px;
     width: 100%;
-    display: none;
+    /*display: none;*/
     background-color:rgba(242,247,250,0.9);
 }
 .logo-right-wrapper ul.nav li.dropdown.why-centrality .dropdown-menu.why-centrality {
@@ -294,7 +299,7 @@ header .request-service-form form > div textarea {
     right: 0;
     top: 85px;
     width: 100%;
-    display: none;
+    /*display: none;*/
     background-color:rgba(242,247,250,0.9);
 }
 .solution-dropdown-wrapper .search-head {

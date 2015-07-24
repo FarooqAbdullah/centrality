@@ -19,7 +19,7 @@ $ulClass = "";
         if($val->post_title == "Solutions") {
             ?>
             <li class="dropdown solution">
-                <a href="<?php echo $val->url; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="<?php echo $val->url; ?>" class="dropdown-toggle" data-togle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <?php echo $val->post_title; ?>
                 </a>
                 <div class="dropdown-menu solutions">
@@ -133,7 +133,7 @@ $ulClass = "";
         }
         elseif($val->post_title == "REQUEST SERVICE") {
             ?>
-            <li class="dropdown">
+            <li class="dropdown" id="serviceRequest">
                 <a href="<?php echo $val->url; ?>" class="dropdown-toggle btn btn-default pull-right" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $val->post_title ?>: <span><?php echo $field_value['centrality-service-request']; ?></span></a>
                 <div class="dropdown-menu">
                     <div class="arrow-up"></div>
@@ -198,7 +198,7 @@ $ulClass = "";
         elseif($val->title == "Why Centrality"){
             ?>
             <li class="dropdown why-centrality">
-                <a href="<?php echo $val->url; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+                <a href="<?php echo $val->url; ?>" class="dropdown-toggle" data-togge="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
                     <?php echo $val->title; ?>
                 </a>
                 <div class="dropdown-menu why-centrality">
